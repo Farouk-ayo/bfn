@@ -12,9 +12,11 @@ const StatsBlock: React.FC = () => {
   }, []);
 
   return (
-    <section className="w-full py-8 bg-gradient-to-r from-purple-600 to-blue-600 text-white">
+    <section className="w-full py-8 bg-gradient-to-r  text-white">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-8">Key Program Stats</h2>
+        <h2 className="text-3xl font-bold mb-8 text-primary">
+          Key Program Stats
+        </h2>
         {/* Stat Block Container */}
         <div className="flex justify-center items-center space-x-8 text-4xl font-bold">
           <div className="flex items-center stats-item">

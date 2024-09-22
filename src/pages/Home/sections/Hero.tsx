@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
+import Navbar from "../../../components/Navbar";
 
 const Hero: React.FC = () => {
   useEffect(() => {
@@ -36,39 +37,15 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
 
       {/* Navbar */}
-      <nav className="sticky z-30 top-0 flex justify-between items-center p-6 bg-opacity-100 backdrop-blur-md transition duration-500">
-        <ul className="flex space-x-8 text-white items-center">
-          <li className="hover:text-yellow-400">
-            <a href="#introduction">Introduction</a>
-          </li>
-          <li className="hover:text-yellow-400 ">
-            <a href="#founder">Founder</a>
-          </li>
-        </ul>
-        <div className="text-white font-bold text-2xl">
-          <img
-            src="https://via.placeholder.com/100x100?text=Logo"
-            alt="Logo"
-            className="w-12 h-12"
-          />
-        </div>
-        <ul className="flex space-x-8 text-white items-center">
-          <li className="hover:text-yellow-400">
-            <a href="#program-highlights">Program Highlights</a>
-          </li>
-          <li className="hover:text-yellow-400">
-            <a href="#success-stories">Success Stories</a>
-          </li>
-        </ul>
-      </nav>
+      <Navbar />
 
       {/* Hero Section */}
-      <section className="z-20 relative w-full h-screen flex justify-center items-center text-white px-12">
+      <section className="z-20 relative w-full h-screen flex justify-center items-center text-white px-12 pt-16">
         {/* Center Text */}
         <div className="text-center hero-text">
-          <h1 className="text-7xl font-bold uppercase">
+          <h1 className="text-7xl font-bold uppercase leading-relaxed sm:leading-normal">
             Being{" "}
-            <span className="relative bg-[#2F2F2F]">
+            <span className="relative bg-primary">
               founder
               <span className="absolute -bottom-1 left-0 w-full h-3 bg-white opacity-40 rotate-2"></span>
             </span>{" "}
