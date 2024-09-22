@@ -1,21 +1,48 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MobileNav from "./MobileNav";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSectionHeight =
+        document.querySelector(".hero-section")?.clientHeight || 0;
+      if (window.scrollY > heroSectionHeight) {
+        setScrolled(true); // User has scrolled past the hero section
+      } else {
+        setScrolled(false); // User is still in the hero section
+      }
+    };
+
+    // Add event listener for scroll
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll); // Clean up event listener
+    };
+  }, []);
 
   return (
     <nav className="fixed z-30 top-0 w-full flex justify-between items-center p-6 bg-opacity-100 backdrop-blur-md transition duration-500">
       <ul className="hidden space-x-10 text-white items-center font-semibold  sm:flex">
-        <li className="  border-b-2 border-b-transparent hover:border-b hover:border-primary transition pb-2">
+        <li
+          className={`${
+            scrolled ? "text-primary" : "text-white"
+          } border-b-2 border-b-transparent hover:border-b hover:border-primary transition pb-2`}
+        >
           <a href="#introduction">Introduction</a>
         </li>
-        <li className="  border-b-2 border-b-transparent hover:border-b hover:border-primary transition pb-2">
+        <li
+          className={`${
+            scrolled ? "text-primary" : "text-white"
+          } border-b-2 border-b-transparent hover:border-b hover:border-primary transition pb-2`}
+        >
           <a href="#founder">Founder</a>
         </li>
       </ul>
@@ -27,10 +54,18 @@ const Navbar = () => {
         />
       </div>
       <ul className=" hidden sm:flex space-x-10 text-white items-center font-semibold">
-        <li className="  border-b-2 border-b-transparent hover:border-b hover:border-primary transition pb-2">
+        <li
+          className={`${
+            scrolled ? "text-primary" : "text-white"
+          } border-b-2 border-b-transparent hover:border-b hover:border-primary transition pb-2`}
+        >
           <a href="#program-highlights">Program Highlights</a>
         </li>
-        <li className="  border-b-2 border-b-transparent hover:border-b hover:border-primary transition pb-2">
+        <li
+          className={`${
+            scrolled ? "text-primary" : "text-white"
+          } border-b-2 border-b-transparent hover:border-b hover:border-primary transition pb-2`}
+        >
           <a href="#success-stories">Success Stories</a>
         </li>
       </ul>

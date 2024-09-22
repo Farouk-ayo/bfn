@@ -2,7 +2,7 @@ import React from "react";
 
 const CallToAction: React.FC = () => {
   return (
-    <section className="py-16 bg-primary text-white text-center">
+    <section className="py-16 bg-blue-600 text-white text-center">
       <div className="max-w-6xl mx-auto px-4">
         {/* Title */}
         <h2 className="text-4xl font-bold mb-6">Get Involved</h2>
