@@ -50,7 +50,7 @@ const highlights = [
 
 const ProgramHighlights: React.FC = () => {
   return (
-    <section className="py-16 bg-light text-primary">
+    <section className="py-16 bg-light text-primary overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">
           Program Highlights & Workshops

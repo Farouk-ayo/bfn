@@ -29,7 +29,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed z-30 top-0 w-full flex justify-between items-center p-6 bg-opacity-100 backdrop-blur-md transition duration-500">
+    <nav className="fixed z-50 top-0 w-full flex justify-between items-center p-6 bg-opacity-100 backdrop-blur-md transition duration-500">
       <ul className="hidden space-x-10 text-white items-center font-semibold  sm:flex">
         <li
           className={`${
@@ -103,7 +103,7 @@ const Navbar = () => {
           initial={{ x: "100%" }}
           animate={{ x: isOpen ? "0%" : "100%" }}
           transition={{ duration: 0.5 }}
-          className="absolute top-0 right-0 h-full w-3/4 bg-light shadow-lg p-4"
+          className="absolute top-0 right-0 h-full z-50 w-3/4 bg-light shadow-lg p-4"
         >
           <MobileNav />
         </motion.div>
