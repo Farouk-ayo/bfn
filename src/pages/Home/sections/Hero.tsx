@@ -23,8 +23,12 @@ const Hero: React.FC = () => {
         autoPlay
         loop
         muted
+        playsInline
+        poster="/office.webp"
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        preload="metadata"
       >
+        <source src="/office.webm" type="video/webm" />
         <source src="/office.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
