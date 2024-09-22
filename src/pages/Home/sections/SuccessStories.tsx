@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { FaCheckCircle, FaRocket, FaUsers } from "react-icons/fa";
+import Button from "../../../components/Button";
 
 // Dummy Data for Success Stories
 const successStories = [
@@ -139,9 +140,7 @@ const SuccessStories: React.FC = () => {
 
         {/* Optional Call-to-Action Button */}
         <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
-            Meet All Founders
-          </button>
+          <Button>Meet All Founders</Button>
         </div>
       </div>
     </section>

@@ -5,6 +5,7 @@ import {
   FaLightbulb,
   FaHandshake,
 } from "react-icons/fa"; // Icons for workshops and milestones
+import Button from "../../../components/Button";
 
 const highlights = [
   {
@@ -93,9 +94,7 @@ const ProgramHighlights: React.FC = () => {
 
         {/* Optional Call-to-Action button */}
         <div className="text-center mt-12">
-          <button className=" hover:scale-105 transition duration-300 ease-in-out text-white py-2 px-6 rounded-lg shadow-lg bg-gradient-to-r from-green-400 to-blue-500">
-            Explore Workshops
-          </button>
+          <Button>Explore Workshops</Button>
         </div>
       </div>
     </section>

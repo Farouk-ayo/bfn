@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   FaBriefcase,
   FaHeartbeat,
@@ -69,7 +69,66 @@ const founders = [
     sector: "health",
     imageUrl: "https://via.placeholder.com/150",
   },
-  // Add more founder data here (total 24)
+  {
+    name: "Jane Smith",
+    businessName: "HealthConnect",
+    description:
+      "A digital platform connecting patients with healthcare providers.",
+    achievement: "Secured $500K in seed funding during the accelerator.",
+    quote: "The network we built here will sustain our growth for years.",
+    sector: "health",
+    imageUrl: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Jane Smith",
+    businessName: "HealthConnect",
+    description:
+      "A digital platform connecting patients with healthcare providers.",
+    achievement: "Secured $500K in seed funding during the accelerator.",
+    quote: "The network we built here will sustain our growth for years.",
+    sector: "health",
+    imageUrl: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Jane Smith",
+    businessName: "HealthConnect",
+    description:
+      "A digital platform connecting patients with healthcare providers.",
+    achievement: "Secured $500K in seed funding during the accelerator.",
+    quote: "The network we built here will sustain our growth for years.",
+    sector: "health",
+    imageUrl: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Jane Smith",
+    businessName: "HealthConnect",
+    description:
+      "A digital platform connecting patients with healthcare providers.",
+    achievement: "Secured $500K in seed funding during the accelerator.",
+    quote: "The network we built here will sustain our growth for years.",
+    sector: "health",
+    imageUrl: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Jane Smith",
+    businessName: "HealthConnect",
+    description:
+      "A digital platform connecting patients with healthcare providers.",
+    achievement: "Secured $500K in seed funding during the accelerator.",
+    quote: "The network we built here will sustain our growth for years.",
+    sector: "health",
+    imageUrl: "https://via.placeholder.com/150",
+  },
+  {
+    name: "Jane Smith",
+    businessName: "HealthConnect",
+    description:
+      "A digital platform connecting patients with healthcare providers.",
+    achievement: "Secured $500K in seed funding during the accelerator.",
+    quote: "The network we built here will sustain our growth for years.",
+    sector: "health",
+    imageUrl: "https://via.placeholder.com/150",
+  },
 ];
 
 // Function to get icon based on business sector
@@ -87,16 +146,25 @@ const getSectorIcon = (sector: string) => {
 };
 
 const Founder: React.FC = () => {
+  // State to control how many founders are shown
+  const [showAll, setShowAll] = useState(false);
+
+  // Function to toggle "See All"
+  const toggleShowAll = () => setShowAll(!showAll);
+
+  // Only show 8 founders if "See All" is not clicked
+  const foundersToShow = showAll ? founders : founders.slice(0, 8);
+
   return (
-    <section className="py-16 bg-gray-100 text-gray-800">
+    <section className="py-16 bg-light text-gray-800">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">
           Founder Spotlights
         </h2>
 
-        {/* Grid layout for 24 founders */}
+        {/* Grid layout for founders */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {founders.map((founder, index) => (
+          {foundersToShow.map((founder, index) => (
             <div
               key={index}
               className="relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
@@ -119,7 +187,7 @@ const Founder: React.FC = () => {
               </div>
 
               {/* Hidden back section (on hover) */}
-              <div className="absolute inset-0 bg-blue-600 text-white p-6 flex flex-col justify-between opacity-0 hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 bg-primary text-white p-6 flex flex-col justify-between opacity-0 hover:opacity-100 transition-opacity duration-300">
                 <div>
                   <h4 className="text-lg font-bold mb-2">
                     {founder.businessName}
@@ -140,8 +208,9 @@ const Founder: React.FC = () => {
 
         {/* Optional Call-to-Action button */}
         <div className="text-center mt-12">
-          <button className="bg-blue-600 text-white py-2 px-6 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
-            Learn More about Our Founders
+          {/* Toggle between "See All" and "See Less" */}
+          <button onClick={toggleShowAll}>
+            {showAll ? "See Less" : "See All Founders"}
           </button>
         </div>
       </div>

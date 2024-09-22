@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import Navbar from "../../../components/Navbar";
+import Button from "../../../components/Button";
 
 const Hero: React.FC = () => {
   useEffect(() => {
@@ -58,12 +59,7 @@ const Hero: React.FC = () => {
 
           {/* Call to Action Button */}
           <div className="mt-8">
-            <a
-              href="/invest"
-              className="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold px-8 py-3 rounded-full shadow-lg transform hover:scale-105 transition duration-300 ease-in-out"
-            >
-              Invest in our founders
-            </a>
+            <Button>Invest in our founders</Button>
           </div>
 
           {/* Scroll Indicator */}

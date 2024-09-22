@@ -36,17 +36,20 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-center text-center">
           <h4 className="text-xl font-semibold mb-4">Contact Us</h4>
           <p className="text-gray-400">
-            For inquiries, collaborations, or investment opportunities, contact us at:
+            For inquiries, collaborations, or investment opportunities, contact
+            us at:
           </p>
           <a
-            href="mailto:contact@bamsfounders.com"
+            href="mailto:contact@founders.com"
             className="text-blue-400 mt-2 hover:underline"
           >
-            contact@bamsfounders.com
+            contact@founders.com
           </a>
           <p className="mt-4">
-            Bams Founders Accelerator<br />
-            123 Startup Avenue<br />
+            Founders Accelerator
+            <br />
+            123 Startup Avenue
+            <br />
             Tech City, TC 12345
           </p>
         </div>
@@ -55,28 +58,44 @@ const Footer: React.FC = () => {
         <div className="flex flex-col items-center">
           <h4 className="text-xl font-semibold mb-4">Follow Us</h4>
           <div className="flex space-x-6">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="https://via.placeholder.com/40x40?text=FB"
                 alt="Facebook"
                 className="w-8 h-8"
               />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="https://via.placeholder.com/40x40?text=TW"
                 alt="Twitter"
                 className="w-8 h-8"
               />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="https://via.placeholder.com/40x40?text=LI"
                 alt="LinkedIn"
                 className="w-8 h-8"
               />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="https://via.placeholder.com/40x40?text=IG"
                 alt="Instagram"
@@ -89,7 +108,7 @@ const Footer: React.FC = () => {
 
       {/* Footer Bottom */}
       <div className="text-center mt-10 text-gray-500">
-        <p>&copy; 2024 Bams Founders Accelerator. All rights reserved.</p>
+        <p>&copy; 2024 Founders Accelerator. All rights reserved.</p>
       </div>
     </footer>
   );

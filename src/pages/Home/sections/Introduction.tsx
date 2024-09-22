@@ -20,11 +20,11 @@ const Introduction: React.FC = () => {
   return (
     <section className="w-full py-16 px-8 bg-light text-gray-800">
       {/* Container */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Introduction Text */}
         <div className="intro-text space-y-6">
           <h2 className="text-4xl font-bold text-primary">
-            Welcome to the Bams Founders Accelerator Program
+            Welcome to the Founders Accelerator Program
           </h2>
           <p className="text-lg">
             Our accelerator program is designed to empower early-stage
