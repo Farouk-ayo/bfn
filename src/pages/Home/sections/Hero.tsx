@@ -24,7 +24,6 @@ const Hero: React.FC = () => {
         loop
         muted
         playsInline
-        poster="/office.webp"
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
         preload="metadata"
       >
