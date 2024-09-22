@@ -12,7 +12,10 @@ const StatsBlock: React.FC = () => {
   }, []);
 
   return (
-    <section className="w-full py-8 bg-gradient-to-r  text-white">
+    <section
+      className="w-full py-8 bg-gradient-to-r  text-white"
+      data-aos="zoom-in"
+    >
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-8 text-primary">
           Key Program Stats

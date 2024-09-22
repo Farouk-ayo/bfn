@@ -69,6 +69,7 @@ const ProgramHighlights: React.FC = () => {
                 className={`flex flex-col items-center text-center ${
                   index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                 }`}
+                data-aos={`${index % 2 === 0 ? "fade-right" : "fade-left"}`}
               >
                 {/* Icon */}
                 <div className="relative z-10 flex-shrink-0 p-4 bg-white rounded-full shadow-lg">

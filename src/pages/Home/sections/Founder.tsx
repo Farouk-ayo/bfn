@@ -163,18 +163,19 @@ const Founder: React.FC = () => {
         </h2>
 
         {/* Grid layout for founders */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
           {foundersToShow.map((founder, index) => (
             <div
               key={index}
-              className="relative bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+              className="relative bg-white shadow-lg overflow-hidden hover:shadow-xl transition duration-300 px-4 py-4"
+              data-aos="fade-up"
             >
               {/* Front of the card */}
               <div className="p-6 flex flex-col items-center">
                 <img
                   src={founder.imageUrl}
                   alt={founder.name}
-                  className="w-24 h-24 rounded-full mb-4 object-cover"
+                  className="w-40 h-40 rounded-full mb-4 object-cover"
                 />
                 <h3 className="text-lg font-bold">{founder.name}</h3>
                 <p className="text-sm text-gray-500 mb-2">
@@ -209,7 +210,10 @@ const Founder: React.FC = () => {
         {/* Optional Call-to-Action button */}
         <div className="text-center mt-12">
           {/* Toggle between "See All" and "See Less" */}
-          <button onClick={toggleShowAll}>
+          <button
+            onClick={toggleShowAll}
+            className=" border-b border-b-transparent hover:border-b hover:border-primary transition pb-1"
+          >
             {showAll ? "See Less" : "See All Founders"}
           </button>
         </div>
