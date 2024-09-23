@@ -74,17 +74,17 @@ const Navbar = () => {
         >
           <span
             className={`line block w-full h-1 ${
-              isOpen ? "bg-primary" : "bg-white"
+              isOpen || scrolled ? "bg-primary" : "bg-white"
             }  transition-transform duration-300 ease-in-out origin-center`}
           ></span>
           <span
             className={`line block w-full h-1  ${
-              isOpen ? "bg-primary" : "bg-white"
+              isOpen || scrolled ? "bg-primary" : "bg-white"
             }  transition-opacity duration-300 ease-in-out`}
           ></span>
           <span
             className={`line block w-full h-1 ${
-              isOpen ? "bg-primary" : "bg-white"
+              isOpen || scrolled ? "bg-primary" : "bg-white"
             }  transition-transform duration-300 ease-in-out origin-center`}
           ></span>
         </button>
@@ -99,7 +99,7 @@ const Navbar = () => {
           initial={{ x: "100%" }}
           animate={{ x: isOpen ? "0%" : "100%" }}
           transition={{ duration: 0.5 }}
-          className="absolute top-0 right-0 h-full z-50 w-3/4 bg-lighter shadow-lg p-4"
+          className="absolute top-0 right-0 h-full z-50 w-3/4 bg-light shadow-lg p-4"
         >
           <MobileNav />
         </motion.div>

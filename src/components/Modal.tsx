@@ -13,7 +13,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, content }) => {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 transition-opacity duration-300 ease-in-out">
-      <div className="bg-white rounded-lg shadow-lg w-11/12 md:w-1/2 p-8 relative transform transition-all duration-500 ease-in-out scale-100">
+      <div className="bg-white rounded-lg shadow-lg w-11/12 md:w-1/2 h-[60%] p-8 relative transform transition-all duration-500 ease-in-out scale-100 custom-scrollbar">
         {/* Close button */}
         <button
           onClick={onClose}
@@ -25,8 +25,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, content }) => {
         {/* Modal Header */}
         <h3 className="text-3xl font-bold text-primary mb-6">{title}</h3>
 
-        {/* Modal Content */}
-        <div className="space-y-6">
+        {/* Modal Content (Scrollable Area) */}
+        <div className="space-y-6 overflow-y-auto h-[90%] pr-4 custom-scrollbar">
           {content.map((item, index) => (
             <div key={index} className="border-b border-gray-200 pb-4">
               <h4 className="text-xl font-semibold text-gray-700 mb-2">

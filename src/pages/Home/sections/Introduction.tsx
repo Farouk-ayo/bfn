@@ -24,12 +24,12 @@ const Introduction: React.FC = () => {
     >
       {/* Container */}
       <div
-        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 "
+        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 sm:gap-12 "
         data-aos="fade-up"
       >
         {/* Introduction Text */}
         <div className="intro-text space-y-6">
-          <p className="text-lg">
+          <p className="text-lg" data-aos="fade-up">
             The Black Founders Network (BFN) was founded in 2021 by Efosa Obano
             with a clear-cut mission, “To address the unique challenges faced by
             Black founders in Canada.” What started as an initiative to help
@@ -39,7 +39,7 @@ const Introduction: React.FC = () => {
             of jobs, and supported over 10,000 people through its programs and
             events.
           </p>
-          <p className="text-lg">
+          <p className="text-lg" data-aos="fade-up">
             BFN employs a unique approach in its overall support for Black
             founders, focusing on personalized assistance tailored to the
             specific challenges each entrepreneur faces. Rather than following a
@@ -53,8 +53,8 @@ const Introduction: React.FC = () => {
             effectively.
           </p>
         </div>
-        <div className=" space-y-6 intro-text">
-          <p className="text-lg">
+        <div className="flex flex-col  intro-text">
+          <p className="text-lg order-2 sm:order-1" data-aos="fade-up">
             In mid 2024, BFN initiated two cohort-based programs, attracting
             applications from Black founders in Canada with innovative startup
             ideas and product solutions. Through a competitive selection
