@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -17,16 +14,4 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "ID Grotesk", sans-serif;
-}
-
-@media (max-width: 768px) {
-  :root {
-    font-size: 90%;
-  }
-}
-
-@media (max-width: 480px) {
-  :root {
-    font-size: 80%;
-  }
 }
