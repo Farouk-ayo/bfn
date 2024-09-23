@@ -75,7 +75,7 @@ const successStories = [
 
 const SuccessStories: React.FC = () => {
   return (
-    <section className="py-16 bg-lighter text-primary">
+    <section className="py-16 bg-lighter text-primary" id="success-stories">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">
           Success Stories

@@ -70,7 +70,7 @@ const Founder: React.FC = () => {
                 <img
                   src={founder.imageUrl}
                   alt={founder.name}
-                  className="w-40 h-40 rounded-full mb-6 object-cover border-4 border-light"
+                  className="w-40 h-40 rounded-full mb-6 object-cover border-4 border-primary2"
                 />
                 <h3 className="text-xl font-bold mb-2">{founder.name}</h3>
                 <p className="text-base font-medium text-gray-700 mb-3">
@@ -86,7 +86,7 @@ const Founder: React.FC = () => {
                   {founder.cohort}
                 </p>
                 <a
-                  href={founder.url}
+                  href={founder.url || "#"}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-primary text-white py-2 px-6 rounded-full font-bold hover:bg-primary-dark transition duration-200"

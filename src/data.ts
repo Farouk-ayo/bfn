@@ -7,7 +7,8 @@ export const founders = [
     industryCategory: "Electric Vehicle, IoT, Robotics",
     cohort: "BFN Accelerate",
     sector: "ev",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://media.licdn.com/dms/image/v2/C4E03AQEA6NGdEMoYgw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1594948791283?e=1732752000&v=beta&t=QzWz9auUcKVTBgrqrHjDDbGrSkfzLBuse4Rh6n-q7iw",
     url: "https://www.kiwicharge.ca/",
   },
   {
@@ -18,7 +19,8 @@ export const founders = [
     industryCategory: "Edtech, AI, Education",
     cohort: "BFN Smart Start",
     sector: "education",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://media.licdn.com/dms/image/v2/C5603AQFv0RgC-jxZzQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1583770426234?e=1732752000&v=beta&t=ob2NmCPl3nf7OSy-zunIP1xaDxoiQ29-havGZnOPl4c",
     url: "https://www.edventive.co/",
   },
   {
@@ -29,7 +31,8 @@ export const founders = [
     industryCategory: "Design, Branding, Packaging & Printing",
     cohort: "BFN Accelerate",
     sector: "design",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-37-264x264.jpg",
     url: "https://tivorastudios.com/",
   },
   {
@@ -40,7 +43,8 @@ export const founders = [
     industryCategory: "SaaS, Financial Services, Legal Tech",
     cohort: "BFN Smart Start",
     sector: "financial",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-31-264x264.jpg",
     url: "https://www.staterasuite.com/",
   },
   {
@@ -51,7 +55,8 @@ export const founders = [
     industryCategory: "Events, Social Responsibility, Entrepreneurship",
     cohort: "BFN Smart Start",
     sector: "events",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-7-264x264.jpg",
     url: "https://zakarphotobooth.com/",
   },
   {
@@ -62,7 +67,8 @@ export const founders = [
     industryCategory: "Beauty Tech, Haircare, Innovation",
     cohort: "BFN Smart Start",
     sector: "beauty",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-43-264x264.jpg",
     url: "https://www.linkedin.com/company/braid-ez/",
   },
   {
@@ -73,7 +79,8 @@ export const founders = [
     industryCategory: "Beauty Tech, Haircare, Innovation",
     cohort: "BFN Smart Start",
     sector: "beauty",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-3-264x264.jpg",
     url: "https://www.linkedin.com/company/braid-ez/",
   },
   {
@@ -84,8 +91,8 @@ export const founders = [
     industryCategory: "Fashion, Sustainability, Retail",
     cohort: "BFN Smart Start",
     sector: "fashion",
-    imageUrl: "https://via.placeholder.com/150",
-    url: "#",
+    imageUrl:
+      "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-11-264x264.jpg",
   },
   {
     name: "Cecil Chikezie",
@@ -95,7 +102,8 @@ export const founders = [
     industryCategory: "Healthcare, Education, Biomedical Engineering",
     cohort: "BFN Smart Start",
     sector: "healthcare",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-1-264x264.jpg",
     url: "https://www.linkedin.com/company/gidworkshop/about/",
   },
   {
@@ -106,7 +114,8 @@ export const founders = [
     industryCategory: "Data Infrastructure, AI, Technology",
     cohort: "BFN Smart Start",
     sector: "data",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-21-264x264.jpg",
     url: "https://www.linkedin.com/company/wamiri/",
   },
   {
@@ -117,7 +126,8 @@ export const founders = [
     industryCategory: "Mental Health, Wellness, Community Care",
     cohort: "BFN Smart Start",
     sector: "mentalHealth",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-19-1-scaled-e1716309899525-264x264.jpg",
     url: "https://nuruhealth.my.canva.site/",
   },
   {
@@ -128,8 +138,8 @@ export const founders = [
     industryCategory: "Legal Tech, Estate Planning, Financial Services",
     cohort: "BFN Smart Start",
     sector: "legalTech",
-    imageUrl: "https://via.placeholder.com/150",
-    url: "",
+    imageUrl:
+      "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/1691813686053.jpeg",
   },
   {
     name: "Moses Odemuyiwa",
@@ -139,7 +149,8 @@ export const founders = [
     industryCategory: "Logistics, Automation, Field Service Management",
     cohort: "BFN Smart Start",
     sector: "logistics",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-39-264x264.jpg",
   },
   {
     name: "Chubi Shaibu",
@@ -149,7 +160,8 @@ export const founders = [
     industryCategory: "Design, Infrastructure, Creative Industry",
     cohort: "BFN Smart Start",
     sector: "design",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-45-1-264x264.jpg",
   },
   {
     name: "Igbagbo Ajagunna",
@@ -159,7 +171,8 @@ export const founders = [
     industryCategory: "HR Tech, Employee Benefits, Compensation Management",
     cohort: "BFN Smart Start",
     sector: "hrTech",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl:
+      "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-13-264x264.jpg",
     url: "https://www.linkedin.com/company/compcrafter/",
   },
 ];
