@@ -29,7 +29,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed z-50 top-0 w-full flex justify-between items-center p-6 bg-opacity-100 backdrop-blur-md transition duration-500">
+    <nav className="fixed z-50 top-0 w-full flex justify-between items-center p-6 bg-opacity-100 backdrop-blur-3xl transition duration-500 uppercase">
       <ul className="hidden space-x-10 text-white items-center font-semibold  sm:flex">
         <li
           className={`${
@@ -46,12 +46,8 @@ const Navbar = () => {
           <a href="#founder">Founder</a>
         </li>
       </ul>
-      <div className="text-white font-bold text-2xl ">
-        <img
-          src="https://via.placeholder.com/100x100?text=Logo"
-          alt="Logo"
-          className="w-12 h-12"
-        />
+      <div className="text-white font-bold text-2xl w-44 ">
+        <img src="/bfn.webp" alt="Logo" className="" />
       </div>
       <ul className=" hidden sm:flex space-x-10 text-white items-center font-semibold">
         <li
@@ -103,7 +99,7 @@ const Navbar = () => {
           initial={{ x: "100%" }}
           animate={{ x: isOpen ? "0%" : "100%" }}
           transition={{ duration: 0.5 }}
-          className="absolute top-0 right-0 h-full z-50 w-3/4 bg-light shadow-lg p-4"
+          className="absolute top-0 right-0 h-full z-50 w-3/4 bg-lighter shadow-lg p-4"
         >
           <MobileNav />
         </motion.div>

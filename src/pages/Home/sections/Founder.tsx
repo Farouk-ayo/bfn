@@ -1,147 +1,42 @@
 import React, { useState } from "react";
 import {
   FaBriefcase,
+  FaBolt,
+  FaSchool,
+  FaBrush,
+  FaBalanceScale,
   FaHeartbeat,
+  FaUsers,
   FaLaptopCode,
   FaGlobe,
-} from "react-icons/fa"; // Example icons for sectors
-
-// Sample data for founders
-const founders = [
-  {
-    name: "John Doe",
-    businessName: "TechWave Solutions",
-    description: "Providing AI-driven software solutions for startups.",
-    achievement:
-      "Launched an MVP and onboarded 100+ users during the accelerator.",
-    quote:
-      "The mentorship and resources provided by the accelerator were game-changers for us.",
-    sector: "tech",
-    imageUrl: "https://via.placeholder.com/150", // Dummy profile image
-  },
-  {
-    name: "Jane Smith",
-    businessName: "HealthConnect",
-    description:
-      "A digital platform connecting patients with healthcare providers.",
-    achievement: "Secured $500K in seed funding during the accelerator.",
-    quote: "The network we built here will sustain our growth for years.",
-    sector: "health",
-    imageUrl: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Jane Smith",
-    businessName: "HealthConnect",
-    description:
-      "A digital platform connecting patients with healthcare providers.",
-    achievement: "Secured $500K in seed funding during the accelerator.",
-    quote: "The network we built here will sustain our growth for years.",
-    sector: "health",
-    imageUrl: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Jane Smith",
-    businessName: "HealthConnect",
-    description:
-      "A digital platform connecting patients with healthcare providers.",
-    achievement: "Secured $500K in seed funding during the accelerator.",
-    quote: "The network we built here will sustain our growth for years.",
-    sector: "health",
-    imageUrl: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Jane Smith",
-    businessName: "HealthConnect",
-    description:
-      "A digital platform connecting patients with healthcare providers.",
-    achievement: "Secured $500K in seed funding during the accelerator.",
-    quote: "The network we built here will sustain our growth for years.",
-    sector: "health",
-    imageUrl: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Jane Smith",
-    businessName: "HealthConnect",
-    description:
-      "A digital platform connecting patients with healthcare providers.",
-    achievement: "Secured $500K in seed funding during the accelerator.",
-    quote: "The network we built here will sustain our growth for years.",
-    sector: "health",
-    imageUrl: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Jane Smith",
-    businessName: "HealthConnect",
-    description:
-      "A digital platform connecting patients with healthcare providers.",
-    achievement: "Secured $500K in seed funding during the accelerator.",
-    quote: "The network we built here will sustain our growth for years.",
-    sector: "health",
-    imageUrl: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Jane Smith",
-    businessName: "HealthConnect",
-    description:
-      "A digital platform connecting patients with healthcare providers.",
-    achievement: "Secured $500K in seed funding during the accelerator.",
-    quote: "The network we built here will sustain our growth for years.",
-    sector: "health",
-    imageUrl: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Jane Smith",
-    businessName: "HealthConnect",
-    description:
-      "A digital platform connecting patients with healthcare providers.",
-    achievement: "Secured $500K in seed funding during the accelerator.",
-    quote: "The network we built here will sustain our growth for years.",
-    sector: "health",
-    imageUrl: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Jane Smith",
-    businessName: "HealthConnect",
-    description:
-      "A digital platform connecting patients with healthcare providers.",
-    achievement: "Secured $500K in seed funding during the accelerator.",
-    quote: "The network we built here will sustain our growth for years.",
-    sector: "health",
-    imageUrl: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Jane Smith",
-    businessName: "HealthConnect",
-    description:
-      "A digital platform connecting patients with healthcare providers.",
-    achievement: "Secured $500K in seed funding during the accelerator.",
-    quote: "The network we built here will sustain our growth for years.",
-    sector: "health",
-    imageUrl: "https://via.placeholder.com/150",
-  },
-  {
-    name: "Jane Smith",
-    businessName: "HealthConnect",
-    description:
-      "A digital platform connecting patients with healthcare providers.",
-    achievement: "Secured $500K in seed funding during the accelerator.",
-    quote: "The network we built here will sustain our growth for years.",
-    sector: "health",
-    imageUrl: "https://via.placeholder.com/150",
-  },
-];
+} from "react-icons/fa"; // Icons for sectors
+import { founders } from "../../../data";
 
 // Function to get icon based on business sector
 const getSectorIcon = (sector: string) => {
   switch (sector) {
-    case "tech":
-      return <FaLaptopCode className="text-blue-400 text-xl" />;
-    case "health":
-      return <FaHeartbeat className="text-red-400 text-xl" />;
-    case "social":
-      return <FaGlobe className="text-green-400 text-xl" />;
+    case "ev":
+      return <FaBolt className="text-primary2" size={20} />;
+    case "education":
+      return <FaSchool className="text-primary2" size={20} />;
+    case "design":
+      return <FaBrush className="text-primary2" size={20} />;
+    case "financial":
+      return <FaBalanceScale className="text-primary2" size={20} />;
+    case "beauty":
+      return <FaUsers className="text-primary2" size={20} />;
+    case "healthcare":
+      return <FaHeartbeat className="text-primary2" size={20} />;
+    case "data":
+      return <FaLaptopCode className="text-primary2" size={20} />;
+    case "mentalHealth":
+      return <FaGlobe className="text-primary2" size={20} />;
+    case "legalTech":
+      return <FaBalanceScale className="text-primary2" size={20} />;
+    case "logistics":
+      return <FaBriefcase className="text-primary2" size={20} />;
     default:
-      return <FaBriefcase className="text-gray-400 text-xl" />;
+      return <FaBriefcase className="text-primary2" size={20} />;
   }
 };
 
@@ -156,65 +51,60 @@ const Founder: React.FC = () => {
   const foundersToShow = showAll ? founders : founders.slice(0, 8);
 
   return (
-    <section className="py-16 bg-light text-gray-800">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">
+    <section className="py-16 bg-light text-gray-900" id="founder">
+      <div className="max-w-7xl mx-auto px-6">
+        <h2 className="text-4xl font-extrabold text-primary text-center mb-16">
           Founder Spotlights
         </h2>
 
         {/* Grid layout for founders */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {foundersToShow.map((founder, index) => (
             <div
               key={index}
-              className="relative bg-white shadow-lg overflow-hidden hover:shadow-xl transition duration-300 px-4 py-4"
+              className="relative bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 px-6 py-8"
               data-aos="fade-up"
             >
               {/* Front of the card */}
-              <div className="p-6 flex flex-col items-center">
+              <div className="flex flex-col items-center text-center">
                 <img
                   src={founder.imageUrl}
                   alt={founder.name}
-                  className="w-40 h-40 rounded-full mb-4 object-cover"
+                  className="w-40 h-40 rounded-full mb-6 object-cover border-4 border-light"
                 />
-                <h3 className="text-lg font-bold">{founder.name}</h3>
-                <p className="text-sm text-gray-500 mb-2">
+                <h3 className="text-xl font-bold mb-2">{founder.name}</h3>
+                <p className="text-base font-medium text-gray-700 mb-3">
                   {founder.businessName}
                 </p>
-                {/* Sector Icon */}
-                <div className="flex justify-center items-center mt-2">
+                <div className="flex justify-center items-center space-x-2 mb-3">
                   {getSectorIcon(founder.sector)}
+                  <p className="text-sm text-gray-600 font-semibold">
+                    {founder.industryCategory}
+                  </p>
                 </div>
-              </div>
-
-              {/* Hidden back section (on hover) */}
-              <div className="absolute inset-0 bg-primary text-white p-6 flex flex-col justify-between opacity-0 hover:opacity-100 transition-opacity duration-300">
-                <div>
-                  <h4 className="text-lg font-bold mb-2">
-                    {founder.businessName}
-                  </h4>
-                  <p className="text-sm">{founder.description}</p>
-                </div>
-                <div className="mt-4">
-                  <h5 className="text-md font-semibold">Key Achievement:</h5>
-                  <p className="text-sm mb-2">{founder.achievement}</p>
-                  <blockquote className="text-sm italic">
-                    "{founder.quote}"
-                  </blockquote>
-                </div>
+                <p className="text-sm text-gray-500 font-semibold mb-6">
+                  {founder.cohort}
+                </p>
+                <a
+                  href={founder.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-primary text-white py-2 px-6 rounded-full font-bold hover:bg-primary-dark transition duration-200"
+                >
+                  More Info
+                </a>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Optional Call-to-Action button */}
-        <div className="text-center mt-12">
-          {/* Toggle between "See All" and "See Less" */}
+        {/* Show More/Show Less button */}
+        <div className="text-center mt-10">
           <button
+            className="text-lg font-semibold text-primary border-b  hover:border-b-primary  focus:outline-none transition duration-200 pb-1"
             onClick={toggleShowAll}
-            className=" border-b border-b-transparent hover:border-b hover:border-primary transition pb-1"
           >
-            {showAll ? "See Less" : "See All Founders"}
+            {showAll ? "See Less" : "See All"}
           </button>
         </div>
       </div>

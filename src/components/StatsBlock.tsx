@@ -12,22 +12,30 @@ const StatsBlock: React.FC = () => {
   }, []);
 
   return (
-    <section
-      className="w-full py-8 bg-gradient-to-r  text-white"
-      data-aos="zoom-in"
-    >
+    <section className="w-full py-12 bg-white" data-aos="zoom-in">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-8 text-primary">
-          Key Program Stats
-        </h2>
         {/* Stat Block Container */}
-        <div className="flex justify-center items-center space-x-8 text-4xl font-bold">
-          <div className="flex items-center stats-item">
-            <span className="text-green-200">08</span>
-            <div className="border-l-2 border-red-400 h-12 mx-4"></div>
-            <span className="text-green-200">29</span>
-            <div className="border-l-2 border-red-400 h-12 mx-4"></div>
-            <span className="text-green-200">13</span>
+        <div className="flex justify-around items-center space-x-8 text-center text-gray-800">
+          {/* Total Founders */}
+          <div className="stats-item">
+            <h3 className="text-5xl font-bold">24+</h3>
+            <p className="text-lg text-gray-500 mt-2">
+              Finalist Black Founders
+            </p>
+          </div>
+
+          {/* BFN Accelerate */}
+          <div className="stats-item">
+            <h3 className="text-5xl font-bold">11</h3>
+            <p className="text-lg text-gray-500 mt-2">BFN Accelerate Program</p>
+          </div>
+
+          {/* BFN Smart Start */}
+          <div className="stats-item">
+            <h3 className="text-5xl font-bold">13</h3>
+            <p className="text-lg text-gray-500 mt-2">
+              BFN Smart Start Program
+            </p>
           </div>
         </div>
       </div>
