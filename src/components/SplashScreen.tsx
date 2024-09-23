@@ -15,11 +15,7 @@ const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
           onAnimationComplete={finishLoading}
         >
           <div className="text-white font-bold text-2xl">
-            <img
-              src="https://via.placeholder.com/100x100?text=Logo"
-              alt="Logo"
-              className="w-12 h-12"
-            />
+            <img src="/bfn.webp" alt="Logo" className="w-40" />
           </div>
         </motion.div>
       </div>
