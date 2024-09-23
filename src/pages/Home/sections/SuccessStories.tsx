@@ -4,72 +4,43 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { FaCheckCircle, FaRocket, FaUsers } from "react-icons/fa";
-import Button from "../../../components/Button";
 
-// Dummy Data for Success Stories
 const successStories = [
   {
-    name: "Isdora N.",
-    business: "TechForGood",
-    before: "Struggling to scale operations and gain investor interest.",
-    after: "Tripled revenue and secured $1M in Series A funding.",
-    achievements: [
-      {
-        text: "Revenue tripled",
-        icon: <FaRocket className="text-green-500" />,
-      },
-      {
-        text: "Secured $1M funding",
-        icon: <FaCheckCircle className="text-blue-500" />,
-      },
-      {
-        text: "Added 5 new team members",
-        icon: <FaUsers className="text-yellow-500" />,
-      },
-    ],
-    video: "https://via.placeholder.com/200x200", // Placeholder for video snippet
+    name: "Josh Lokko",
+    business: "Statera",
+    description:
+      "Josh leveraged BFN’s Experts in Residence resource which helped fast-track the development of his product solution for the legal community.",
+    img: "https://via.placeholder.com/200x200", // Placeholder for image
     quote:
-      "The accelerator gave me the mentorship and resources I needed to push my business to the next level.",
+      "We’re now about a month away from launching our first version and have 7 law firms interested in trying our product.",
   },
   {
-    name: "Amina B.",
-    business: "GreenLife Solutions",
-    before: "Limited market traction and unclear product-market fit.",
-    after:
-      "Launched a new product line that doubled customer base in 6 months.",
-    achievements: [
-      {
-        text: "Doubled customer base",
-        icon: <FaUsers className="text-blue-500" />,
-      },
-      {
-        text: "Launched new product line",
-        icon: <FaRocket className="text-green-500" />,
-      },
-    ],
-    video: "https://via.placeholder.com/200x200", // Placeholder for video snippet
+    name: "Amina Dan-Sule",
+    business: "Zakar PhotoBooth",
+    description:
+      "Amina consulted with specialists in the BFN community and went on to develop an onboarding process and a working business model for Zakar Photobooth.",
+    img: "https://via.placeholder.com/200x200", // Placeholder for image
     quote:
-      "Thanks to the accelerator, I was able to pivot quickly and find a product-market fit that worked.",
+      "We were able to formalize our onboarding approach and have validated our franchise model to fund the capital asset of $12,350 for each franchisee, which will be recovered within 1.5 to 2 years of operations.",
   },
   {
-    name: "John D.",
-    business: "SustainPro",
-    before: "Facing issues in scaling production and reaching new markets.",
-    after: "Expanded to 3 new countries and increased production by 50%.",
-    achievements: [
-      {
-        text: "Expanded to 3 countries",
-        icon: <FaRocket className="text-green-500" />,
-      },
-      {
-        text: "Increased production by 50%",
-        icon: <FaCheckCircle className="text-blue-500" />,
-      },
-    ],
-    video: "https://via.placeholder.com/200x200", // Placeholder for video snippet
+    name: "Olayemi Biaou",
+    business: "Braid-EZ",
+    description:
+      "Olayemi joined the BFN Smart Start cohort with a business idea to reduce the average 7-hour process of hair braiding. By the end of the program, she developed a working prototype based on customer insights.",
+    img: "https://via.placeholder.com/200x200", // Placeholder for image
     quote:
-      "This program gave me access to top-notch mentors who guided me through crucial growth stages.",
+      "BFN has boosted the progress of this project. I got in with a business idea, and I am leaving with a team and a physical prototype.",
+  },
+  {
+    name: "Isdora Msigwa",
+    business: "Nuru Health",
+    description:
+      "Sparked with a passion for healthcare innovation, Isdora was on a mission to build culturally-competent mental health support for Black communities. BFN equipped her with the necessary support for the next stage of her business.",
+    img: "https://via.placeholder.com/200x200", // Placeholder for image
+    quote:
+      "We’ve built a talented and diverse team from just one person to five people, which has enriched our approach and strengthened our foundation as an early stage startup. We've also begun developing our prototype, allowing us to see our vision come to life.",
   },
 ];
 
@@ -93,15 +64,13 @@ const SuccessStories: React.FC = () => {
           {successStories.map((story, index) => (
             <SwiperSlide key={index}>
               <div className="bg-gray-50 p-8 rounded-lg shadow-lg flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:space-x-8">
-                {/* Video or Image */}
+                {/* Image */}
                 <div className="lg:w-1/3 w-full flex justify-center">
-                  <div className="w-64 h-64 bg-gray-300 rounded-lg overflow-hidden">
-                    <img
-                      src={story.video} // Placeholder for the video thumbnail or image
-                      alt={`${story.name} testimonial`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                  <img
+                    src={story.img} // Placeholder for the image
+                    alt={`${story.name} testimonial`}
+                    className="w-64 h-64 object-cover rounded-lg"
+                  />
                 </div>
 
                 {/* Founder Story Content */}
@@ -109,24 +78,7 @@ const SuccessStories: React.FC = () => {
                   <h3 className="text-2xl font-bold mb-4">
                     {story.name} – {story.business}
                   </h3>
-                  <p className="text-gray-600 mb-2">
-                    <strong>Before:</strong> {story.before}
-                  </p>
-                  <p className="text-gray-600 mb-2">
-                    <strong>After:</strong> {story.after}
-                  </p>
-
-                  {/* Achievements */}
-                  <div className="grid grid-cols-2 gap-4 my-4">
-                    {story.achievements.map((achievement, i) => (
-                      <div key={i} className="flex items-center space-x-2">
-                        {achievement.icon}
-                        <span className="text-gray-700">
-                          {achievement.text}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
+                  <p className="text-gray-600 mb-2">{story.description}</p>
 
                   {/* Quote */}
                   <blockquote className="italic text-gray-500">
@@ -137,11 +89,6 @@ const SuccessStories: React.FC = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-
-        {/* Optional Call-to-Action Button */}
-        <div className="text-center mt-12">
-          <Button>Meet All Founders</Button>
-        </div>
       </div>
     </section>
   );
