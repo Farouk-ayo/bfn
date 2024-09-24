@@ -10,9 +10,8 @@ const Home = () => {
   return (
     <section>
       <Hero />
-      <Introduction />
+      <Introduction /> <ProgramHighlights />
       <Founder />
-      <ProgramHighlights />
       <SuccessStories />
       <CallToAction />
       <Footer />

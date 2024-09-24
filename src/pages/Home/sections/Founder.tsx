@@ -47,17 +47,15 @@ const Founder: React.FC = () => {
   // Function to toggle "See All"
   const toggleShowAll = () => setShowAll(!showAll);
 
-  // Only show 8 founders if "See All" is not clicked
   const foundersToShow = showAll ? founders : founders.slice(0, 8);
 
   return (
     <section className="py-16 bg-light text-gray-900" id="founder">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl font-extrabold text-primary text-center mb-16">
-          Founder Spotlights
+          Meet The Founders
         </h2>
 
-        {/* Grid layout for founders */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {foundersToShow.map((founder, index) => (
             <div
@@ -65,7 +63,6 @@ const Founder: React.FC = () => {
               className="relative bg-white rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 px-6 py-8"
               data-aos="fade-up"
             >
-              {/* Front of the card */}
               <div className="flex flex-col items-center text-center">
                 <img
                   src={founder.imageUrl}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   FaChalkboardTeacher,
   FaChartLine,
@@ -7,127 +7,115 @@ import {
 } from "react-icons/fa";
 import Modal from "../../../components/Modal";
 
+// Example timeline data
 const highlights = [
   {
-    title: "Core Business Skills",
+    title: "Summer Showcase",
+    date: "6 June, 2024",
     description:
-      "The founders received hands-on guidance through workshops focused on building essential business foundations",
+      "The BFN 2024 program started with unveiling the founders from both cohorts. The Summer Showcase connected BFN’s community of investors and entrepreneurs with the founders, presenting an amazing lineup of innovative ideas and products.",
+    icon: <FaChartLine className="text-2xl text-green-500" />,
     detailContent: [
       {
-        title: "Tax Planning & Compliance for Startups",
+        title: "Summer Showcase",
         description:
-          "This workshop provided a deep dive into tax regulations and compliance, helping founders avoid common pitfalls and streamline their financial operations.",
-      },
-      {
-        title: "Bookkeeping Core Workshop",
-        description:
-          "Focused on financial fundamentals, this session covered everything from managing startup finances to setting up effective bookkeeping practices for long-term growth.",
-      },
-      {
-        title: "Business Model & Monetization",
-        description:
-          "Participating founders learned strategies to refine and optimize their business models while exploring innovative ways to generate revenue.",
+          "Founders presented innovative ideas, connecting with investors and the BFN community.",
       },
     ],
-    icon: <FaLightbulb className="text-yellow-500 text-2xl" />,
   },
   {
-    title: "Growth & Strategy",
+    title: "Collision Conference",
+    date: "17-20 June, 2024",
     description:
-      "This section of the program shifted towards growth hacking and scaling strategies, vital for startups looking to expand and capture market share",
-    detailContent: [
-      {
-        title: "User Acquisition and Growth Strategy",
-        description:
-          "This session explored tactics for driving customer growth, with a particular emphasis on digital channels, customer funnels, and data-driven decision-making.",
-      },
-      {
-        title: "Fundraising 101",
-        description:
-          "Startups were given a primer on the basics of fundraising, including how to pitch to investors, understand venture capital, and create a compelling financial narrative.",
-      },
-      {
-        title: "Dabbling in Paid Social",
-        description:
-          "This workshop introduced participants to the fundamentals of paid social media marketing, equipping them with strategies to acquire new users and promote their products or services effectively.",
-      },
-      {
-        title: "How to Strategically Enter and Excel in the US Market",
-        description:
-          "A critical session for startups looking to expand beyond borders, with expert advice on navigating the complexities of the US business landscape.",
-      },
-      {
-        title: "PR Considerations",
-        description:
-          "The founders gained valuable insights into public relations strategies, learning how to craft a media-friendly narrative and manage their brand’s public image.",
-      },
-    ],
-    icon: <FaChartLine className="text-green-500 text-2xl" />,
-  },
-  {
-    title: "Operations & Compliance",
-    description:
-      "This section addressed logistics and regulatory hurdles for startups especially when scaling across borders",
-    detailContent: [
-      {
-        title: "Customs and Logistics",
-        description:
-          "Founders learned the ins and outs of navigating customs requirements, optimizing their supply chains, and ensuring smooth cross-border operations to avoid costly delays.",
-      },
-      {
-        title:
-          "Important Cross-Border Regulatory Issues Every Founder Should Ponder",
-        description:
-          "This session emphasized the need to understand differing regulatory environments, from data privacy laws to import/export restrictions, and helped founders prepare for potential obstacles as they scale internationally.",
-      },
-    ],
-    icon: <FaHandshake className="text-blue-500 text-2xl" />,
-  },
-  {
-    title: "Storytelling & Communication",
-    description:
-      "Focused on helping founders master the art of communicating with investors, customers, and partners",
-    detailContent: [
-      {
-        title: "Confident Communication, The Art of Engaging Your Audience",
-        description:
-          "This session taught participants how to use voice and body language to communicate effectively, ensuring that their message resonates with any audience.",
-      },
-      {
-        title: "Storytelling & Pitch Decks",
-        description:
-          "Founders honed their storytelling skills, learning how to build a narrative around their brand that captures attention and wins over investors.",
-      },
-    ],
-    icon: <FaChalkboardTeacher className="text-purple-500 text-2xl" />,
-  },
-  {
-    title: "Special Experiences",
-    description:
-      "Orchestrated exclusive experiences that helped founders relax and connect with and beyond the BFN community",
+      "Founders attended Collision Conference, a major tech event in North America. BFN sponsored the founders to pitch their innovative ideas and connect with the global innovation ecosystem.",
+    icon: <FaHandshake className="text-2xl text-blue-500" />,
     detailContent: [
       {
         title: "Collision Conference",
         description:
-          "As part of the program, the founders were sponsored to attend Collision, the largest tech conference in Canada. This gave them direct access to some of the brightest minds in tech and the opportunity to showcase their startups to a global audience.",
-      },
-      {
-        title: "One-on-Ones with Experts-in-Residence",
-        description:
-          "Invaluable personalized mentorship sessions were held with industry experts, providing tailored advice on everything from market entry strategies to legal compliance.",
-      },
-      {
-        title: "Wellness Events and Hangouts",
-        description:
-          "Recognizing the importance of founder wellbeing, the program also included wellness events and informal hangouts, offering participants a chance to relax, recharge, and foster community bonds.",
-      },
-      {
-        title: "Coworking Sessions",
-        description:
-          "These collaborative workspaces allowed startups to connect, share ideas, and work together in a supportive environment.",
+          "Founders pitched ideas and connected with a global network of innovators.",
       },
     ],
-    icon: <FaChartLine className="text-red-500 text-2xl" />,
+  },
+  {
+    title: "Startupfest",
+    date: "10-12 July, 2024",
+    description:
+      "BFN sponsored the founders to attend Startupfest in Montreal, where three founders made it to the final stage for a chance to win up to $100,000 in prize money.",
+    icon: <FaLightbulb className="text-2xl text-yellow-500" />,
+    detailContent: [
+      {
+        title: "Startupfest",
+        description:
+          "Founders pitched for a chance to win funding. Three BFN founders reached the final stage.",
+      },
+    ],
+  },
+  {
+    title: "Sessions on Communication",
+    description:
+      "Will Greenblatt, CEO at OutLoud Speakers School, led a masterclass session guiding founders to overcome self-doubt and become powerful storytellers.",
+    icon: <FaChalkboardTeacher className="text-2xl text-blue-500" />,
+    detailContent: [
+      {
+        title: "Sessions on Communication",
+        description:
+          "Sessions helped founders communicate with investors, customers, and partners more effectively.",
+      },
+    ],
+  },
+  {
+    title: "Legal Education Series",
+    description:
+      "Angela Scarlett, BFN’s in-house legal expert, ensured that founders avoided common pitfalls in legal operations. Sessions with Fasken provided knowledge on corporate law and founder responsibilities.",
+    icon: <FaChalkboardTeacher className="text-2xl text-red-500" />,
+    detailContent: [
+      {
+        title: "Legal Education Series",
+        description:
+          "Workshops were focused on avoiding legal pitfalls, ensuring founders operate within the law.",
+      },
+    ],
+  },
+  {
+    title: "Wellness and Exercise Sessions",
+    description:
+      "BFN introduced the Wellness Pillar, organizing sports and workout sessions to support founders' well-being.",
+    icon: <FaChalkboardTeacher className="text-2xl text-purple-500" />,
+    detailContent: [
+      {
+        title: "Wellness and Exercise Sessions",
+        description:
+          "Sessions focused on founders' physical and mental well-being through exercises and sports.",
+      },
+    ],
+  },
+  {
+    title: "Smart Start Internal Pitch",
+    description:
+      "The early-stage founders showcased their innovations, having gained confidence and experience from the program.",
+    icon: <FaChartLine className="text-2xl text-green-500" />,
+    detailContent: [
+      {
+        title: "Smart Start Internal Pitch",
+        description:
+          "Early-stage founders displayed their innovations, powered by confidence and growth.",
+      },
+    ],
+  },
+  {
+    title: "BFN Demo Day",
+    date: "27 September, 2024",
+    description:
+      "The Accelerate Cohort competed in a pitch contest for $50,000 non-dilutive funding, celebrating three years of BFN.",
+    icon: <FaChartLine className="text-2xl text-yellow-500" />,
+    detailContent: [
+      {
+        title: "BFN Demo Day",
+        description:
+          "Founders from the Accelerate Cohort competed for $50,000 non-dilutive funding.",
+      },
+    ],
   },
 ];
 
@@ -136,22 +124,6 @@ const ProgramHighlights: React.FC = () => {
     title: string;
     detailContent: Array<{ title: string; description: string }>;
   } | null>(null);
-  const [lineHeight, setLineHeight] = useState("0%");
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.pageYOffset;
-
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      console.log(document.documentElement.scrollHeight, window);
-      const scrolled = (scrollTop / docHeight) * 100;
-      setLineHeight(`${Math.min(scrolled, 100)}%`);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const openModal = (highlight: {
     title: string;
@@ -170,23 +142,24 @@ const ProgramHighlights: React.FC = () => {
       id="program-highlights"
     >
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-12">
+        <h2 className="text-4xl font-bold text-center mb-10">
           Program Highlights & Workshops
         </h2>
 
         {/* Timeline */}
-        <div className="relative">
-          {/* line height  */}
+        <div className="relative mt-12">
+          {/* Vertical Line */}
           <div
-            className="absolute w-1 bg-primary2 left-1/2 transform -translate-x-1/2 transition-all duration-300"
-            style={{ height: lineHeight }} // Dynamic height based on scroll
+            className="absolute w-1 bg-gray-300 left-1/2 transform -translate-x-1/2 transition-all duration-300"
+            style={{ height: "100%" }} // Dynamic height based on scroll
           ></div>
+
           {/* Timeline events */}
           <div className="space-y-12">
             {highlights.map((highlight, index) => (
               <div
                 key={index}
-                className={`flex flex-col items-center text-center ${
+                className={`flex flex-col items-center  ${
                   index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                 }`}
                 data-aos={`${index % 2 === 0 ? "fade-right" : "fade-left"}`}
@@ -197,10 +170,13 @@ const ProgramHighlights: React.FC = () => {
                 </div>
 
                 {/* Content */}
-                <div className="relative lg:w-1/2 w-full mt-4 lg:mt-0 p-6 bg-white rounded-lg shadow-lg flex flex-col items-center">
+                <div className="relative lg:w-1/2 w-full mt-4 lg:mt-0 p-6 bg-white rounded-lg shadow-lg flex flex-col ">
                   <h3 className="text-xl font-semibold mb-2">
                     {highlight.title}
                   </h3>
+                  <p className="text-sm font-medium text-gray-500 mb-2">
+                    {highlight.date}
+                  </p>
                   <p className="text-gray-600 mb-4">{highlight.description}</p>
 
                   {/* Click to open modal */}
