@@ -29,43 +29,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed z-50 top-0 w-full flex justify-between items-center p-6 bg-opacity-100 backdrop-blur-3xl transition duration-500 uppercase">
-      <ul className="hidden space-x-10 text-white items-center font-semibold  sm:flex">
-        <li
-          className={`${
-            scrolled ? "text-primary" : "text-white"
-          } border-b-2 border-b-transparent hover:border-b hover:border-primary transition pb-2`}
-        >
-          <a href="#introduction">Introduction</a>
-        </li>
-        <li
-          className={`${
-            scrolled ? "text-primary" : "text-white"
-          } border-b-2 border-b-transparent hover:border-b hover:border-primary transition pb-2`}
-        >
-          <a href="#founder">Founder</a>
-        </li>
-      </ul>
+    <nav className="fixed z-50 top-0 w-full flex justify-between items-center py-6 px-6 sm:px-20 bg-opacity-100 backdrop-blur-3xl transition duration-500 uppercase">
       <div className="text-white font-bold text-2xl w-44 ">
-        <img src="/bfn.webp" alt="Logo" className="" />
+        <img src="/bfn.svg" alt="Logo" />
       </div>
-      <ul className=" hidden sm:flex space-x-10 text-white items-center font-semibold">
-        <li
-          className={`${
-            scrolled ? "text-primary" : "text-white"
-          } border-b-2 border-b-transparent hover:border-b hover:border-primary transition pb-2`}
-        >
-          <a href="#program-highlights">Program Highlights</a>
-        </li>
-        <li
-          className={`${
-            scrolled ? "text-primary" : "text-white"
-          } border-b-2 border-b-transparent hover:border-b hover:border-primary transition pb-2`}
-        >
-          <a href="#success-stories">Success Stories</a>
-        </li>
-      </ul>
-      <div className="inline-block sm:hidden">
+
+      <div className="inline-block">
         <button
           className={`hamburger ${
             isOpen ? "open" : ""
@@ -93,7 +62,7 @@ const Navbar = () => {
         initial={{ x: "100%" }}
         animate={{ x: isOpen ? "0%" : "100%" }}
         transition={{ duration: 0.5 }}
-        className={`fixed inset-0 w-full h-lvh bg-black bg-opacity-50 lg:hidden`}
+        className={`fixed inset-0 w-full h-lvh bg-black bg-opacity-50`}
       >
         <motion.div
           initial={{ x: "100%" }}
@@ -101,7 +70,7 @@ const Navbar = () => {
           transition={{ duration: 0.5 }}
           className="absolute top-0 right-0 h-full z-50 w-3/4 bg-light shadow-lg p-4"
         >
-          <MobileNav />
+          <MobileNav setIsOpen={setIsOpen} />
         </motion.div>
       </motion.div>
     </nav>
