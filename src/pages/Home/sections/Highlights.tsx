@@ -7,13 +7,12 @@ import {
 } from "react-icons/fa";
 import Modal from "../../../components/Modal";
 
-// Example timeline data
 const highlights = [
   {
     title: "Summer Showcase",
     date: "6 June, 2024",
     description:
-      "The BFN 2024 program started with unveiling the founders from both cohorts. The Summer Showcase connected BFN’s community of investors and entrepreneurs with the founders, presenting an amazing lineup of innovative ideas and products.",
+      "The BFN 2024 program started with unveiling the founders from both cohorts. The Summer Showcase was a unique way to connect BFN’s community of investors and entrepreneurs with the founders. The attendees witnessed the amazing lineup of innovative ideas and products from this year's cohort as well as learn the stories behind the innovations.",
     icon: <FaChartLine className="text-2xl text-green-500" />,
     detailContent: [
       {
@@ -27,7 +26,7 @@ const highlights = [
     title: "Collision Conference",
     date: "17-20 June, 2024",
     description:
-      "Founders attended Collision Conference, a major tech event in North America. BFN sponsored the founders to pitch their innovative ideas and connect with the global innovation ecosystem.",
+      "The next exciting phase of the program was connecting the founders to a global community of innovators. BFN sponsored the founders to attend Collision Conference, the fastest growing tech event in North America. With strengthened collaborations across similar ecosystems at the conference, the Black Innovation Zone spotlighted some of the amazing Black founders in North America, including a few founders from BFN’s cohorts also pitching at the event.",
     icon: <FaHandshake className="text-2xl text-blue-500" />,
     detailContent: [
       {
@@ -41,7 +40,7 @@ const highlights = [
     title: "Startupfest",
     date: "10-12 July, 2024",
     description:
-      "BFN sponsored the founders to attend Startupfest in Montreal, where three founders made it to the final stage for a chance to win up to $100,000 in prize money.",
+      "More opportunities for the founders to secure grants and funding as BFN sponsored the founders to attend and pitch at Startupfest in Montreal. Three founders from the BFN Accelerate Cohort made it to the final stage with up to $100,000 winning prize.",
     icon: <FaLightbulb className="text-2xl text-yellow-500" />,
     detailContent: [
       {
@@ -54,7 +53,7 @@ const highlights = [
   {
     title: "Sessions on Communication",
     description:
-      "Will Greenblatt, CEO at OutLoud Speakers School, led a masterclass session guiding founders to overcome self-doubt and become powerful storytellers.",
+      "These sessions helped the founders master the art of communicating with investors, customers, and partners. Will Greenblatt, CEO at OutLoud Speakers School led a masterclass session with the founders, guiding them to overcome self-doubt and become powerful storytellers.",
     icon: <FaChalkboardTeacher className="text-2xl text-blue-500" />,
     detailContent: [
       {
@@ -67,7 +66,7 @@ const highlights = [
   {
     title: "Legal Education Series",
     description:
-      "Angela Scarlett, BFN’s in-house legal expert, ensured that founders avoided common pitfalls in legal operations. Sessions with Fasken provided knowledge on corporate law and founder responsibilities.",
+      "The legal education workshops were organized by BFN’s in-house legal expert, Angela Scarlett. Angela’s focus was ensuring that the founders avoided common pitfalls in legal operations. Key sessions with Fasken, a global leading law firm, ensured that the founders were equipped with foundational knowledge on corporate law among other aspects of being a law-abiding founder.",
     icon: <FaChalkboardTeacher className="text-2xl text-red-500" />,
     detailContent: [
       {
@@ -78,9 +77,22 @@ const highlights = [
     ],
   },
   {
+    title: "Sessions on Marketing",
+    description:
+      "The founders gained actionable insights from organized sessions with marketing experts. Tosin Adeniyi, brand consultant and public speaker, held informative sessions with the founders on navigating branding and marketing at the startup phase.",
+    icon: <FaChalkboardTeacher className="text-2xl text-purple-500" />,
+    detailContent: [
+      {
+        title: "Sessions on Marketing",
+        description:
+          "Sessions focused on founders' physical and mental well-being through exercises and sports.",
+      },
+    ],
+  },
+  {
     title: "Wellness and Exercise Sessions",
     description:
-      "BFN introduced the Wellness Pillar, organizing sports and workout sessions to support founders' well-being.",
+      "As part of a new initiative to cater to the overall well-being of Black founders, BFN introduced the Wellness Pillar. Sports and workout sessions were organized to support the founders through the program.",
     icon: <FaChalkboardTeacher className="text-2xl text-purple-500" />,
     detailContent: [
       {
@@ -93,7 +105,7 @@ const highlights = [
   {
     title: "Smart Start Internal Pitch",
     description:
-      "The early-stage founders showcased their innovations, having gained confidence and experience from the program.",
+      "After four months of intensive support from BFN, the 2024 program came to an end, starting with the Smart Start Cohort. The early-stage founders, over powered by confidence and growth took over the stage to showcase their innovations.",
     icon: <FaChartLine className="text-2xl text-green-500" />,
     detailContent: [
       {
@@ -107,7 +119,7 @@ const highlights = [
     title: "BFN Demo Day",
     date: "27 September, 2024",
     description:
-      "The Accelerate Cohort competed in a pitch contest for $50,000 non-dilutive funding, celebrating three years of BFN.",
+      "The Accelerate Cohort followed shortly after with BFN Demo Day. The extended BFN community gathered to celebrate 3 years of BFN and witness the founders compete in a pitch contest for $50,000 non-dilutive funding.",
     icon: <FaChartLine className="text-2xl text-yellow-500" />,
     detailContent: [
       {
