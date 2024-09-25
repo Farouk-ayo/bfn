@@ -1,5 +1,5 @@
 import Footer from "../../layout/Footer";
-import CallToAction from "./sections/CallToAction";
+// import CallToAction from "./sections/CallToAction";
 import Founder from "./sections/Founder";
 import Hero from "./sections/Hero";
 import ProgramHighlights from "./sections/Highlights";
@@ -13,7 +13,7 @@ const Home = () => {
       <Introduction /> <ProgramHighlights />
       <Founder />
       <SuccessStories />
-      <CallToAction />
+      {/* <CallToAction /> */}
       <Footer />
     </section>
   );

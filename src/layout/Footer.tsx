@@ -1,57 +1,28 @@
 import React from "react";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+} from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-primary text-white py-10">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Program and Partner Logos */}
         <div className="flex flex-col items-center">
-          {/* Program Logo */}
-          <img
-            src="https://via.placeholder.com/150x150?text=Program+Logo"
-            alt="Program Logo"
-            className="mb-4 w-24 h-24"
-          />
-          {/* Partner Logos */}
-          <div className="flex space-x-4">
-            <img
-              src="https://via.placeholder.com/100x100?text=Partner+1"
-              alt="Partner 1"
-              className="w-16 h-16"
-            />
-            <img
-              src="https://via.placeholder.com/100x100?text=Partner+2"
-              alt="Partner 2"
-              className="w-16 h-16"
-            />
-            <img
-              src="https://via.placeholder.com/100x100?text=Partner+3"
-              alt="Partner 3"
-              className="w-16 h-16"
-            />
-          </div>
+          <img src="/bfn-white.svg" alt="BFN Logo" className="mb-4 w-40" />
         </div>
 
         {/* Contact Information */}
         <div className="flex flex-col items-center text-center">
           <h4 className="text-xl font-semibold mb-4">Contact Us</h4>
-          <p className="text-gray-400">
-            For inquiries, collaborations, or investment opportunities, contact
-            us at:
-          </p>
           <a
             href="mailto:contact@founders.com"
             className="text-blue-400 mt-2 hover:underline"
           >
-            contact@founders.com
+            contact@bfnfounders.com
           </a>
-          <p className="mt-4">
-            Founders Accelerator
-            <br />
-            123 Startup Avenue
-            <br />
-            Tech City, TC 12345
-          </p>
         </div>
 
         {/* Social Media Links */}
@@ -62,45 +33,33 @@ const Footer: React.FC = () => {
               href="https://facebook.com"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-white hover:text-blue-400"
             >
-              <img
-                src="https://via.placeholder.com/40x40?text=FB"
-                alt="Facebook"
-                className="w-8 h-8"
-              />
+              <FaFacebookF size={24} />
             </a>
             <a
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-white hover:text-blue-400"
             >
-              <img
-                src="https://via.placeholder.com/40x40?text=TW"
-                alt="Twitter"
-                className="w-8 h-8"
-              />
+              <FaTwitter size={24} />
             </a>
             <a
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-white hover:text-blue-400"
             >
-              <img
-                src="https://via.placeholder.com/40x40?text=LI"
-                alt="LinkedIn"
-                className="w-8 h-8"
-              />
+              <FaLinkedinIn size={24} />
             </a>
             <a
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
+              className="text-white hover:text-blue-400"
             >
-              <img
-                src="https://via.placeholder.com/40x40?text=IG"
-                alt="Instagram"
-                className="w-8 h-8"
-              />
+              <FaInstagram size={24} />
             </a>
           </div>
         </div>
@@ -108,7 +67,10 @@ const Footer: React.FC = () => {
 
       {/* Footer Bottom */}
       <div className="text-center mt-10 text-gray-500">
-        <p>&copy; 2024 Founders Accelerator. All rights reserved.</p>
+        <p>&copy; 2024 Black Founders Network. All rights reserved.</p>
+        <p className="mt-1">
+          Microsite crafted by <strong>Pitch Insights Consulting</strong>.
+        </p>
       </div>
     </footer>
   );
