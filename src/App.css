@@ -32,3 +32,40 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.quote-bg {
+  position: relative;
+  padding: 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  background: rgba(245, 245, 245, 0.9); /* Light background color */
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.quote-bg::before {
+  content: "“";
+  font-family: Georgia, serif;
+  font-size: 80px;
+  color: #d8d2c2; /* Lighter opacity for less intrusive quote */
+  position: absolute;
+  top: -10px;
+  left: -30px;
+}
+
+.quote-bg::after {
+  content: "”";
+  font-family: Georgia, serif;
+  font-size: 80px;
+  color: #d8d2c2; /* Lighter opacity for less intrusive quote */
+  position: absolute;
+  bottom: -10px;
+  right: -30px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #002a5c !important;
+}
+.swiper-pagination-bullet {
+  height: 1rem !important;
+  width: 1rem !important;
+}
