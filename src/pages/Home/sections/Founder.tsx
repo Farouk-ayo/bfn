@@ -9,6 +9,7 @@ import {
   FaUsers,
   FaLaptopCode,
   FaGlobe,
+  FaLinkedin,
 } from "react-icons/fa"; // Icons for sectors
 import { founders } from "../../../data";
 
@@ -41,22 +42,54 @@ const getSectorIcon = (sector: string) => {
 };
 
 const Founder: React.FC = () => {
-  // State to control how many founders are shown
   const [showAll, setShowAll] = useState(false);
+  const [selectedCohort, setSelectedCohort] = useState("BFN Smart Start"); // Default cohort
 
-  // Function to toggle "See All"
   const toggleShowAll = () => setShowAll(!showAll);
 
-  const foundersToShow = showAll ? founders : founders.slice(0, 8);
+  // Toggle cohort between "BFN Accelerate" and "BFN Smart Start"
+  const toggleCohort = (cohort: string) => setSelectedCohort(cohort);
+
+  // Filter founders by selected cohort
+  const filteredFounders = founders.filter(
+    (founder) => founder.cohort === selectedCohort
+  );
+  const foundersToShow = showAll
+    ? filteredFounders
+    : filteredFounders.slice(0, 8);
 
   return (
     <section className="py-16 bg-light text-gray-900" id="founder">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-extrabold text-primary text-center mb-16">
           Meet The Founders
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="flex justify-center mb-10 ">
+          <button
+            className={`py-2 px-6 font-bold border-l border-r border-b border-primary shadow-lg transition duration-300 transform ${
+              selectedCohort === "BFN Smart Start"
+                ? "bg-primary text-white "
+                : "bg-gray-200 text-gray-700 hover:bg-primary hover:text-white "
+            }`}
+            onClick={() => toggleCohort("BFN Smart Start")}
+          >
+            BFN Smart Start
+          </button>
+
+          <button
+            className={`py-2 px-6 font-bold border-l border-r border-b border-primary shadow-lg transition duration-300 transform ${
+              selectedCohort === "BFN Accelerate"
+                ? "bg-primary text-white "
+                : "bg-gray-200 text-gray-700 hover:bg-primary hover:text-white "
+            }`}
+            onClick={() => toggleCohort("BFN Accelerate")}
+          >
+            BFN Accelerate
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 ">
           {foundersToShow.map((founder, index) => (
             <div
               key={index}
@@ -69,7 +102,20 @@ const Founder: React.FC = () => {
                   alt={founder.name}
                   className="w-40 h-40 rounded-full mb-6 object-cover border-4 border-primary2"
                 />
-                <h3 className="text-xl font-bold mb-2">{founder.name}</h3>
+
+                <div className="flex items-center justify-center gap-2">
+                  <h3 className="text-xl font-bold">{founder.name}</h3>
+                  {founder.linkedIn && (
+                    <a
+                      href={founder.linkedIn}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-2 text-primary hover:text-primary-dark"
+                    >
+                      <FaLinkedin size={20} />
+                    </a>
+                  )}
+                </div>
                 <p className="text-base font-medium text-gray-700 mb-3">
                   {founder.businessName}
                 </p>
@@ -79,8 +125,9 @@ const Founder: React.FC = () => {
                     {founder.industryCategory}
                   </p>
                 </div>
-                <p className="text-sm text-gray-500 font-semibold mb-6">
-                  {founder.cohort}
+                {/* <p className="text-sm text-black mb-6">{founder.description}</p> */}
+                <p className="text-sm text-black mb-6 clamped-text">
+                  {founder.description}
                 </p>
                 <a
                   href={founder.url || "#"}
@@ -98,7 +145,7 @@ const Founder: React.FC = () => {
         {/* Show More/Show Less button */}
         <div className="text-center mt-10">
           <button
-            className="text-lg font-semibold text-primary border-b  hover:border-b-primary  focus:outline-none transition duration-200 pb-1"
+            className="text-lg font-semibold text-primary border-b hover:border-b-primary focus:outline-none transition duration-200 pb-1"
             onClick={toggleShowAll}
           >
             {showAll ? "See Less" : "See All"}
