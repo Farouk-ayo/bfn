@@ -18,7 +18,7 @@ export const founders = [
     description:
       "Edventive provides teachers with an AI tool to help with administrative tasks such as marking and reporting, making them more productive",
     industryCategory: "Edtech, AI, Education",
-    cohort: "BFN Smart Start",
+    cohort: "BFN Accelerate",
     sector: "education",
     imageUrl:
       "https://media.licdn.com/dms/image/v2/C5603AQFv0RgC-jxZzQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1583770426234?e=1732752000&v=beta&t=ob2NmCPl3nf7OSy-zunIP1xaDxoiQ29-havGZnOPl4c",

@@ -70,8 +70,8 @@ const Introduction: React.FC = () => {
             extended community event that spotlights the founders from both
             cohorts and their innovative solutions. From June through September,
             the founders were immersed in a series of dynamic development
-            programs. BFN provided. BFN provided comprehensive support in
-            building, funding, and scaling their startups to the next level.
+            programs. BFN provided comprehensive support in building, funding,
+            and scaling their startups to the next level.
           </p>
         </div>
       </div>

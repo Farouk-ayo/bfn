@@ -7,14 +7,16 @@ const StatsBlock: React.FC = () => {
         {/* Central Stat Block */}
         <div className="flex flex-col items-center mb-16">
           <div className="flex flex-col items-center justify-center stats-item relative">
-            <h3 className="text-6xl font-bold text-primary">24</h3>
-            <p className="text-lg text-primary mt-2">Finalist Black Founders</p>
+            <h3 className="text-4xl sm:text-6xl  font-bold ">24</h3>
+            <p className="text-lg text-gray-500 mt-2">
+              Finalist Black Founders
+            </p>
           </div>
 
           {/* Downward pointing arrows from "11" and "13" to "24" */}
           <svg
             className="absolute left-1/2 transform -translate-x-1/2 top-20"
-            width="300"
+            width="250"
             height="120"
             viewBox="0 0 300 120"
           >
@@ -55,14 +57,16 @@ const StatsBlock: React.FC = () => {
         <div className="flex items-center justify-center space-x-24">
           {/* BFN Accelerate Program */}
           <div className="stats-item text-center flex flex-col items-center">
-            <h3 className="text-5xl font-bold">11</h3>
-            <p className="text-lg text-gray-500 mt-2">BFN Accelerate Program</p>
+            <h3 className=" text-3xl sm:text-5xl font-bold">11</h3>
+            <p className="text-base sm:text-lg text-gray-500 mt-2">
+              BFN Accelerate Program
+            </p>
           </div>
 
           {/* BFN Smart Start Program */}
           <div className="stats-item text-center flex flex-col items-center">
-            <h3 className="text-5xl font-bold">13</h3>
-            <p className="text-lg text-gray-500 mt-2">
+            <h3 className="text-3xl sm:text-5xl  font-bold">13</h3>
+            <p className="text-base sm:text-lg text-gray-500 mt-2">
               BFN Smart Start Program
             </p>
           </div>
@@ -71,7 +75,7 @@ const StatsBlock: React.FC = () => {
         {/* Connecting line between "11" and "13" */}
         <svg
           className="absolute left-1/2 transform -translate-x-1/2 bottom-8"
-          width="250"
+          width="200"
           height="50"
           viewBox="0 0 300 50"
         >
