@@ -1,9 +1,20 @@
 import { useEffect } from "react";
 import "./App.css";
-import SplashScreenManager from "./components/SplashScreenManager";
 import Home from "./pages/Home/Home";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from "./pages/ErrorPage";
+import FaizahBalogunPage from "./pages/Faizah";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home />,
+    errorElement: <ErrorPage />,
+  },
+  { path: "/interview-faizah-balogun", element: <FaizahBalogunPage /> },
+]);
 
 function App() {
   useEffect(() => {
@@ -14,13 +25,7 @@ function App() {
     });
     AOS.refresh();
   }, []);
-  return (
-    <>
-      <SplashScreenManager>
-        <Home />
-      </SplashScreenManager>
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

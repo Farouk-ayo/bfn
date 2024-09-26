@@ -1,3 +1,5 @@
+import { ScrollRestoration } from "react-router-dom";
+import SplashScreenManager from "../../components/SplashScreenManager";
 import Footer from "../../layout/Footer";
 import CallToAction from "./sections/CallToAction";
 import Founder from "./sections/Founder";
@@ -9,15 +11,17 @@ import SuccessStories from "./sections/SuccessStories";
 
 const Home = () => {
   return (
-    <section>
+    <SplashScreenManager>
+      <ScrollRestoration />
       <Hero />
-      <Introduction /> <ProgramHighlights />
+      <Introduction />
+      <ProgramHighlights />
       <Founder />
       <Milestone />
       <SuccessStories />
       <CallToAction />
-      <Footer />
-    </section>
+      <Footer />{" "}
+    </SplashScreenManager>
   );
 };
 export default Home;
