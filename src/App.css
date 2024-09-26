@@ -30,7 +30,7 @@
   padding: 20px;
   font-size: 1.1rem;
   line-height: 1.6;
-  background: rgba(245, 245, 245, 0.9); /* Light background color */
+  background: #f5f5f5e6; /* Light background color */
   border-radius: 8px;
   z-index: 10;
 }

@@ -150,12 +150,15 @@ const SuccessStories: React.FC = () => {
 
                 {/* Founder Story Content */}
                 <div className="lg:w-2/3 w-full pb-5 sm:px-10">
-                  <h3 className=" text-xl sm:text-2xl font-medium mb-4">
+                  <h3 className=" text-xl sm:text-2xl font-medium mb-2">
                     {story.name}{" "}
                     <span className="text-xl sm:text-2xl text-primary font-bold">
                       –@{story.business}
                     </span>
                   </h3>
+                  <p className=" text-gray-500 text-sm italic mb-2">
+                    {story.cohort}
+                  </p>
                   <p className="text-gray-600 mb-4 sm:mb-10 text-base sm:text-lg">
                     {story.description}
                   </p>

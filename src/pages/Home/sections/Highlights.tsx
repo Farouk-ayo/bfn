@@ -331,7 +331,7 @@ const highlights = [
   {
     title: "Smart Start Internal Pitch",
     description:
-      "After four months of intensive support from BFN, the 2024 program came to an end, starting with the Smart Start Cohort. The early-stage founders, over powered by confidence and growth took over the stage to showcase their innovations.",
+      "After four months of intensive support from BFN, the 2024 program came to an end, starting with the Smart Start Cohort. The early-stage founders demonstrated confidence and growth as they pitched their innovations",
     icon: <FaLightbulb size={24} color="#FFD700" />,
     detailContent: {
       title: "Smart Start Internal Pitch",
