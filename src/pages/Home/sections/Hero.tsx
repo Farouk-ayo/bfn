@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
         <div className="text-center hero-text space-y-4">
           <h1 className="text-6xl sm:text-7xl font-bold uppercase leading-relaxed sm:leading-normal flex-col flex font-maldives">
             Black{" "}
-            <span className="relative -skew-y-2 bg-secondary scale-105 transform perspective-300">
+            <span className="relative -skew-y-2 bg-primary scale-105 transform perspective-300">
               <span className="block transform -skew-y-2">
                 Founders
                 <span className="absolute -bottom-1 left-0 w-full h-3 bg-white opacity-40 rotate-2"></span>

@@ -149,17 +149,19 @@ const SuccessStories: React.FC = () => {
                 </div>
 
                 {/* Founder Story Content */}
-                <div className="lg:w-2/3 w-full pb-5 px-10">
-                  <h3 className="text-2xl font-medium mb-4">
+                <div className="lg:w-2/3 w-full pb-5 sm:px-10">
+                  <h3 className=" text-xl sm:text-2xl font-medium mb-4">
                     {story.name}{" "}
-                    <span className="text-primary font-bold">
+                    <span className="text-xl sm:text-2xl text-primary font-bold">
                       –@{story.business}
                     </span>
                   </h3>
-                  <p className="text-gray-600 mb-2">{story.description}</p>
+                  <p className="text-gray-600 mb-4 sm:mb-10 text-base sm:text-lg">
+                    {story.description}
+                  </p>
 
                   {/* Quote with Background */}
-                  <blockquote className="quote-bg italic text-primary2 relative z-10 px-10 py-4 ">
+                  <blockquote className="quote-bg italic text-primary2 relative z-10 sm:px-10 py-4 text-base sm:text-lg ">
                     "{story.quote}"
                   </blockquote>
                 </div>
