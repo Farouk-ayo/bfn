@@ -11,7 +11,7 @@ const CallToAction: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Title */}
         <h2 className="text-4xl font-bold mb-6">Get Involved with BFN</h2>
-        <p className="text-xl mb-6">
+        <p className="text-xl mb-6 text-black">
           Get involved with the impact at BFN. Join a thriving community of
           entrepreneurs, investors, and advocates in striving for the excellence
           of Black-owned businesses.
@@ -62,32 +62,6 @@ const CallToAction: React.FC = () => {
           </div>
         </div>
       </div>{" "}
-      <div className="w-3/4">
-        <p className="text-lg mb-10">
-          Click{" "}
-          <a
-            href="/interview-faizah-balogun"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-secondary hover:underline font-semibold"
-          >
-            here
-          </a>{" "}
-          to read more about the 2024 program and how you can be ready to apply
-          for the 2025 programs in this interview with{" "}
-          <span>
-            <a
-              href="/interview-faizah-balogun"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary hover:text-secondary underline font-semibold"
-            >
-              Faizah Balogun
-            </a>
-          </span>
-          , BFN’s Program Coordinator.
-        </p>
-      </div>
     </section>
   );
 };

@@ -173,6 +173,32 @@ const SuccessStories: React.FC = () => {
           ))}
         </Swiper>
       </div>
+      <div className="w-3/4 text-center m-auto mt-10 text-primary2">
+        <p className="text-lg mb-10">
+          Click{" "}
+          <a
+            href="/interview-faizah-balogun"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-secondary hover:underline font-semibold"
+          >
+            here
+          </a>{" "}
+          to read more about the 2024 program and how you can be ready to apply
+          for the 2025 programs in this interview with{" "}
+          <span>
+            <a
+              href="/interview-faizah-balogun"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:text-secondary underline font-semibold"
+            >
+              Faizah Balogun
+            </a>
+          </span>
+          , BFN’s Program Coordinator.
+        </p>
+      </div>
     </section>
   );
 };
