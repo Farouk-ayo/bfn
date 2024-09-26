@@ -126,7 +126,7 @@ const Founder: React.FC = () => {
                   </p>
                 </div>
                 {/* <p className="text-sm text-black mb-6">{founder.description}</p> */}
-                <p className="text-sm text-black mb-6 clamped-text">
+                <p className="text-sm text-black mb-6 ">
                   {founder.description}
                 </p>
                 <a

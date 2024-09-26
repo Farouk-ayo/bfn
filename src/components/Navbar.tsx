@@ -31,7 +31,7 @@ const Navbar = () => {
   return (
     <nav className="fixed z-50 top-0 w-full flex justify-between items-center py-6 px-6 sm:px-20 bg-opacity-100 backdrop-blur-3xl transition duration-500 uppercase">
       <div className="text-white font-bold text-2xl w-44 ">
-        <img src="/bfn.svg" alt="Logo" />
+        <img src={`${scrolled ? "/bfn.svg" : "/bfn-white.svg"}`} alt="Logo" />
       </div>
 
       <div className="inline-block">
