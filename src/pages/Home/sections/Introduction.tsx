@@ -28,7 +28,7 @@ const Introduction: React.FC = () => {
             className="bg-gray-100 border-l-4 border-secondary px-2 py-2 sm:px-6 sm:py-4 shadow-md rounded-md my-4"
             data-aos="fade-up"
           >
-            <ul className="list-disc pl-6 space-y-2 text-left text-lg">
+            <ul className="sm:list-disc sm:pl-6 space-y-2 text-left text-base sm:text-lg">
               <li>
                 <strong>Needs Assessment:</strong> Each engagement begins with a
                 comprehensive assessment to determine where the entrepreneur is

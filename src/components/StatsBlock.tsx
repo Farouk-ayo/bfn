@@ -15,7 +15,7 @@ const StatsBlock: React.FC = () => {
 
           {/* Downward pointing arrows from "11" and "13" to "24" */}
           <svg
-            className="absolute left-1/2 transform -translate-x-1/2 top-20"
+            className="absolute left-1/2 transform -translate-x-1/2 top-14 sm:top-20"
             width="250"
             height="120"
             viewBox="0 0 300 120"
