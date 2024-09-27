@@ -4,12 +4,12 @@ import StatsBlock from "../../../components/StatsBlock";
 const Introduction: React.FC = () => {
   return (
     <section
-      className="w-full py-16 px-8 bg-lighter text-gray-800"
+      className="w-full py-16  px-4 sm:px-8 bg-lighter text-gray-800"
       id="introduction"
     >
       {/* Container */}
       <div
-        className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[3fr,2fr] gap-5 sm:gap-12"
+        className=" max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[3fr,2fr] gap-5 sm:gap-12"
         data-aos="fade-up"
       >
         {/* Introduction Text */}
@@ -34,13 +34,13 @@ const Introduction: React.FC = () => {
           </h3>
           {/* Boxed Section with Icons */}
           <div
-            className="bg-gray-100 border-l-4 border-secondary px-4 py-6 sm:px-8 sm:py-8 shadow-md rounded-md my-4 flex flex-col space-y-4"
+            className="bg-gray-100 border-l-4 border-secondary px-2 py-6 sm:px-8 sm:py-8 shadow-md rounded-md my-4 flex flex-col space-y-4"
             data-aos="fade-up"
           >
             <ul className="space-y-4 text-left text-base sm:text-lg">
               <li className="flex items-start space-x-4">
                 <p>
-                  <strong className="text-primary">Needs Assessment:</strong>
+                  <strong className="text-primary">Needs Assessment: </strong>
                   Each engagement begins with a comprehensive assessment to
                   determine where the entrepreneur is in their journey
                 </p>
@@ -48,7 +48,7 @@ const Introduction: React.FC = () => {
               <li className="flex items-start space-x-4">
                 <p>
                   <strong className="text-primary">
-                    Personalized Support:
+                    Personalized Support:{" "}
                   </strong>
                   BFN provides tailored assistance based on each founder's
                   unique challenges and needs. Workshops, resources, and
@@ -59,7 +59,7 @@ const Introduction: React.FC = () => {
               <li className="flex items-start space-x-4">
                 <p>
                   <strong className="text-primary">
-                    Non-Dilutive Funding:
+                    Non-Dilutive Funding:{" "}
                   </strong>
                   BFN offers targeted non-dilutive funding options, including
                   grants for hiring and product development.
@@ -68,7 +68,7 @@ const Introduction: React.FC = () => {
               <li className="flex items-start space-x-4">
                 <p>
                   <strong className="text-primary">
-                    From Concept to Scale:
+                    From Concept to Scale:{" "}
                   </strong>
                   Support extends from helping founders bring their ideas to
                   life to effectively scaling their operations.
@@ -86,7 +86,7 @@ const Introduction: React.FC = () => {
               <li className="flex items-start space-x-4">
                 <p>
                   <strong className="text-primary">
-                    One-on-One Mentorship:
+                    One-on-One Mentorship:{" "}
                   </strong>
                   One-on-one mentorship from BFN’s Experts in Residence who
                   provide personalized guidance tailored to each founder’s
@@ -98,8 +98,8 @@ const Introduction: React.FC = () => {
               <li className="flex items-start space-x-4">
                 <p>
                   <strong className="text-primary">
-                    Group-based Skill Building Sessions:
-                  </strong>
+                    Group-based Skill Building Sessions:{" "}
+                  </strong>{" "}
                   Group sessions are also offered all through the length of the
                   programs that focus on specific skills and topics, from
                   storytelling and pitching to wellness and public speaking.
