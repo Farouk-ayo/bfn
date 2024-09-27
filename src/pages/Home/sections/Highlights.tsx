@@ -325,6 +325,16 @@ const highlights = [
           src: "/images/wellness-session-v-1.mp4",
           alt: "wellness session Image 1",
         },
+        {
+          type: "image",
+          src: "/images/wellness-session-p-1.jpg",
+          alt: "wellness session Image 1",
+        },
+        {
+          type: "image",
+          src: "/images/wellness2.jpg",
+          alt: "wellness session Image 1",
+        },
       ],
     },
   },
@@ -338,17 +348,17 @@ const highlights = [
       media: [
         {
           type: "image",
-          src: "/images/coaching-workshop-p-1.jpg",
+          src: "/images/smart-start-pitch1.jpg",
           alt: "coaching Image 1",
         },
         {
           type: "image",
-          src: "/images/coaching-workshop-p-2.jpg",
+          src: "/images/smart-start-pitch2.jpg",
           alt: "coaching Image 2",
         },
         {
-          type: "video",
-          src: "/images/coaching-workshop-v-1.MOV",
+          type: "image",
+          src: "/images/smart-start-pitch3.jpg",
           alt: "coaching Image 1",
         },
       ],

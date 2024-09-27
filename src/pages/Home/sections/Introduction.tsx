@@ -122,12 +122,12 @@ const Introduction: React.FC = () => {
           </p>
           <StatsBlock />
           <p className="text-lg" data-aos="fade-up">
-            “In mid-2024, BFN kicked off its two cohort-based programs, BFN
-            Accelerate program and BFN Smart Start program, attracting
-            applications from Black founders with innovative startup ideas and
-            product solutions across Canada. Through a competitive selection
-            process, 24 finalist Black founders made it to both programs – 11 in
-            the BFN Accelerate program and 13 in the BFN Smart Start program.”
+            The 2024 programs kicked off in June with the Summer Showcase, an
+            extended community event that spotlights the founders from both
+            cohorts and their innovative solutions. From June through September,
+            the founders were immersed in a series of dynamic development
+            programs, with BFN providing comprehensive support in every aspect
+            of building, funding, and scaling their startups to the next level.
           </p>
         </div>
       </div>
