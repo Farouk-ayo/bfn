@@ -327,7 +327,7 @@ const highlights = [
         },
         {
           type: "image",
-          src: "/images/wellness-session-p-1.jpg",
+          src: "/images/wellness.jpg",
           alt: "wellness session Image 1",
         },
         {
@@ -348,17 +348,17 @@ const highlights = [
       media: [
         {
           type: "image",
-          src: "/images/smart-start-pitch1.jpg",
+          src: "/images/smartstartpitch.jpg",
           alt: "coaching Image 1",
         },
         {
           type: "image",
-          src: "/images/smart-start-pitch2.jpg",
+          src: "/images/smartstartpitch2.jpg",
           alt: "coaching Image 2",
         },
         {
           type: "image",
-          src: "/images/smart-start-pitch3.jpg",
+          src: "/images/smartstartpitch3.jpg",
           alt: "coaching Image 1",
         },
       ],
