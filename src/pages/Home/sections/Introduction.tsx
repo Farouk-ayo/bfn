@@ -16,7 +16,7 @@ const Introduction: React.FC = () => {
         <div className="intro-text space-y-6 ">
           <p className="text-lg" data-aos="fade-up">
             The Black Founders Network (BFN) was founded in 2021 with a
-            clear-cut mission:
+            clear-cut mission:{" "}
             <span className="font-semibold  text-xl">
               “To address the unique challenges faced by Black founders in
               Canada.”
@@ -48,7 +48,7 @@ const Introduction: React.FC = () => {
               <li className="flex items-start space-x-4">
                 <p>
                   <strong className="text-primary">
-                    Personalized Support:{" "}
+                    Personalized Support: {"  "}
                   </strong>
                   BFN provides tailored assistance based on each founder's
                   unique challenges and needs. Workshops, resources, and
@@ -76,7 +76,7 @@ const Introduction: React.FC = () => {
               </li>
               <li className="flex items-start space-x-4">
                 <p>
-                  <strong className="text-primary">Networking:</strong>
+                  <strong className="text-primary">Networking: </strong>
                   BFN connects founders within the Black community to the
                   broader entrepreneurial ecosystem, offering access to events,
                   pitch opportunities, and potential investors to help them
