@@ -13,11 +13,11 @@ const Introduction: React.FC = () => {
         data-aos="fade-up"
       >
         {/* Introduction Text */}
-        <div className="intro-text space-y-6 font-light">
+        <div className="intro-text space-y-6 ">
           <p className="text-lg" data-aos="fade-up">
             The Black Founders Network (BFN) was founded in 2021 with a
             clear-cut mission:
-            <span className="font-extrabold  text-xl">
+            <span className="font-semibold  text-xl">
               “To address the unique challenges faced by Black founders in
               Canada.”
             </span>{" "}

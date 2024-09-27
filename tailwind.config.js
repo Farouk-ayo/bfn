@@ -13,7 +13,7 @@ export default {
       fontFamily: {
         grotesk: ["ID Grotesk", "sans-serif"],
         billiona: ["Billiona", "sans-serif"],
-        maldives: ["Maldives", "sans-serif"],
+        maldives: ["Poppins", "sans-serif"],
         tradegothic: ["Trade Gothic LT Std", "sans-serif"],
       },
     },

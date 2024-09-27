@@ -2,6 +2,7 @@
 @import url("https://fonts.cdnfonts.com/css/billiona");
 @import url("https://fonts.cdnfonts.com/css/maldives-4");
 @import url("https://fonts.cdnfonts.com/css/trade-gothic-lt-std");
+@import url("https://fonts.cdnfonts.com/css/poppins");
 
 .hamburger.open .line:nth-child(1) {
   transform: translateY(10px) rotate(45deg);
