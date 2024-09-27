@@ -1,10 +1,13 @@
+import Navbar from "./components/Navbar";
+
 const FaizahBalogunPage = () => {
   return (
     <div className="bg-light text-primary py-16">
-      <div className="max-w-6xl mx-auto px-4">
+      <Navbar />
+      <div className="max-w-6xl mx-auto px-4 mt-20">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className=" text-2xl sm:text-4xl font-bold mb-4">
             Meet Faizah Balogun: Program Coordination Powerhouse at Black
             Founders Network in 2024
           </h1>

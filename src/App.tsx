@@ -6,14 +6,18 @@ import "aos/dist/aos.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage";
 import FaizahBalogunPage from "./pages/Faizah";
+import Root from "./pages/Root";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <Root />,
     errorElement: <ErrorPage />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/interview-faizah-balogun", element: <FaizahBalogunPage /> },
+    ],
   },
-  { path: "/interview-faizah-balogun", element: <FaizahBalogunPage /> },
 ]);
 
 function App() {
