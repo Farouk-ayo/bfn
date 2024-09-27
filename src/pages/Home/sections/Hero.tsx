@@ -20,13 +20,6 @@ const Hero: React.FC = () => {
       { opacity: 1, y: 0, duration: 1.2, ease: "power3.out", delay: 0.8 }
     );
 
-    // Animate the carousel images as they load
-    gsap.fromTo(
-      ".swiper-slide img",
-      { opacity: 0, y: 100 }, // Images start from bottom
-      { opacity: 1, y: 0, duration: 1.5, ease: "power3.out", stagger: 0.5 }
-    );
-
     // Bounce effect for scroll indicator
     gsap.to(".scroll-indicator", {
       y: 20,
@@ -38,7 +31,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative h-screen">
+    <div className="relative h-screen ">
       {/* Image Carousel using Swiper */}
       <Swiper
         modules={[Autoplay, EffectFade]}
@@ -47,17 +40,16 @@ const Hero: React.FC = () => {
         effect="fade"
         autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop={true}
-        className="absolute top-0 left-0 w-full h-screen z-0"
+        className="absolute top-0 left-0 w-full h-screen z-0 bg-fixed"
       >
         {Array.from({ length: 8 }, (_, i) => (
-          <SwiperSlide key={i}>
-            <img
-              src={`/images/carousel-${i + 1}.webp`}
-              alt={`Slide ${i + 1}`}
-              className="w-full h-screen object-cover"
-              loading="lazy"
-            />
-          </SwiperSlide>
+          <SwiperSlide
+            key={i}
+            className="w-full h-full  bg-center bg-cover bg-fixed"
+            style={{
+              backgroundImage: `url(/images/carousel-${i + 1}.webp)`,
+            }}
+          ></SwiperSlide>
         ))}
       </Swiper>
 
