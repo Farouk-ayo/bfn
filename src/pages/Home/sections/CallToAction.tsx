@@ -28,7 +28,7 @@ const CallToAction: React.FC = () => {
               Volunteer as a mentor, advisor, or speaker
             </p>
             <a
-              href="https://entrepreneurs.utoronto.ca/about/get-involved/"
+              href="https://airtable.com/appRJdI32lTg60p4X/pagbTPCNOyXKA93Dp/form"
               target="_blank"
               rel="noopener noreferrer"
               className=" bg-primary text-white py-2 px-6 rounded-full hover:bg-secondary transition duration-300 flex items-center justify-center space-x-2 "

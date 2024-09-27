@@ -174,6 +174,19 @@ const SuccessStories: React.FC = () => {
         </Swiper>
       </div>
       <div className="w-3/4 text-center m-auto mt-10 text-primary2">
+        <p className="text-lg mb-6 font-semibold">
+          Watch the recap video of the BFN program
+        </p>
+        <div className="relative overflow-hidden rounded-lg shadow-lg mb-10">
+          <iframe
+            className="w-full h-64 sm:h-96 lg:h-[540px] xl:h-[600px]"
+            src="https://www.youtube.com/embed/TXNcNEV93T0"
+            title="BFN Program Recap"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
         <p className="text-lg mb-10">
           Click{" "}
           <a

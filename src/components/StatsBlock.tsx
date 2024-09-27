@@ -8,7 +8,7 @@ const StatsBlock: React.FC = () => {
         <div className="flex flex-col items-center mb-16">
           <div className="flex flex-col items-center justify-center stats-item relative">
             <h3 className="text-4xl sm:text-6xl  font-bold ">24</h3>
-            <p className="text-lg text-gray-500 mt-2">
+            <p className="text-lg text-gray-500 mt-2 font-semibold">
               Finalist Black Founders
             </p>
           </div>
@@ -58,7 +58,7 @@ const StatsBlock: React.FC = () => {
           {/* BFN Accelerate Program */}
           <div className="stats-item text-center flex flex-col items-center">
             <h3 className=" text-3xl sm:text-5xl font-bold">11</h3>
-            <p className="text-base sm:text-lg text-gray-500 mt-2">
+            <p className="text-base sm:text-lg text-gray-500 mt-2 font-semibold">
               BFN Accelerate Program
             </p>
           </div>
@@ -66,7 +66,7 @@ const StatsBlock: React.FC = () => {
           {/* BFN Smart Start Program */}
           <div className="stats-item text-center flex flex-col items-center">
             <h3 className="text-3xl sm:text-5xl  font-bold">13</h3>
-            <p className="text-base sm:text-lg text-gray-500 mt-2">
+            <p className="text-base sm:text-lg text-gray-500 mt-2 font-semibold">
               BFN Smart Start Program
             </p>
           </div>

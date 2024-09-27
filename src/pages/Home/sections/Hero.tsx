@@ -1,40 +1,68 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
+import { Swiper, SwiperSlide } from "swiper/react";
 import Navbar from "../../../components/Navbar";
+import { Autoplay, EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
 
 const Hero: React.FC = () => {
   useEffect(() => {
     // GSAP Animations for the hero text
     gsap.fromTo(
       ".hero-text",
-      { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1, delay: 0.5 }
+      { opacity: 0, y: 50 }, // Start further down
+      { opacity: 1, y: 0, duration: 1.2, ease: "power3.out", delay: 0.3 }
     );
     gsap.fromTo(
       ".tagline",
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 1, delay: 0.7 }
+      { opacity: 0, y: 30 }, // Start a bit lower
+      { opacity: 1, y: 0, duration: 1.2, ease: "power3.out", delay: 0.8 }
     );
+
+    // Animate the carousel images as they load
+    gsap.fromTo(
+      ".swiper-slide img",
+      { opacity: 0, y: 100 }, // Images start from bottom
+      { opacity: 1, y: 0, duration: 1.5, ease: "power3.out", stagger: 0.5 }
+    );
+
+    // Bounce effect for scroll indicator
+    gsap.to(".scroll-indicator", {
+      y: 20,
+      repeat: -1,
+      yoyo: true,
+      ease: "power1.inOut",
+      duration: 1.2,
+    });
   }, []);
 
   return (
     <div className="relative h-screen">
-      {/* Video Background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        preload="metadata"
+      {/* Image Carousel using Swiper */}
+      <Swiper
+        modules={[Autoplay, EffectFade]}
+        spaceBetween={0}
+        slidesPerView={1}
+        effect="fade"
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
+        loop={true}
+        className="absolute top-0 left-0 w-full h-screen z-0"
       >
-        <source src="/office.webm" type="video/webm" />
-        <source src="/office.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+        {Array.from({ length: 8 }, (_, i) => (
+          <SwiperSlide key={i}>
+            <img
+              src={`/images/carousel-${i + 1}.webp`}
+              alt={`Slide ${i + 1}`}
+              className="w-full h-screen object-cover"
+              loading="lazy"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
       {/* Overlay to make the text readable */}
-      <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-70 z-10"></div>
 
       {/* Navbar */}
       <Navbar />
@@ -43,20 +71,20 @@ const Hero: React.FC = () => {
       <section className="z-20 relative w-full h-full flex flex-col justify-center items-center text-white px-6 sm:px-12 pt-40 hero-section">
         {/* Center Text */}
         <div className="text-center hero-text space-y-4">
-          <h1 className="text-6xl sm:text-7xl font-bold uppercase leading-relaxed sm:leading-normal flex-col flex font-maldives">
+          <h1 className="text-5xl sm:text-7xl font-bold uppercase leading-relaxed sm:leading-normal flex-col flex font-tradegothic tracking-wide">
             Black{" "}
-            <span className="relative -skew-y-2 bg-primary scale-105 transform perspective-300">
-              <span className="block transform -skew-y-2">
+            <span className="relative -skew-y-1 bg-primary transform perspective-300">
+              <span className="block -skew-y-1 px-1">
                 Founders
-                <span className="absolute -bottom-1 left-0 w-full h-3 bg-white opacity-40 rotate-2"></span>
+                <span className="absolute -bottom-1 left-0 w-full h-2 bg-white opacity-40 rotate-1"></span>
               </span>
             </span>{" "}
             Network
           </h1>
-          <h2 className="font-maldives text-3xl sm:text-4xl mt-2 sm:mt-4">
+          <h2 className="font-tradegothic text-2xl sm:text-3xl mt-2 sm:mt-4 tracking-wider text-gray-200">
             2024
           </h2>
-          <p className="text-white text-lg mt-4 sm:mt-6 max-w-lg mx-auto tagline leading-relaxed sm:leading-normal">
+          <p className="text-gray-300 text-lg mt-4 sm:mt-6 max-w-lg mx-auto tagline leading-relaxed sm:leading-normal font-tradegothic tracking-wide">
             Empowering Black Founders to Innovate and Scale
           </p>
         </div>
@@ -65,7 +93,7 @@ const Hero: React.FC = () => {
         <div className="mt-16 sm:mt-24">
           <div className="scroll-indicator animate-bounce hover:scale-110 transition duration-300">
             <svg
-              className="w-10 h-10 text-white"
+              className="w-10 h-10 text-gray-300"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

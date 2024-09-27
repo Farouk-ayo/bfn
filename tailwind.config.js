@@ -14,6 +14,7 @@ export default {
         grotesk: ["ID Grotesk", "sans-serif"],
         billiona: ["Billiona", "sans-serif"],
         maldives: ["Maldives", "sans-serif"],
+        tradegothic: ["Trade Gothic LT Std", "sans-serif"],
       },
     },
   },

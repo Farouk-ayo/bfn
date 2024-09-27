@@ -32,7 +32,7 @@ export const founders = [
     description:
       "Tools to help small businesses design, customize, and order on-brand packaging for their products.",
     industryCategory: "Design, Branding, Packaging & Printing",
-    cohort: "BFN Accelerate",
+    cohort: "BFN Smart Start",
     sector: "design",
     imageUrl:
       "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-37-264x264.jpg",
@@ -215,7 +215,7 @@ export const founders = [
       "Health & Life Sciences, Medical Devices & Surgical, Research.",
     cohort: "BFN Accelerate",
     sector: "healthcare",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "https://i.ibb.co/Tb3bdnN/kareem.jpg",
     url: "https://www.karechem.com/",
     linkedIn: "https://ca.linkedin.com/in/kareem-abdur-rashid",
   },
@@ -240,7 +240,7 @@ export const founders = [
     industryCategory: "Health & Wellness",
     cohort: "BFN Accelerate",
     sector: "healthcare",
-    imageUrl: "https://via.placeholder.com/150",
+    imageUrl: "https://i.ibb.co/wKqmjX5/ynnovie.jpg",
     url: "https://www.medmelanin.com/",
     linkedIn: "https://ca.linkedin.com/in/yvonneosagie",
   },
