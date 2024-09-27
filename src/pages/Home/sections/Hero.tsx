@@ -52,7 +52,7 @@ const Hero: React.FC = () => {
         <div className="text-center hero-text space-y-4">
           <h1 className="text-5xl sm:text-7xl font-bold uppercase leading-relaxed sm:leading-normal flex-col flex font-tradegothic tracking-wide">
             Black{" "}
-            <span className="relative -skew-y-1 bg-[#00295c84] transform perspective-300">
+            <span className="relative -skew-y-1 bg-[#00295c6e] transform perspective-300">
               <span className="block -skew-y-1 px-1">
                 Founders
                 <span className="absolute -bottom-1 left-0 w-full h-2 bg-white opacity-40 rotate-1"></span>
