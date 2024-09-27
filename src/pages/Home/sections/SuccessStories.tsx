@@ -173,7 +173,7 @@ const SuccessStories: React.FC = () => {
           ))}
         </Swiper>
       </div>
-      <div className="w-3/4 text-center m-auto mt-10 text-primary2">
+      <div className=" w-full sm:w-3/4 px-4 sm:px-0 text-center m-auto mt-10 text-primary2">
         <p className="text-lg mb-6 font-semibold">
           Watch the recap video of the BFN program
         </p>
