@@ -446,7 +446,7 @@ const ProgramHighlights: React.FC = () => {
                   {/* Click to open modal */}
                   <button
                     onClick={() => openModal(highlight)}
-                    className="text-secondary hover:underline focus:outline-none"
+                    className="text-secondary font-semibold hover:underline focus:outline-none"
                   >
                     Explore moments
                   </button>
