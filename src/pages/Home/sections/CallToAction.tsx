@@ -11,7 +11,7 @@ const CallToAction: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Title */}
         <h2 className="text-4xl font-bold mb-6">Get Involved with BFN</h2>
-        <p className="text-xl mb-6 text-black">
+        <p className=" text-base sm:text-xl mb-6 text-black">
           Get involved with the impact at BFN. Join a thriving community of
           entrepreneurs, investors, and advocates in striving for the excellence
           of Black-owned businesses.
