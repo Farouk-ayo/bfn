@@ -50,7 +50,7 @@ const Hero: React.FC = () => {
       <section className="z-20 relative w-full h-full flex flex-col justify-center items-center text-white px-6 sm:px-12 pt-40 hero-section">
         {/* Center Text */}
         <div className="text-center hero-text space-y-4">
-          <h1 className="text-5xl sm:text-7xl font-bold uppercase  sm:leading-normal flex-col flex font-tradegothic tracking-wide">
+          <h1 className="text-5xl sm:text-7xl font-bold uppercase leading-tight sm:leading-normal flex-col flex font-tradegothic tracking-wide">
             Black{" "}
             <span className="relative -skew-y-1 bg-[#00295c6e] transform perspective-300">
               <span className="block -skew-y-1 px-1">
