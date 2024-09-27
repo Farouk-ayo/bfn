@@ -1,10 +1,6 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
-import { Swiper, SwiperSlide } from "swiper/react";
 import Navbar from "../../../components/Navbar";
-import { Autoplay, EffectFade } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-fade";
 
 const Hero: React.FC = () => {
   useEffect(() => {
@@ -32,29 +28,20 @@ const Hero: React.FC = () => {
 
   return (
     <div className="relative h-screen ">
-      {/* Image Carousel using Swiper */}
-      <Swiper
-        modules={[Autoplay, EffectFade]}
-        spaceBetween={0}
-        slidesPerView={1}
-        effect="fade"
-        autoplay={{ delay: 5000, disableOnInteraction: false }}
-        loop={true}
-        className="absolute top-0 left-0 w-full h-screen z-0 bg-fixed"
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        preload="metadata"
       >
-        {Array.from({ length: 8 }, (_, i) => (
-          <SwiperSlide
-            key={i}
-            className="w-full h-full  bg-center bg-cover bg-fixed"
-            style={{
-              backgroundImage: `url(/images/carousel-${i + 1}.webp)`,
-            }}
-          ></SwiperSlide>
-        ))}
-      </Swiper>
+        <source src="/bgvideo.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
 
       {/* Overlay to make the text readable */}
-      <div className="absolute inset-0 bg-black bg-opacity-70 z-10"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
 
       {/* Navbar */}
       <Navbar />
@@ -65,7 +52,7 @@ const Hero: React.FC = () => {
         <div className="text-center hero-text space-y-4">
           <h1 className="text-5xl sm:text-7xl font-bold uppercase leading-relaxed sm:leading-normal flex-col flex font-tradegothic tracking-wide">
             Black{" "}
-            <span className="relative -skew-y-1 bg-primary transform perspective-300">
+            <span className="relative -skew-y-1 bg-[#00295c84] transform perspective-300">
               <span className="block -skew-y-1 px-1">
                 Founders
                 <span className="absolute -bottom-1 left-0 w-full h-2 bg-white opacity-40 rotate-1"></span>
