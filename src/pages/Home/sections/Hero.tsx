@@ -48,21 +48,22 @@ const Hero: React.FC = () => {
 
       {/* Hero Section */}
       <section className="z-20 relative w-full h-full flex flex-col justify-center items-center text-white px-6 sm:px-12 pt-40 hero-section leading-tight sm:leading-normal">
-        <div className="text-center hero-text space-y-6 sm:space-y-8">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold uppercase flex-col flex font-tradegothic">
+        {/* Center Text */}
+        <div className="text-center hero-text space-y-4">
+          <h1 className="text-5xl sm:text-7xl font-bold uppercase  flex-col flex font-tradegothic ">
             Black{" "}
-            <span className="relative bg-[#00295c6e] inline-block transform -skew-y-1">
-              <span className="block px-2 -skew-y-1">Founders</span>
-              <span className="absolute -bottom-1 left-0 w-full h-1 bg-white opacity-40 rotate-1"></span>
+            <span className="relative -skew-y-1 bg-[#00295c6e] transform perspective-300">
+              <span className="block -skew-y-1 px-1">
+                Founders
+                <span className="absolute -bottom-1 left-0 w-full h-2 bg-white opacity-40 rotate-1"></span>
+              </span>
             </span>{" "}
-            Network
+            <span className="mt-2 sm:mt-0">Network</span>
           </h1>
-
-          <h2 className="font-tradegothic text-xl sm:text-2xl lg:text-3xl mt-2 sm:mt-4 tracking-wide text-gray-200">
+          <h2 className="font-tradegothic text-2xl sm:text-3xl mt-2 sm:mt-4 tracking-wider text-gray-200">
             2024
           </h2>
-
-          <p className="text-gray-300 text-base sm:text-lg lg:text-xl mt-4 sm:mt-6 max-w-lg mx-auto tagline leading-relaxed sm:leading-normal font-tradegothic tracking-wide">
+          <p className="text-gray-300 text-lg mt-4 sm:mt-6 max-w-lg mx-auto tagline leading-relaxed sm:leading-normal font-tradegothic tracking-wide">
             Empowering Black Founders to Innovate and Scale
           </p>
         </div>
