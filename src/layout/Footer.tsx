@@ -86,11 +86,13 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Footer Bottom */}
-      <div className="text-center mt-10 text-gray-500">
-        <p>&copy; 2024 Black Founders Network. All rights reserved.</p>
+      <div className="text-center mt-16 text-gray-500">
         <p className="mt-2">
           Microsite crafted by{" "}
           <strong className="text-white">Pitch Insights Consulting</strong>.
+        </p>
+        <p className=" text-white ">
+          &copy; 2024 Black Founders Network. All rights reserved.
         </p>
       </div>
     </footer>

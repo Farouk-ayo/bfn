@@ -56,7 +56,7 @@ const Founder: React.FC = () => {
   );
   const foundersToShow = showAll
     ? filteredFounders
-    : filteredFounders.slice(0, 8);
+    : filteredFounders.slice(0, 9);
 
   return (
     <section className="py-16 bg-light text-gray-900" id="founder">
@@ -89,7 +89,7 @@ const Founder: React.FC = () => {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6 sm:px-0 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  gap-6 px-6 sm:px-0 ">
           {foundersToShow.map((founder, index) => (
             <div
               key={index}
