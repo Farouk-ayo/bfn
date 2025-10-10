@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/ErrorPage";
 import FaizahBalogunPage from "./pages/Faizah";
 import Root from "./pages/Root";
+import Yearbook2025 from "./pages/Yearbook-2025";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/interview-faizah-balogun", element: <FaizahBalogunPage /> },
+      { path: "/yearbook-2025", element: <Yearbook2025 /> },
     ],
   },
 ]);
