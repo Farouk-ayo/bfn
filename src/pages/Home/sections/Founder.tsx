@@ -11,7 +11,7 @@ import {
   FaGlobe,
   FaLinkedin,
 } from "react-icons/fa"; // Icons for sectors
-import { founders } from "../../../data";
+import { founders } from "../../../../data/2024/founder-data";
 
 // Function to get icon based on business sector
 const getSectorIcon = (sector: string) => {
