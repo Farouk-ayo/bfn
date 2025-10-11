@@ -22,7 +22,7 @@ const ProgramHighlights = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-black/80 z-0" />
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl  mx-auto relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -59,7 +59,7 @@ const ProgramHighlights = () => {
 
               {/* Content Card */}
               <div
-                className={`ml-12 sm:ml-0 sm:w-5/12 ${
+                className={`ml-10 sm:ml-0 w-full sm:w-5/12 ${
                   idx % 2 === 0
                     ? "sm:pr-12 sm:text-right"
                     : "sm:pl-12 sm:text-left"

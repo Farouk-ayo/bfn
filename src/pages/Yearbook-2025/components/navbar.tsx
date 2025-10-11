@@ -16,7 +16,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed z-50 top-0 w-full flex justify-between items-center py-4 px-4 sm:py-6 sm:px-20 bg-black bg-opacity-90 backdrop-blur-md transition duration-500">
+    <nav className="fixed z-50 top-0 w-full flex justify-between items-center py-4 px-4 sm:py-6 sm:px-20  bg-opacity-100 backdrop-blur-3xl transition duration-500">
       <div className="text-white font-bold text-xl sm:text-2xl w-32 sm:w-44">
         <a href="/">
           <img src="/bfn-white.svg" alt="BFN Logo" />

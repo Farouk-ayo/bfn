@@ -89,7 +89,7 @@ const CohortOverview = () => {
                 Gender Distribution
               </h3>
 
-              <div className="flex flex-col sm:flex-row items-center gap-8">
+              <div className="flex sm:flex-row items-center  gap-8">
                 <div className="w-full sm:w-64">
                   <ResponsiveContainer width="100%" height={200}>
                     <PieChart>
