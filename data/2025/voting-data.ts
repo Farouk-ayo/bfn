@@ -9,18 +9,39 @@ export const votingCategories: VotingCategory[] = [
       "The founder who brought the room to life — energy, passion, and presence! Tap to vote for the pitch that fired you up most.",
     candidates: [
       {
-        id: "abdel-ali",
-        name: "Abdel Ali",
-        businessName: "Kiwi Charge",
+        id: "toluwanimi-Alebiosu",
+        name: "Toluwanimi (Tolu) Alebiosu",
+        businessName: "Wamiri",
         imageUrl:
-          "https://media.licdn.com/dms/image/v2/C4E03AQEA6NGdEMoYgw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1594948791283?e=1732752000&v=beta&t=QzWz9auUcKVTBgrqrHjDDbGrSkfzLBuse4Rh6n-q7iw",
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-21-264x264.jpg",
       },
       {
-        id: "jonathon-bloomfield",
-        name: "Jonathon Bloomfield",
-        businessName: "Edventive",
+        id: "isdora-msigwa",
+        name: "Isdora Msigwa",
+        businessName: "Nuru Health",
         imageUrl:
-          "https://media.licdn.com/dms/image/v2/C5603AQFv0RgC-jxZzQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1583770426234?e=1732752000&v=beta&t=ob2NmCPl3nf7OSy-zunIP1xaDxoiQ29-havGZnOPl4c",
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-19-1-scaled-e1716309899525-264x264.jpg",
+      },
+      {
+        id: "michael-owusu",
+        name: "Michael Owusu",
+        businessName: "Willify",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/1691813686053.jpeg",
+      },
+      {
+        id: "moses-odemuyiwa",
+        name: "Moses Odemuyiwa",
+        businessName: "InfraFlo",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-39-264x264.jpg",
+      },
+      {
+        id: "chubi-shaibu",
+        name: "Chubi Shaibu",
+        businessName: "Medidon'tcry",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-45-1-264x264.jpg",
       },
       {
         id: "toritse-tuedor",
@@ -59,6 +80,34 @@ export const votingCategories: VotingCategory[] = [
         imageUrl:
           "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-37-264x264.jpg",
       },
+      {
+        id: "michael-owusu",
+        name: "Michael Owusu",
+        businessName: "Willify",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/1691813686053.jpeg",
+      },
+      {
+        id: "moses-odemuyiwa",
+        name: "Moses Odemuyiwa",
+        businessName: "InfraFlo",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-39-264x264.jpg",
+      },
+      {
+        id: "chubi-shaibu",
+        name: "Chubi Shaibu",
+        businessName: "Medidon'tcry",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-45-1-264x264.jpg",
+      },
+      {
+        id: "toritse-tuedor",
+        name: "Toritse Tuedor",
+        businessName: "Tivora Studios",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-37-264x264.jpg",
+      },
     ],
   },
   {
@@ -81,6 +130,34 @@ export const votingCategories: VotingCategory[] = [
         businessName: "Edventive",
         imageUrl:
           "https://media.licdn.com/dms/image/v2/C5603AQFv0RgC-jxZzQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1583770426234?e=1732752000&v=beta&t=ob2NmCPl3nf7OSy-zunIP1xaDxoiQ29-havGZnOPl4c",
+      },
+      {
+        id: "toritse-tuedor",
+        name: "Toritse Tuedor",
+        businessName: "Tivora Studios",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-37-264x264.jpg",
+      },
+      {
+        id: "michael-owusu",
+        name: "Michael Owusu",
+        businessName: "Willify",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/1691813686053.jpeg",
+      },
+      {
+        id: "moses-odemuyiwa",
+        name: "Moses Odemuyiwa",
+        businessName: "InfraFlo",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-39-264x264.jpg",
+      },
+      {
+        id: "chubi-shaibu",
+        name: "Chubi Shaibu",
+        businessName: "Medidon'tcry",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-45-1-264x264.jpg",
       },
       {
         id: "toritse-tuedor",
@@ -119,6 +196,34 @@ export const votingCategories: VotingCategory[] = [
         imageUrl:
           "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-37-264x264.jpg",
       },
+      {
+        id: "michael-owusu",
+        name: "Michael Owusu",
+        businessName: "Willify",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/1691813686053.jpeg",
+      },
+      {
+        id: "moses-odemuyiwa",
+        name: "Moses Odemuyiwa",
+        businessName: "InfraFlo",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-39-264x264.jpg",
+      },
+      {
+        id: "chubi-shaibu",
+        name: "Chubi Shaibu",
+        businessName: "Medidon'tcry",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-45-1-264x264.jpg",
+      },
+      {
+        id: "toritse-tuedor",
+        name: "Toritse Tuedor",
+        businessName: "Tivora Studios",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-37-264x264.jpg",
+      },
     ],
   },
   {
@@ -141,6 +246,34 @@ export const votingCategories: VotingCategory[] = [
         businessName: "Edventive",
         imageUrl:
           "https://media.licdn.com/dms/image/v2/C5603AQFv0RgC-jxZzQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1583770426234?e=1732752000&v=beta&t=ob2NmCPl3nf7OSy-zunIP1xaDxoiQ29-havGZnOPl4c",
+      },
+      {
+        id: "toritse-tuedor",
+        name: "Toritse Tuedor",
+        businessName: "Tivora Studios",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-37-264x264.jpg",
+      },
+      {
+        id: "michael-owusu",
+        name: "Michael Owusu",
+        businessName: "Willify",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/1691813686053.jpeg",
+      },
+      {
+        id: "moses-odemuyiwa",
+        name: "Moses Odemuyiwa",
+        businessName: "InfraFlo",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-39-264x264.jpg",
+      },
+      {
+        id: "chubi-shaibu",
+        name: "Chubi Shaibu",
+        businessName: "Medidon'tcry",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-45-1-264x264.jpg",
       },
       {
         id: "toritse-tuedor",
@@ -179,6 +312,34 @@ export const votingCategories: VotingCategory[] = [
         imageUrl:
           "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-37-264x264.jpg",
       },
+      {
+        id: "michael-owusu",
+        name: "Michael Owusu",
+        businessName: "Willify",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/1691813686053.jpeg",
+      },
+      {
+        id: "moses-odemuyiwa",
+        name: "Moses Odemuyiwa",
+        businessName: "InfraFlo",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-39-264x264.jpg",
+      },
+      {
+        id: "chubi-shaibu",
+        name: "Chubi Shaibu",
+        businessName: "Medidon'tcry",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-45-1-264x264.jpg",
+      },
+      {
+        id: "toritse-tuedor",
+        name: "Toritse Tuedor",
+        businessName: "Tivora Studios",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-37-264x264.jpg",
+      },
     ],
   },
   {
@@ -209,6 +370,34 @@ export const votingCategories: VotingCategory[] = [
         imageUrl:
           "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-37-264x264.jpg",
       },
+      {
+        id: "michael-owusu",
+        name: "Michael Owusu",
+        businessName: "Willify",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/1691813686053.jpeg",
+      },
+      {
+        id: "moses-odemuyiwa",
+        name: "Moses Odemuyiwa",
+        businessName: "InfraFlo",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-39-264x264.jpg",
+      },
+      {
+        id: "chubi-shaibu",
+        name: "Chubi Shaibu",
+        businessName: "Medidon'tcry",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-45-1-264x264.jpg",
+      },
+      {
+        id: "toritse-tuedor",
+        name: "Toritse Tuedor",
+        businessName: "Tivora Studios",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-37-264x264.jpg",
+      },
     ],
   },
   {
@@ -231,6 +420,34 @@ export const votingCategories: VotingCategory[] = [
         businessName: "Edventive",
         imageUrl:
           "https://media.licdn.com/dms/image/v2/C5603AQFv0RgC-jxZzQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1583770426234?e=1732752000&v=beta&t=ob2NmCPl3nf7OSy-zunIP1xaDxoiQ29-havGZnOPl4c",
+      },
+      {
+        id: "toritse-tuedor",
+        name: "Toritse Tuedor",
+        businessName: "Tivora Studios",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-37-264x264.jpg",
+      },
+      {
+        id: "michael-owusu",
+        name: "Michael Owusu",
+        businessName: "Willify",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/1691813686053.jpeg",
+      },
+      {
+        id: "moses-odemuyiwa",
+        name: "Moses Odemuyiwa",
+        businessName: "InfraFlo",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-39-264x264.jpg",
+      },
+      {
+        id: "chubi-shaibu",
+        name: "Chubi Shaibu",
+        businessName: "Medidon'tcry",
+        imageUrl:
+          "https://entrepreneurs.utoronto.ca/wp-content/uploads/2024/05/OMV-0502-BFN-45-1-264x264.jpg",
       },
       {
         id: "toritse-tuedor",
