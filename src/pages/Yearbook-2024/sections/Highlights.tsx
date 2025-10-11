@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Modal from "../../../components/Modal";
+import Modal from "../components/Modal";
 import { highlights } from "../../../../data/2024/highlight-data";
 
 const ProgramHighlights: React.FC = () => {

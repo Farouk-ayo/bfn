@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { milestones, stats } from "../../../../data/2025/highlight-data";
+import { milestones } from "../../../../data/2025/highlight-data";
 
 const ProgramHighlights = () => {
   return (
@@ -19,7 +19,7 @@ const ProgramHighlights = () => {
       />
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-black/80 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-black/80 z-0" />
 
       {/* Content */}
       <div className="max-w-7xl  mx-auto relative z-10">
@@ -83,41 +83,6 @@ const ProgramHighlights = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* By the Numbers */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-6 sm:p-10 border-2 border-yellow-400"
-        >
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-yellow-400 mb-8 sm:mb-12">
-            By the Numbers
-          </h3>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
-            {stats.map((stat, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-                className="text-center p-4 sm:p-6 bg-black bg-opacity-50 rounded-2xl"
-              >
-                <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">
-                  {stat.icon}
-                </div>
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-yellow-400 mb-1 sm:mb-2">
-                  {stat.number}
-                </div>
-                <p className="text-gray-300 text-xs sm:text-sm md:text-base">
-                  {stat.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

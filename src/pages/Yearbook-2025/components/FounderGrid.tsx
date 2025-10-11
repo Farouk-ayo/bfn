@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import FounderModal from "../components/founderModal";
+import FounderModal from "./founderModal";
 import { founders } from "../../../../data/2025/founder-data";
 
 const FounderGrid = () => {
@@ -17,11 +17,8 @@ const FounderGrid = () => {
       : founders.filter((f) => f.cohort === `BFN ${selectedProgram}`);
 
   return (
-    <section
-      id="founders"
-      className="w-full py-12 sm:py-20 bg-black px-4 sm:px-8"
-    >
-      <div className="max-w-7xl mx-auto">
+    <section id="founders" className="w-full py-12 sm:py-20  px-4 sm:px-8">
+      <div className="max-w-7xl mx-auto z-10 relative">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -30,7 +27,7 @@ const FounderGrid = () => {
           className="text-center mb-8 sm:mb-12"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Meet Our <span className="text-yellow-400">Founders</span>
+            Meet Our <span className="text-gold">Founders</span>
           </h2>
           <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
             Explore the inspiring stories of our 2025 cohort
@@ -47,7 +44,7 @@ const FounderGrid = () => {
               }
               className={`px-4 sm:px-8 py-2 sm:py-3 rounded-full font-semibold text-sm sm:text-base transition-all duration-300 ${
                 selectedProgram === program
-                  ? "bg-yellow-400 text-black shadow-lg scale-105"
+                  ? "bg-gold text-black shadow-lg scale-105"
                   : "bg-gray-800 text-white hover:bg-gray-700"
               }`}
             >
@@ -74,7 +71,7 @@ const FounderGrid = () => {
                 onClick={() => setSelectedFounder(founder)}
                 className="cursor-pointer group"
               >
-                <div className="relative aspect-square rounded-full overflow-hidden border-4 border-gray-800 group-hover:border-yellow-400 transition-all duration-300">
+                <div className="relative aspect-square rounded-full overflow-hidden border-4 border-gray-800 group-hover:border-gold transition-all duration-300">
                   <img
                     src={founder.imageUrl}
                     alt={founder.name}

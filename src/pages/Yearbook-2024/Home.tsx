@@ -1,4 +1,4 @@
-import SplashScreenManager from "../../components/SplashScreenManager";
+import SplashScreenManager from "./components/SplashScreenManager";
 import CallToAction from "./sections/CallToAction";
 import Founder from "./sections/Founder";
 import Hero from "./sections/Hero";

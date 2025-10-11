@@ -1,5 +1,5 @@
 import React from "react";
-import StatsBlock from "../../../components/StatsBlock";
+import StatsBlock from "../components/StatsBlock";
 
 const Introduction: React.FC = () => {
   return (

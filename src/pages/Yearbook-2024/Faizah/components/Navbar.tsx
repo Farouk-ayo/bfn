@@ -1,5 +1,5 @@
 import { useState } from "react";
-import MobileNav from "../../../components/MobileNav";
+import MobileNav from "../../components/MobileNav";
 import { motion } from "framer-motion";
 
 const Navbar = () => {

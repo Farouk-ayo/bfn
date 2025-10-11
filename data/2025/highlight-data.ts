@@ -31,10 +31,3 @@ export const milestones = [
     description: "Building lasting connections",
   },
 ];
-
-export const stats = [
-  { number: "100+", label: "Mentorship Hours", icon: "⏰" },
-  { number: "24", label: "Demo Pitches", icon: "🎯" },
-  { number: "5+", label: "Partner Organizations", icon: "🤝" },
-  { number: "$50K+", label: "In Support Provided", icon: "💰" },
-];

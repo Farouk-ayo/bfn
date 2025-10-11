@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
-import Navbar from "../../../components/Navbar";
+import Navbar from "../components/Navbar";
 
 const Hero: React.FC = () => {
   useEffect(() => {

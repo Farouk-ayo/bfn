@@ -1,8 +1,8 @@
 import { Outlet } from "react-router";
-import Footer from "../layout/Footer";
 import { ScrollRestoration } from "react-router-dom";
+import Footer from "./layout/footer";
 
-const Root = () => {
+const Root25 = () => {
   return (
     <section>
       <ScrollRestoration />
@@ -11,4 +11,4 @@ const Root = () => {
     </section>
   );
 };
-export default Root;
+export default Root25;

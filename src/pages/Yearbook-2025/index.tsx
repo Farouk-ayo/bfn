@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import Navbar from "./components/navbar";
+import Navbar from "./layout/navbar";
 import HeroSection from "./sections/Hero";
 import CohortOverview from "./sections/CohortOverview";
-import FounderGrid from "./sections/FounderGrid";
 import ProgramHighlights from "./sections/ProgramHighlights";
 import MemoriesSection from "./sections/Memories";
+import Founder from "./sections/Founder";
 
 const Yearbook2025 = () => {
   useEffect(() => {
@@ -16,7 +16,7 @@ const Yearbook2025 = () => {
       <Navbar />
       <HeroSection />
       <CohortOverview />
-      <FounderGrid />
+      <Founder />
       <ProgramHighlights />
       <MemoriesSection />
     </div>
