@@ -5,6 +5,7 @@ import CohortOverview from "./sections/CohortOverview";
 import ProgramHighlights from "./sections/ProgramHighlights";
 import MemoriesSection from "./sections/Memories";
 import Founder from "./sections/Founder";
+import VotingSection from "./sections/Voting";
 
 const Yearbook2025 = () => {
   useEffect(() => {
@@ -19,6 +20,7 @@ const Yearbook2025 = () => {
       <Founder />
       <ProgramHighlights />
       <MemoriesSection />
+      <VotingSection />
     </div>
   );
 };
