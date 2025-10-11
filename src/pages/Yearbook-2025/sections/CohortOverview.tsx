@@ -1,110 +1,185 @@
 import { motion } from "framer-motion";
+import {
+  PieChart,
+  Pie,
+  Cell,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  ResponsiveContainer,
+  Tooltip,
+} from "recharts";
+interface GenderData {
+  name: string;
+  value: number;
+  percentage: number;
+}
 
 const CohortOverview = () => {
+  const genderData = [
+    { name: "Male", value: 14, percentage: 58 },
+    { name: "Female", value: 10, percentage: 42 },
+  ];
+
+  const industryData = [
+    { name: "Healthcare", count: 6 },
+    { name: "Education", count: 5 },
+    { name: "Technology", count: 4 },
+    { name: "E-commerce", count: 3 },
+    { name: "Fintech", count: 3 },
+  ];
+
+  const COLORS = {
+    male: "#D1A000",
+    female: "#FF6F61",
+  };
+
+  interface CustomTooltipProps {
+    active?: boolean;
+    payload?: Array<{
+      name: string;
+      value: number;
+      payload: GenderData;
+    }>;
+  }
+
+  const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="bg-black bg-opacity-90 px-3 py-2 rounded border border-gold">
+          <p className="text-white text-sm">
+            {payload[0].name}: {payload[0].value} (
+            {payload[0].payload.percentage}%)
+          </p>
+        </div>
+      );
+    }
+    return null;
+  };
+
   return (
     <section
       id="cohort"
-      className="w-full py-12 sm:py-20 bg-gradient-to-b from-black to-gray-900 px-4 sm:px-8"
+      className="w-full py-16 sm:py-24 bg-black px-4 sm:px-8"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center"
+          transition={{ duration: 0.6 }}
+          className="grid grid-cols-1 lg:grid-cols-5 items-center gap-12 lg:gap-16"
         >
           {/* Left: Headline */}
-          <div className="text-center lg:text-left">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
-              <span className="text-yellow-400">24 Founders.</span>
-              <br />
-              <span className="text-yellow-400">15 Industries.</span>
-              <br />
-              <span className="text-white">1 Bold Community.</span>
+          <div className="lg:col-span-2">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-maldives leading-tight mb-6">
+              <div className="text-gold mb-3">24 Founders.</div>
+              <div className="text-gold mb-3">5 Industries.</div>
+              <div className="text-white">1 Bold Community.</div>
             </h2>
-            <div className="w-24 h-1 bg-yellow-400 mx-auto lg:mx-0 mt-6" />
+            <div className="w-16 h-1 bg-gold" />
           </div>
 
           {/* Right: Data Visuals */}
-          <div className="space-y-6 sm:space-y-8">
+          <div className="lg:col-span-3 space-y-12">
             {/* Gender Distribution */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="bg-gray-800 bg-opacity-50 backdrop-blur-sm p-6 rounded-2xl border border-yellow-400 border-opacity-20"
-            >
-              <h3 className="text-xl sm:text-2xl font-bold text-yellow-400 mb-4 flex items-center">
-                <span className="mr-3">👥</span> Gender Distribution
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-6 font-maldives">
+                Gender Distribution
               </h3>
-              <div className="flex items-center justify-between">
-                <div className="flex-1">
-                  <div className="flex items-center mb-2">
-                    <div className="w-full bg-gray-700 rounded-full h-3 mr-3">
-                      <div
-                        className="bg-yellow-400 h-3 rounded-full"
-                        style={{ width: "58%" }}
-                      />
+
+              <div className="flex flex-col sm:flex-row items-center gap-8">
+                <div className="w-full sm:w-64">
+                  <ResponsiveContainer width="100%" height={200}>
+                    <PieChart>
+                      <Pie
+                        data={genderData}
+                        cx="50%"
+                        cy="50%"
+                        innerRadius={60}
+                        outerRadius={80}
+                        paddingAngle={2}
+                        dataKey="value"
+                      >
+                        <Cell fill={COLORS.male} />
+                        <Cell fill={COLORS.female} />
+                      </Pie>
+                      <Tooltip content={<CustomTooltip />} />
+                    </PieChart>
+                  </ResponsiveContainer>
+                </div>
+
+                <div className="space-y-4 flex-1">
+                  {genderData.map((entry, index) => (
+                    <div
+                      key={index}
+                      className="flex items-center justify-between"
+                    >
+                      <div className="flex items-center gap-3">
+                        <div
+                          className="w-4 h-4 rounded-sm"
+                          style={{
+                            backgroundColor:
+                              index === 0 ? COLORS.male : COLORS.female,
+                          }}
+                        />
+                        <span className="text-softGray font-body">
+                          {entry.name}
+                        </span>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-white font-semibold">
+                          {entry.value}
+                        </div>
+                        <div className="text-sm text-gray-500">
+                          {entry.percentage}%
+                        </div>
+                      </div>
                     </div>
-                    <span className="text-white text-sm sm:text-base whitespace-nowrap">
-                      58% Male
-                    </span>
-                  </div>
-                  <div className="flex items-center">
-                    <div className="w-full bg-gray-700 rounded-full h-3 mr-3">
-                      <div
-                        className="bg-coral-400"
-                        style={{
-                          width: "42%",
-                          backgroundColor: "#FF6F61",
-                          height: "100%",
-                          borderRadius: "9999px",
-                        }}
-                      />
-                    </div>
-                    <span className="text-white text-sm sm:text-base whitespace-nowrap">
-                      42% Female
-                    </span>
-                  </div>
+                  ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
 
-            {/* Industry Categories */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="bg-gray-800 bg-opacity-50 backdrop-blur-sm p-6 rounded-2xl border border-yellow-400 border-opacity-20"
-            >
-              <h3 className="text-xl sm:text-2xl font-bold text-yellow-400 mb-4 flex items-center">
-                <span className="mr-3">💼</span> Top Industries
+            {/* Industry Breakdown */}
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-6 font-maldives">
+                Top Industries
               </h3>
-              <div className="space-y-3">
-                {[
-                  { name: "Healthcare & Wellness", icon: "🏥", count: 6 },
-                  { name: "Education & Learning", icon: "📚", count: 5 },
-                  { name: "Technology & AI", icon: "💻", count: 4 },
-                  { name: "E-commerce & Fashion", icon: "🛍️", count: 3 },
-                  { name: "Fintech & Legal", icon: "💰", count: 3 },
-                ].map((industry, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center justify-between text-white"
-                  >
-                    <span className="text-sm sm:text-base">
-                      {industry.icon} {industry.name}
-                    </span>
-                    <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-xs sm:text-sm font-bold">
-                      {industry.count}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+
+              <ResponsiveContainer width="100%" height={280}>
+                <BarChart
+                  data={industryData}
+                  layout="vertical"
+                  margin={{ top: 5, right: 30, left: 80, bottom: 5 }}
+                >
+                  <XAxis type="number" hide />
+                  <YAxis
+                    type="category"
+                    dataKey="name"
+                    tick={{ fill: "#F5F5F5", fontSize: 14 }}
+                    axisLine={false}
+                    tickLine={false}
+                  />
+                  <Tooltip
+                    cursor={{ fill: "rgba(209, 160, 0, 0.1)" }}
+                    contentStyle={{
+                      backgroundColor: "rgba(0, 0, 0, 0.9)",
+                      border: "1px solid #D1A000",
+                      borderRadius: "4px",
+                    }}
+                    labelStyle={{ color: "#F5F5F5" }}
+                  />
+                  <Bar
+                    dataKey="count"
+                    fill="#D1A000"
+                    radius={[0, 8, 8, 0]}
+                    barSize={32}
+                  />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
           </div>
         </motion.div>
 
@@ -113,11 +188,11 @@ const CohortOverview = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.6, duration: 0.8 }}
-          className="text-center text-gray-400 text-sm sm:text-base md:text-lg mt-8 sm:mt-12 max-w-3xl mx-auto px-4"
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="text-center text-gray-400 text-base mt-16 max-w-2xl mx-auto font-body"
         >
-          Spanning from coast to coast, the 2025 BFN founders are redefining
-          innovation in Canada.
+          Spanning across multiple industries, the 2025 BFN founders are
+          redefining innovation in Canada.
         </motion.p>
       </div>
     </section>

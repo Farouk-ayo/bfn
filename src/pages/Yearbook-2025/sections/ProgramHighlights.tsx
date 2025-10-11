@@ -5,9 +5,24 @@ const ProgramHighlights = () => {
   return (
     <section
       id="highlights"
-      className="w-full py-12 sm:py-20 bg-gradient-to-b from-gray-900 to-black px-4 sm:px-8"
+      className="relative w-full py-12 sm:py-20 px-4 sm:px-8 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto">
+      {/* Background Image Layer */}
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: "url('/sun-tornado.svg')",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-black/80 z-0" />
+
+      {/* Content */}
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

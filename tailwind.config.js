@@ -9,6 +9,7 @@ export default {
         tertiary: "#D8D2C2",
         light: "#FAF7F0",
         primary2: "#4A4947",
+        // 2025
         black: "#0A0A0A",
         gold: "#D1A000",
         coral: "#FF6F61",
