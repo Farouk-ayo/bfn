@@ -50,7 +50,7 @@ const ProgramHighlights = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className={`relative flex items-center mb-8 sm:mb-12 ${
+              className={`relative flex items-center mb-8 sm:mb-12  ${
                 idx % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
               } flex-row`}
             >
@@ -67,7 +67,7 @@ const ProgramHighlights = () => {
               >
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className={`bg-gradient-to-br ${milestone.color} p-6 rounded-2xl shadow-xl`}
+                  className={` p-6 rounded-2xl shadow-xl   bg-black/20`}
                 >
                   <div className="text-4xl sm:text-5xl mb-3">
                     {milestone.icon}
