@@ -1,6 +1,7 @@
 import { ref, onValue, runTransaction, get, set } from "firebase/database";
 import { database } from "./firebase.config";
 
+const VOTING_SESSION_VERSION = "v1";
 export interface Candidate {
   id: string;
   name: string;
@@ -16,6 +17,36 @@ export interface VotingCategory {
   description: string;
   candidates: Candidate[];
 }
+const checkVotingSession = async (): Promise<void> => {
+  const sessionRef = ref(database, "votingSession");
+  const snapshot = await get(sessionRef);
+  const currentSession = snapshot.val();
+
+  // If session version doesn't match, clear all localStorage votes
+  const storedSession = localStorage.getItem("votingSession");
+  console.log("session", currentSession, storedSession);
+
+  if (!currentSession) {
+    // Initialize session in Firebase
+    await set(sessionRef, VOTING_SESSION_VERSION);
+    localStorage.setItem("votingSession", VOTING_SESSION_VERSION);
+  } else if (storedSession !== currentSession) {
+    // Session changed! Clear all votes
+    console.log("🔄 Voting session changed - clearing local votes");
+    clearAllLocalVotes();
+    localStorage.setItem("votingSession", currentSession);
+  }
+};
+
+// Clear all vote records from localStorage
+const clearAllLocalVotes = (): void => {
+  const keys = Object.keys(localStorage);
+  keys.forEach((key) => {
+    if (key.startsWith("voted-")) {
+      localStorage.removeItem(key);
+    }
+  });
+};
 
 // Subscribe to real-time vote updates for a category
 export const subscribeToCategory = (
@@ -47,6 +78,8 @@ export const castVote = async (
   categoryId: string,
   candidateId: string
 ): Promise<void> => {
+  await checkVotingSession();
+
   // Check global voting status
   const statusRef = ref(database, "votingStatus");
   const statusSnapshot = await get(statusRef);
@@ -71,11 +104,13 @@ export const castVote = async (
 
 // Check if user has voted in a category
 export const hasVotedInCategory = (categoryId: string): boolean => {
+  checkVotingSession();
   return !!localStorage.getItem(`voted-${categoryId}`);
 };
 
 // Get vote choice for a category
 export const getVoteChoice = (categoryId: string): string | null => {
+  checkVotingSession();
   return localStorage.getItem(`voted-${categoryId}`);
 };
 
