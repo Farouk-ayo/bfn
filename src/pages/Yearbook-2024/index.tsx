@@ -7,7 +7,7 @@ import Introduction from "./sections/Introduction";
 import Milestone from "./sections/Milestone";
 import SuccessStories from "./sections/SuccessStories";
 
-const Home = () => {
+const Yearbook2024 = () => {
   return (
     <SplashScreenManager>
       <Hero />
@@ -20,4 +20,4 @@ const Home = () => {
     </SplashScreenManager>
   );
 };
-export default Home;
+export default Yearbook2024;
