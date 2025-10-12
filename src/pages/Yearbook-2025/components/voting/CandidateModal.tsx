@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { VotingCategory } from "../../../../types";
 import { useState } from "react";
+import { useVoting } from "../../../../hooks/useVoting";
 
 const CandidateModal = ({
   category,
@@ -9,15 +10,26 @@ const CandidateModal = ({
 }: {
   category: VotingCategory;
   onClose: () => void;
-  onVote: (candidateId: string) => void;
+  onVote: () => void;
 }) => {
   const [selectedCandidate, setSelectedCandidate] = useState<string | null>(
     null
   );
+  const { vote, isVoting, hasVoted, votedFor } = useVoting(category);
 
-  const handleVote = () => {
-    if (selectedCandidate) {
-      onVote(selectedCandidate);
+  const handleVote = async () => {
+    if (selectedCandidate && !isVoting) {
+      try {
+        await vote(selectedCandidate);
+        onVote();
+      } catch (error) {
+        console.error("Error voting:", error);
+        alert(
+          error instanceof Error
+            ? error.message
+            : "Failed to cast vote. Please try again."
+        );
+      }
     }
   };
 
@@ -46,6 +58,13 @@ const CandidateModal = ({
             <p className="text-gray-400 text-sm sm:text-base font-body">
               {category.description}
             </p>
+            {hasVoted && (
+              <div className="mt-3 inline-block bg-gold/20 border border-gold rounded-full px-4 py-1">
+                <span className="text-gold text-sm font-bold">
+                  ✓ You voted in this category
+                </span>
+              </div>
+            )}
           </div>
           <button
             onClick={onClose}
@@ -57,58 +76,89 @@ const CandidateModal = ({
 
         {/* Scrollable Candidates Container */}
         <div className="flex-1 overflow-y-auto p-6 sm:p-8 space-y-3">
-          {category.candidates.map((candidate) => (
-            <motion.div
-              key={candidate.id}
-              onClick={() => setSelectedCandidate(candidate.id)}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className={`flex items-center gap-4 p-4 rounded-xl cursor-pointer transition-all ${
-                selectedCandidate === candidate.id
-                  ? "bg-gold/20 border-2 border-gold"
-                  : "bg-gray-800 border-2 border-transparent hover:border-gray-700"
-              }`}
-            >
-              <div className="relative flex-shrink-0">
-                <img
-                  src={candidate.imageUrl}
-                  alt={candidate.name}
-                  className="w-16 h-16 rounded-full object-cover"
-                />
-                {selectedCandidate === candidate.id && (
-                  <div className="absolute -top-1 -right-1 bg-gold text-black rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">
-                    ✓
-                  </div>
-                )}
-              </div>
+          {category.candidates.map((candidate) => {
+            const isVotedFor = votedFor === candidate.id;
+            const isSelected = selectedCandidate === candidate.id;
 
-              <div className="flex-1 min-w-0">
-                <h4 className="text-white font-semibold text-lg truncate">
-                  {candidate.name}
-                </h4>
-                <p className="text-gray-400 text-sm truncate">
-                  {candidate.businessName}
-                </p>
-              </div>
-            </motion.div>
-          ))}
+            return (
+              <motion.div
+                key={candidate.id}
+                onClick={() => !isVoting && setSelectedCandidate(candidate.id)}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className={`flex items-center gap-4 p-4 rounded-xl cursor-pointer transition-all ${
+                  isSelected
+                    ? "bg-gold/20 border-2 border-gold"
+                    : isVotedFor
+                    ? "bg-green-900/20 border-2 border-green-500"
+                    : "bg-gray-800 border-2 border-transparent hover:border-gray-700"
+                }`}
+              >
+                <div className="relative flex-shrink-0">
+                  <img
+                    src={candidate.imageUrl}
+                    alt={candidate.name}
+                    className="w-16 h-16 rounded-full object-cover"
+                  />
+                  {isSelected && (
+                    <div className="absolute -top-1 -right-1 bg-gold text-black rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">
+                      ✓
+                    </div>
+                  )}
+                  {isVotedFor && !isSelected && (
+                    <div className="absolute -top-1 -right-1 bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">
+                      ✓
+                    </div>
+                  )}
+                </div>
+
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-white font-semibold text-lg truncate">
+                    {candidate.name}
+                  </h4>
+                  <p className="text-gray-400 text-sm truncate">
+                    {candidate.businessName}
+                  </p>
+                  {isVotedFor && !isSelected && (
+                    <p className="text-green-500 text-xs mt-1 font-semibold">
+                      Your previous vote
+                    </p>
+                  )}
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
 
         {/* Fixed Button at Bottom */}
         <div className="p-6 sm:p-8 border-t border-gray-800 bg-gray-900">
           <motion.button
             onClick={handleVote}
-            disabled={!selectedCandidate}
-            whileHover={selectedCandidate ? { scale: 1.05 } : {}}
-            whileTap={selectedCandidate ? { scale: 0.95 } : {}}
+            disabled={!selectedCandidate || isVoting}
+            whileHover={selectedCandidate && !isVoting ? { scale: 1.05 } : {}}
+            whileTap={selectedCandidate && !isVoting ? { scale: 0.95 } : {}}
             className={`w-full py-4 rounded-full font-bold text-lg transition-all ${
-              selectedCandidate
+              selectedCandidate && !isVoting
                 ? "bg-gradient-to-r from-gold to-yellow-600 text-black hover:shadow-2xl"
                 : "bg-gray-700 text-gray-500 cursor-not-allowed"
             }`}
           >
-            {selectedCandidate ? "Cast Your Vote 🎉" : "Select a Candidate"}
+            {isVoting
+              ? "Casting Vote..."
+              : hasVoted
+              ? selectedCandidate
+                ? "Change Your Vote 🎉"
+                : "Select to Change Vote"
+              : selectedCandidate
+              ? "Cast Your Vote 🎉"
+              : "Select a Candidate"}
           </motion.button>
+
+          {hasVoted && (
+            <p className="text-center text-gray-500 text-sm mt-3">
+              You can change your vote anytime
+            </p>
+          )}
         </div>
       </motion.div>
     </motion.div>

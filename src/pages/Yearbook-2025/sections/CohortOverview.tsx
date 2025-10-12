@@ -89,7 +89,7 @@ const CohortOverview = () => {
                 Gender Distribution
               </h3>
 
-              <div className="flex sm:flex-row items-center  gap-8">
+              <div className="flex sm:flex-row items-center  sm:gap-8 mr-4 ">
                 <div className="w-full sm:w-64">
                   <ResponsiveContainer width="100%" height={200}>
                     <PieChart>
@@ -110,7 +110,7 @@ const CohortOverview = () => {
                   </ResponsiveContainer>
                 </div>
 
-                <div className="space-y-4 flex-1">
+                <div className="space-y-4 flex-1 ">
                   {genderData.map((entry, index) => (
                     <div
                       key={index}

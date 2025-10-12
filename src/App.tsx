@@ -9,6 +9,7 @@ import FaizahBalogunPage from "./pages/Yearbook-2024/Faizah";
 import Yearbook2025 from "./pages/Yearbook-2025";
 import Root25 from "./pages/Yearbook-2025/Root";
 import Root24 from "./pages/Yearbook-2024/Root";
+import Leaderboard from "./pages/Yearbook-2025/pages/Leaderboard";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,10 @@ const router = createBrowserRouter([
     path: "/yearbook-2025",
     element: <Root25 />,
     errorElement: <ErrorPage />,
-    children: [{ index: true, element: <Yearbook2025 /> }],
+    children: [
+      { index: true, element: <Yearbook2025 /> },
+      { path: "leaderboard", element: <Leaderboard /> },
+    ],
   },
 ]);
 

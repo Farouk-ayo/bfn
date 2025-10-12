@@ -1,20 +1,21 @@
-import { useState } from "react";
 import { VotingCategory } from "../../../../types";
 import { motion } from "framer-motion";
+import { hasVotedInCategory } from "../../../../services/voting.service";
 
 const CategoryCard = ({
   category,
   onClick,
+  voteUpdate,
 }: {
   category: VotingCategory;
   onClick: () => void;
+  voteUpdate: number;
 }) => {
-  //   const [votes, setVotes] = useState<Record<string, number>>({});
-  const [votes] = useState<Record<string, number>>({});
-  const hasVoted = votes[`voted-${category.id}`] !== undefined;
+  const hasVoted = hasVotedInCategory(category.id);
 
   return (
     <motion.div
+      key={`${category.id}-${voteUpdate}`}
       onClick={onClick}
       whileHover={{ scale: 1.05, y: -5 }}
       whileTap={{ scale: 0.95 }}
@@ -41,12 +42,12 @@ const CategoryCard = ({
       </p>
 
       <div className="flex items-center justify-between">
-        <span className="text-gold text-sm font-semibold">Tap to Vote →</span>
-        {hasVoted && (
-          <span className="text-xs text-gray-500">
-            {category.candidates.length} nominees
-          </span>
-        )}
+        <span className="text-gold text-sm font-semibold">
+          {hasVoted ? "Vote Again →" : "Tap to Vote →"}
+        </span>
+        <span className="text-xs text-gray-500">
+          {category.candidates.length} nominees
+        </span>
       </div>
     </motion.div>
   );
