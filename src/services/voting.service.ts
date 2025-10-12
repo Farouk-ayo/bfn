@@ -1,4 +1,4 @@
-import { ref, onValue, runTransaction, get } from "firebase/database";
+import { ref, onValue, runTransaction, get, set } from "firebase/database";
 import { database } from "./firebase.config";
 
 export interface Candidate {
@@ -47,21 +47,25 @@ export const castVote = async (
   categoryId: string,
   candidateId: string
 ): Promise<void> => {
+  // Check global voting status
+  const statusRef = ref(database, "votingStatus");
+  const statusSnapshot = await get(statusRef);
+  const currentStatus = statusSnapshot.val() || "open";
+
+  if (currentStatus !== "open") {
+    throw new Error("Voting is currently closed.");
+  }
+
   // Check if already voted in this category
   const hasVoted = localStorage.getItem(`voted-${categoryId}`);
-
   if (hasVoted) {
     throw new Error("You have already voted in this category");
   }
 
+  // Proceed with transaction
   const voteRef = ref(database, `votes/${categoryId}/${candidateId}`);
+  await runTransaction(voteRef, (currentVotes) => (currentVotes || 0) + 1);
 
-  // Use transaction to ensure atomic increment
-  await runTransaction(voteRef, (currentVotes) => {
-    return (currentVotes || 0) + 1;
-  });
-
-  // Mark as voted locally
   localStorage.setItem(`voted-${categoryId}`, candidateId);
 };
 
@@ -112,42 +116,27 @@ export const getCategoryWinner = async (
   return { candidateId: winnerId, votes: maxVotes };
 };
 
-// Admin function: Toggle voting status
 export const setVotingStatus = async (
-  status: "open" | "closed" | "paused"
+  status: "open" | "closed"
 ): Promise<void> => {
   const statusRef = ref(database, "votingStatus");
-  await runTransaction(statusRef, () => status);
+  await set(statusRef, status);
 };
 
-// Subscribe to voting status
 export const subscribeToVotingStatus = (
-  callback: (status: "open" | "closed" | "paused") => void
+  callback: (status: "open" | "closed") => void
 ) => {
   const statusRef = ref(database, "votingStatus");
 
-  return onValue(statusRef, (snapshot) => {
-    const status = snapshot.val() || "open";
+  return onValue(statusRef, async (snapshot) => {
+    let status = snapshot.val();
+    console.log(status, "jd");
+
+    if (!status) {
+      await set(statusRef, "open");
+      status = "open";
+    }
+
     callback(status);
   });
-};
-
-// Admin function: Reset all votes (use with caution!)
-export const resetAllVotes = async (): Promise<void> => {
-  const votesRef = ref(database, "votes");
-  await runTransaction(votesRef, () => ({}));
-
-  // Clear localStorage
-  Object.keys(localStorage).forEach((key) => {
-    if (key.startsWith("voted-")) {
-      localStorage.removeItem(key);
-    }
-  });
-};
-
-// Export results for admin
-export const exportVotingResults = async () => {
-  const votesRef = ref(database, "votes");
-  const snapshot = await get(votesRef);
-  return snapshot.val() || {};
 };

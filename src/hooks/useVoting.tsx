@@ -85,9 +85,8 @@ export const useVoting = (category: VotingCategory): UseVotingReturn => {
   };
 };
 
-// Hook for voting status (open/closed/paused)
 export const useVotingStatus = () => {
-  const [status, setStatus] = useState<"open" | "closed" | "paused">("open");
+  const [status, setStatus] = useState<"open" | "closed" | "">("");
 
   useEffect(() => {
     const unsubscribe = subscribeToVotingStatus((newStatus) => {

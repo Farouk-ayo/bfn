@@ -15,6 +15,7 @@ const VotingSection = () => {
   const [showConfetti, setShowConfetti] = useState(false);
   const [voteUpdate, setVoteUpdate] = useState(0);
   const votingStatus = useVotingStatus();
+  console.log(votingStatus);
 
   const handleVote = () => {
     setShowConfetti(true);
@@ -31,6 +32,7 @@ const VotingSection = () => {
 
   // Check if voting is open
   const isVotingOpen = votingStatus === "open";
+  console.log(isVotingOpen);
 
   return (
     <section
