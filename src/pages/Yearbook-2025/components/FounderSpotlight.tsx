@@ -20,14 +20,14 @@ const subthemes = [
     founders: [] as typeof founders,
   },
   {
-    title: "The Dreamers",
+    title: "The Changemakers",
     cardColor: "#FFF9E6",
     accent: "#D1A000",
     description: "Bringing bold visions to life",
     founders: [] as typeof founders,
   },
   {
-    title: "The Connectors",
+    title: "The Craftsmen",
     cardColor: "#FFE8E5",
     accent: "#FF6F61",
     description: "Building bridges and communities",
@@ -42,13 +42,10 @@ const FounderSpotlights = () => {
   const scrollContainerRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   // Categorize founders by theme
-  const categorizedThemes = subthemes.map((theme) => ({ ...theme }));
-
-  founders.forEach((founder, index) => {
-    const themeIndex = index % 4;
-    categorizedThemes[themeIndex].founders.push(founder);
-  });
-
+  const categorizedThemes = subthemes.map((theme) => ({
+    ...theme,
+    founders: founders.filter((f) => f.theme === theme.title),
+  }));
   const scroll = (index: number, direction: "left" | "right") => {
     const container = scrollContainerRefs.current[index];
     if (container) {

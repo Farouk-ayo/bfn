@@ -14,7 +14,7 @@ const FounderGrid = () => {
   const filteredFounders =
     selectedProgram === "all"
       ? founders
-      : founders.filter((f) => f.cohort === `BFN ${selectedProgram}`);
+      : founders.filter((f) => f.cohort === `${selectedProgram}`);
 
   return (
     <section id="founders" className="w-full py-12 sm:py-20  px-4 sm:px-8">
