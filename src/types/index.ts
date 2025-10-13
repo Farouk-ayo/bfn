@@ -22,11 +22,7 @@ export interface Founder {
 }
 
 // VOTING
-export interface Candidate {
-  id: string;
-  name: string;
-  businessName: string;
-  imageUrl: string;
+export interface Candidate extends Founder {
   votes?: number;
 }
 
