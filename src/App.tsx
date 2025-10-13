@@ -10,6 +10,7 @@ import Root25 from "./pages/Yearbook-2025/Root";
 import Root24 from "./pages/Yearbook-2024/Root";
 import Leaderboard from "./pages/Yearbook-2025/pages/Leaderboard";
 import Yearbook2024 from "./pages/Yearbook-2024";
+import { inject } from "@vercel/analytics";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,7 @@ function App() {
       once: false,
     });
     AOS.refresh();
+    inject();
   }, []);
   return <RouterProvider router={router} />;
 }
