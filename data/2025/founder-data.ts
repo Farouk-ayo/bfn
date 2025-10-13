@@ -2,6 +2,7 @@ import { Founder } from "../../src/types";
 
 export const founders: Founder[] = [
   {
+    id: "tomi-johnson",
     name: "Tomi Johnson",
     businessName: "Kazo.ai",
     description:
@@ -20,6 +21,7 @@ export const founders: Founder[] = [
     theme: "The Builders",
   },
   {
+    id: "wisdom-mawuenyefia-amenyo",
     name: "Wisdom Mawuenyefia Amenyo",
     businessName: "Pearlion Medical Technologies Inc.",
     description:
@@ -38,6 +40,7 @@ export const founders: Founder[] = [
     theme: "The Healers",
   },
   {
+    id: "lyle-williams",
     name: "Lyle Williams",
     businessName: "Magnify access",
     description:
@@ -55,6 +58,7 @@ export const founders: Founder[] = [
     theme: "The Changemakers",
   },
   {
+    id: "ibukun-elebute",
     name: "Ibukun Elebute",
     businessName: "CELLECT Laboratories",
     description:
@@ -72,6 +76,7 @@ export const founders: Founder[] = [
     theme: "The Healers",
   },
   {
+    id: "njideka-onwuasor",
     name: "Njideka Onwuasor",
     businessName: "MyHelper",
     description:
@@ -89,6 +94,7 @@ export const founders: Founder[] = [
     theme: "The Changemakers",
   },
   {
+    id: "fatima-abdillahi",
     name: "Fatima Abdillahi",
     businessName: "Agentflow",
     description:
@@ -107,6 +113,7 @@ export const founders: Founder[] = [
     theme: "The Builders",
   },
   {
+    id: "eyra-abraham",
     name: "Eyra Abraham",
     businessName: "Lisnen",
     description:
@@ -125,6 +132,7 @@ export const founders: Founder[] = [
     theme: "The Changemakers",
   },
   {
+    id: "kamika-sylvester",
     name: "Kamika Sylvester",
     businessName: "Code Melanin",
     description:
@@ -143,6 +151,7 @@ export const founders: Founder[] = [
     theme: "The Changemakers",
   },
   {
+    id: "kay-boama",
     name: "Kay Boama",
     businessName: "Swiirl",
     description:
@@ -161,6 +170,7 @@ export const founders: Founder[] = [
     theme: "The Changemakers",
   },
   {
+    id: "bianci-mensah",
     name: "Bianci Mensah",
     businessName: "Ginny",
     description:
@@ -179,6 +189,7 @@ export const founders: Founder[] = [
     theme: "The Craftsmen",
   },
   {
+    id: "didier-ramazani",
     name: "Didier Ramazani",
     businessName: "Beau AI",
     description:
@@ -197,6 +208,7 @@ export const founders: Founder[] = [
     theme: "The Builders",
   },
   {
+    id: "reyanna-lambie",
     name: "Reyanna Lambie",
     businessName: "Founder Athlete",
     description:
@@ -215,6 +227,7 @@ export const founders: Founder[] = [
     theme: "The Healers",
   },
   {
+    id: "gesikeme-wodu",
     name: "Gesikeme Wodu",
     businessName: "",
     description:
@@ -232,6 +245,7 @@ export const founders: Founder[] = [
     theme: "The Builders",
   },
   {
+    id: "chinedum-nwaogwugwu",
     name: "Chinedum Nwaogwugwu",
     businessName: "Her Dream Fund",
     description:
@@ -249,6 +263,7 @@ export const founders: Founder[] = [
     theme: "The Changemakers",
   },
   {
+    id: "justina-kanza",
     name: "Justina Kanza",
     businessName: "GRANTED",
     description:
@@ -266,6 +281,7 @@ export const founders: Founder[] = [
     theme: "The Builders",
   },
   {
+    id: "efemena-eghujovbo",
     name: "Efemena Eghujovbo",
     businessName: "Lift, Clip, Go. (LCG)",
     description:
@@ -283,6 +299,7 @@ export const founders: Founder[] = [
     theme: "The Builders",
   },
   {
+    id: "busayo-ladapo",
     name: "Busayo Ladapo",
     businessName: "Dynamite Skin Collection",
     description:
@@ -301,6 +318,7 @@ export const founders: Founder[] = [
     theme: "The Craftsmen",
   },
   {
+    id: "sarra-ali",
     name: "Sarra Ali",
     businessName: "Diaminate",
     description:
@@ -318,6 +336,7 @@ export const founders: Founder[] = [
     theme: "The Builders",
   },
   {
+    id: "curtis-carmichael",
     name: "Curtis Carmichael",
     businessName: "shuriii",
     description:
@@ -336,6 +355,7 @@ export const founders: Founder[] = [
     theme: "The Changemakers",
   },
   {
+    id: "tony-colley",
     name: "Tony Colley",
     businessName: "B12Give",
     description:
@@ -354,6 +374,7 @@ export const founders: Founder[] = [
     theme: "The Changemakers",
   },
   {
+    id: "faith-oloruntoba",
     name: "Faith Oloruntoba",
     businessName: "Groupbuyhive",
     description:
@@ -372,6 +393,7 @@ export const founders: Founder[] = [
     theme: "The Builders",
   },
   {
+    id: "jonny-kalambay",
     name: "Jonny Kalambay",
     businessName: "Roshi AI",
     description:
@@ -389,6 +411,7 @@ export const founders: Founder[] = [
     theme: "The Builders",
   },
   {
+    id: "mariam-oyinloye",
     name: "Mariam Oyinloye ",
     businessName: "ABIMBOLA",
     description:
@@ -407,6 +430,7 @@ export const founders: Founder[] = [
     theme: "The Craftsmen",
   },
   {
+    id: "yaan-saah",
     name: "Yaan Saah",
     businessName: "Graspr AI",
     description:

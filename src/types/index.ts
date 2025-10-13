@@ -7,6 +7,7 @@ export type Theme =
 
 export type Cohort = "Smart Start" | "Accelerate";
 export interface Founder {
+  id: string;
   name: string;
   businessName: string;
   description: string;
