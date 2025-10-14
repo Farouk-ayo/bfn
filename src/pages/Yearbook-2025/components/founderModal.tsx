@@ -1,20 +1,11 @@
-// src/pages/Yearbook2025/components/FounderModal.tsx
 import React, { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaTimes, FaLinkedin, FaGlobe } from "react-icons/fa";
 import confetti from "canvas-confetti";
+import { Founder } from "../../../types";
 
 interface FounderModalProps {
-  founder: {
-    name: string;
-    businessName: string;
-    description: string;
-    industryCategory: string;
-    cohort: string;
-    imageUrl: string;
-    url?: string;
-    linkedIn?: string;
-  } | null;
+  founder: Founder | null;
   isOpen: boolean;
   onClose: () => void;
 }
@@ -104,7 +95,7 @@ const FounderModal: React.FC<FounderModalProps> = ({
             {/* Tagline */}
             <div className="px-4 sm:px-6 py-3 sm:py-4 bg-gray-800 bg-opacity-50">
               <p className="text-sm sm:text-base text-gray-300 italic text-center">
-                Building {founder.description.split(".")[0].toLowerCase()}
+                {founder.story}
               </p>
             </div>
 

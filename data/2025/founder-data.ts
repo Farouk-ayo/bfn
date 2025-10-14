@@ -6,9 +6,9 @@ export const founders: Founder[] = [
     name: "Tomi Johnson",
     businessName: "Kazo.ai",
     description:
-      "PKazo is democratizing access to AI solutions for small businesses by providing them with scalable, cost-effective AI implementations that drive business growth and revenue.",
+      "Kazo is democratizing access to AI solutions for small businesses by providing them with scalable, cost-effective AI implementations that drive business growth and revenue.",
     story:
-      "AEmpowering smaller businesses to harness AI through practical education, tailored strategy, and affordable implementation.",
+      "Empowering smaller businesses to harness AI through practical education, tailored strategy, and affordable implementation.",
     industryCategory: "AI/ML, Software, Consulting Tech",
     cohort: "Smart Start",
     sector: "",
