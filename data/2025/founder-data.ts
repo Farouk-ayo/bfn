@@ -12,8 +12,7 @@ export const founders: Founder[] = [
     industryCategory: "AI/ML, Software, Consulting Tech",
     cohort: "Smart Start",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/8AY4MWPHIg32l3HdijTJ-g/a3IXuzWmfd4pAacI_TDalKfhfHNDwpl62VJH1swySkCcuZBAP-GcUQaYkjqziSuRxHrWFT-kk1DjAS5wxUeRu4qWkueD9UkS8I0e4h_0uu5zSOr3fpVmmOqOJvgwwh_v5qKq7xv4G5Yq54DZgCl26A/0-hct8jykwR5XGcyVzsAk3koEOCn5g_VxukQNVIKTF4",
+    imageUrl: "/images/2025/tomi.webp",
     ventureLogoUrl:
       "https://static.wixstatic.com/media/2c4954_6d1aa7b3537c4a72898732d098e5a434~mv2.png/v1/fill/w_440,h_124,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/white%20%2B%20green%20horizontal%20logo.png",
     url: "https://www.kazoai.com/",
@@ -32,8 +31,7 @@ export const founders: Founder[] = [
       "Medical Devices, Wellness Tech,, Internet of Things (IoT)",
     cohort: "Smart Start",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/cf-QE09jxY53Gkpk9yF3Yg/JNpR2d5AeAYPSj0y9iXqKdxSGduYPiNG86NYdVkMkcoJiXxeVHBSdl166MMZyzoP52HDJYg3mguqz3H7hdMeL3gV9HewJtw5YUzTPbJv_J7zX2dAC_mf-BeH6-d2O4p94uk6CwA29vmwKlnW7yPR6w/EPHMTAqcwhAM_EMrcXBouvK4ysHCZEAAx8K2DQEbOkU",
+    imageUrl: "/images/2025/wisdom.webp",
     ventureLogoUrl: "",
     url: "",
     linkedIn: "",
@@ -50,8 +48,7 @@ export const founders: Founder[] = [
     industryCategory: "AI/ML, HR Tech, Social Impact",
     cohort: "Accelerate",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/AqCUKHMYfEPIx_1PGX5HYg/u-81QIAU0WZbqadmWsjx1DHNEDQFAAo1fRW-AFHwjTk28FXD_bqZjjSE7oWRXZY8pvYaprUcSlFRetfOQkW9OqDu4LohM7ZE3YVAu7q1dnSwxGHxVU52ExgJSqQ_u3mdEZRdb3_sF5qVKYYSCw1_iQ/n5BBhgcVn7oYar_PkbEqDvSmgAF4c8xaZLI5KVP1ZeM",
+    imageUrl: "/images/2025/lyle.webp",
     ventureLogoUrl: "",
     url: "https://www.magnifyaccess.ai/",
     linkedIn: "",
@@ -68,8 +65,7 @@ export const founders: Founder[] = [
     industryCategory: "Medical Devices, BioTech",
     cohort: "Accelerate",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/9m2Ag451DENCHGd-zvYwjA/n2t35NfHg4wNijrTBpUxUlJPR5YMZD3uLZaurP6nwRiThxETEwI5ahBJ5V-SOd5Q3ftbvymqAF9_2KMkR_V-rwbAiO9Cn7gqPRCvMNvUbDLxLnpGFpc2BzMP7w2H0-ulG9JvndL_6baJc1oP6Rw6Pg/zfagl1wVTn6bG7r55f9hHI5JpQr0Cf_bJcd-kEhO9Hk",
+    imageUrl: "/images/2025/ibukun.webp",
     ventureLogoUrl: "",
     url: "https://cellectlaboratories.com/",
     linkedIn: "https://ca.linkedin.com/in/ibukunelebute",
@@ -86,8 +82,7 @@ export const founders: Founder[] = [
     industryCategory: "AI/ML, Social Impact, Software",
     cohort: "Smart Start",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/J-_TblN-_Ou-PvaQJ66ghA/BbXygTK8Mxs7rAI17jp86QjjJ5wOZ4_rNLhJB_vkwSKkhkKUJQJd9Txx7XArx1TOldyJie7lFWg967eVXBKz-_G9pduBKKZWkKYau4_ocIjHSqhJyA5b-DMIvdy4mFT0z_oaUUjacMoVZeOXNT7IgQ/hCZMstn8K_4biGeasOb5EzQXBes4PY3EJZVv3wIT-ws",
+    imageUrl: "/images/2025/njideka.webp",
     ventureLogoUrl: "",
     url: "",
     linkedIn: "https://ca.linkedin.com/in/njideka-onwuasor-32976113a",
@@ -104,8 +99,7 @@ export const founders: Founder[] = [
     industryCategory: "AI/ML, Software",
     cohort: "Smart Start",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/fdS_p56hT0oFA9PXQzXhtw/19JVqomZ5hsadvOoJlO_h7sPYcRwV2m8YTWQJNhRSNs9l-bLMFOewmbFFN2cj3mvKpp_KD2bKnLsNHwB4lVWSgP7cXrl7rYA_8gftMkpQyOIl97rf7pn656h5zFh3-4MftxsiVtFUyYCURUV_coXmA/4Khx7reGSAF9RXMFzUwgFAtXhXqVH_cGfiEcLllL7pY",
+    imageUrl: "/images/2025/fatima.webp",
     ventureLogoUrl:
       "https://framerusercontent.com/images/Hgh3RRYZrDdF2nA2MWhoBLACTo.png?width=374&height=80",
     url: "http://www.agent-flow.ca/",
@@ -123,8 +117,7 @@ export const founders: Founder[] = [
     industryCategory: "AI/ML, Software",
     cohort: "Accelerate",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/iqJds4zbwUbqhIazht5GoA/OMHyYhfUjG6OcCU_qjM4-Nu-CCXOY2D0T_B_eFNzqhlWiVenA50Tiv73Qzt2KATncOUpYYlA-uLYWzL6wxyTa6uU1hdha5RjnvHkj3d9R-TR4sB2M6uFc6Th1lW3pObb57LY81JtAlhCxBS8axh7hQ/vlHva8XUQX13Qu-1xBYY_PbPr7ItRyFcbFiv2rYXrBw",
+    imageUrl: "/images/2025/eyra.webp",
     ventureLogoUrl:
       "https://lisnen.com/wp-content/uploads/2020/06/cropped-LISNEN_ForWhiteBackground-1-e1648731454828.png",
     url: "https://lisnen.com/",
@@ -142,8 +135,7 @@ export const founders: Founder[] = [
     industryCategory: "Software",
     cohort: "Smart Start",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/RIBTbyR579RK7IpAXUTwZA/vIGKdVtTMGxMDVcW6bQCOuVUJux6v3UybvGU0auKAVVnXowf5Ayk7ieMcY2WqKQ8EvkyNJr1bkS0oY7sOuCTdVfsdEhligBM2ShYe9MLNlkij7fTM9qtLLipnx6N7nX4WlVYvJXxIWbZfA9JhvAL5A/iX5w-fxxAcA5sy4OB4odvM5bEUkKja22qENAeQBHwko",
+    imageUrl: "/images/2025/kamika.webp",
     ventureLogoUrl:
       "https://static.wixstatic.com/media/018d2f_d89ffe876cbe4967a915f51097c9d94f~mv2.png/v1/fill/w_122,h_102,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/018d2f_d89ffe876cbe4967a915f51097c9d94f~mv2.png",
     url: "http://www.rennel.co/",
@@ -161,8 +153,7 @@ export const founders: Founder[] = [
     industryCategory: "Software, Social Impact",
     cohort: "Accelerate",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/hhW5VH15FekSJd7XIBBlPw/o_fC5E3-oM3hr0W0DJwqsEBNAoOvKw3s4lUtKZXXmnOJFord9Vm-L-Hmjz3Huy50yUfgJ5qTB0iSD6pZiL61hfjy204SPSXuVjQq2qpiEkLY8tXUQkzlrUSkH623NOleRIIyh4hAZ93hSiqoIFlorw/p4tDTZSbmqERlR0Od2zDgsrFhDH8JToGu8w4wOJXGAs",
+    imageUrl: "/images/2025/kay.webp",
     ventureLogoUrl:
       "https://media.licdn.com/dms/image/v2/D560BAQENp0Q0WygBXQ/company-logo_200_200/company-logo_200_200/0/1682630870791/swiirl_logo?e=1762992000&v=beta&t=lVQWiPPRxruZlXBH4JW56yLrjPavMMMYKDvznIrrPG4",
     url: "http://www.swiirl.io/",
@@ -180,8 +171,7 @@ export const founders: Founder[] = [
     industryCategory: "Consumer Goods, Food & Beverage",
     cohort: "Accelerate",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/FC4utkpgdfkGDlfe2g4T1w/rVYAe7F5Cqo1n9PLqAFVsK5SKB8ATM85eXTdZsVEYRWAfoW3WHBpNmccUFGYrN4jIQUPGwQe0eUHyxmDVR7BH2AfdHoTrMXMWyuPguhJpREI3rrvFSTGE9LuP4q4EedspyKK_00LUvlcbZJzmHhbcQ/wPZttUhtAqjgSyXEN4pqt9yDjIN2oikGrKc3IWpoCqc",
+    imageUrl: "/images/2025/bianci.webp",
     ventureLogoUrl:
       "https://drinkginny.com/cdn/shop/files/LOGO.png?v=1738190180&width=200",
     url: "http://sipginny.com/",
@@ -199,8 +189,7 @@ export const founders: Founder[] = [
     industryCategory: "Software, Beauty Tech, Electronics",
     cohort: "Accelerate",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/YSmhMmeqArv5v4AB5WCWxg/LjmNOUi02-2ccbuScgY0E7rY7PuQPtJ3Ir2AxqWqO2PTx1SQvqpFoKiJVT1rWQQ9Aa_f0IEVk6guJ0bPlENDjPUNlPZTlvuAd0ZI0Ba-eB1ddrkZiK8pmZxRM861EtUULkEYkHnvYFIxMG3NOrYI1A/c2xO8R-zzDYqH4vEabO7qQJWmPoSfWuu7UfT_4uWZ6s",
+    imageUrl: "/images/2025/didier.webp",
     ventureLogoUrl:
       "https://media.licdn.com/dms/image/v2/D4E03AQHBRC4gnKOsZg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1692129718474?e=1762992000&v=beta&t=Qu8TmMDtmAt_gQaMZlKhYHyS1Zaje4sjKr81GSs5Li4",
     url: "https://beautoronto.com/",
@@ -218,8 +207,7 @@ export const founders: Founder[] = [
     industryCategory: "Software, Sports Tech, AI/ML",
     cohort: "Smart Start",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/5N0TFSBX0RIuIl7t7gIZyw/xlREOJypei8KjzGAs4F19sr1wq7fVfFarAi9I9T1T5T5j0Y9Sri3ZlvG20NuTO-YR5-KtrvkDj7lGsnUtL6oOSFwJF_nOa2u--DOR6VBFAGptEF4kdmMGGzVsA3otzqJZk4qozJk72kP0vsbfM7GFw/mv9zmXQC1I6e--P2MkLPpzNAqEnvjhXJcz_Chp2x-fU",
+    imageUrl: "/images/2025/reyanna.webp",
     ventureLogoUrl:
       "https://founderathlete.co/assets/images/image01.png?v=fd305386",
     url: "https://founderathlete.co/",
@@ -237,8 +225,7 @@ export const founders: Founder[] = [
     industryCategory: "AI/ML, Software",
     cohort: "Smart Start",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/hdK55Gjh587iMaZkwJSS5w/T2uimAGe83fAknDnF01UF-txuBn5js8CVV7MRG0xaXLOURgnX__jbF0E-TdKNbJ-fnPTeuo6p1minJcLGbhYiZyVlsbd7Uuhk_igI4vM8o6_XS6S9LwckI95K99Z6MNyz5_PRejmydrKg7TUS9tSCg/tVHnq4n_hQXtXmeARX4skDbnnJKVFMu-e54zQw7vS80",
+    imageUrl: "/images/2025/gesikeme.webp",
     ventureLogoUrl: "",
     url: "",
     linkedIn: "https://ca.linkedin.com/in/gesikeme-wodu/",
@@ -255,8 +242,7 @@ export const founders: Founder[] = [
     industryCategory: "Social Impact",
     cohort: "Smart Start",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/ZPSdM3A-Nyat4A1MW_Iq1w/FR6ZaAyWRCrVMKedIvA7lIqU8vLWtWvPVZStLueXQnXIwwkzV03iRkldsGPgS0T4uAZCxLx8oyKdzqS9qdeUbGNJ55cz6prCH0N5Nrv5jsvMvPVVq8m7B86AoMTIc9JkKVeswQDOZpKDhrsndnIf2g/Tl2Z2XwhQYzXRmqPVJLhTOyh9ccfLMXBBMOpuUsOBbc",
+    imageUrl: "/images/2025/chinedum.webp",
     ventureLogoUrl: "",
     url: "",
     linkedIn: "https://www.linkedin.com/in/cnwaogwugwu/",
@@ -273,8 +259,7 @@ export const founders: Founder[] = [
     industryCategory: "AI/ML, Software",
     cohort: "Smart Start",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/DoM5JhtJp7vTyJe4hjJlkQ/liNPCO9QxI06LB9mT6rlLJ4LqQWYldeFJx9b7t5RzXv4ewlKJAlAvVuYUvcaO_K9MfIAcbn22SP9puKGny4Mz2ax9Gq2O1Z35bHoJaJ8r87dlmr9_WYmyDjzcEAPmCudWOY1nJNgwKJvcb4taRlpbA/LxoxxeM1-wtigD0M7bv_pSJzuQ1zy1vGY3M_CXs7agk",
+    imageUrl: "/images/2025/justina.webp",
     ventureLogoUrl: "https://grantedtech.ca/assets/images/granted-logo.png",
     url: "https://grantedtech.ca/",
     linkedIn: "https://ca.linkedin.com/in/justina-k-857624114",
@@ -291,8 +276,7 @@ export const founders: Founder[] = [
     industryCategory: "Robotics, Environmental Tech",
     cohort: "Smart Start",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/_8LeMLgpv0ejEAzzE0CY_g/36AvloS6D1Gm3l58JZEuIYJRaWtp4Y0vgbkVkg_9g-hLdsFqDkbB2gtOYvEGPP9039TkKpx87IUJQ9mRDlJSrzRPRo12wmFZUHhBQFPpqoX5q-gf98sB8yZO3U4Kn__nyXrbRIYWVz4JD91paUrUbA/XT1uJy_3lbe_rExXV8cCUtetFeosoUA1c1AE5jPpk0M",
+    imageUrl: "/images/2025/efemena.webp",
     ventureLogoUrl: "",
     url: "",
     linkedIn: "https://ca.linkedin.com/in/efemena-eghujovbo",
@@ -309,8 +293,7 @@ export const founders: Founder[] = [
     industryCategory: "Ecommerce, Beauty Tech",
     cohort: "Smart Start",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/3JeLZOGvr7AwlQsgxILXhQ/ACWE7X1PRDp_3B6arLq3zupBf0FiIIBQXyATnOynjES1aZJ8PaxCbNe3pRtlDjfPclLpZrIgiztZVlzqQcPjhKHUpBrmebYJiUWXS_X9vzMYVg_elCuWyfMzKdr5TzMaXAUa-MSDhVq-kz5yj8Trnw/exGkm3a8eFPxccQfLAW46TGrujkvsaaUrzrmqSY9YCg",
+    imageUrl: "/images/2025/busayo.webp",
     ventureLogoUrl:
       "https://dynamiteskincollection.com/wp-content/uploads/2022/04/DSC.png",
     url: "https://dynamiteskincollection.com/",
@@ -328,8 +311,7 @@ export const founders: Founder[] = [
     industryCategory: "Software, AI/ML, Fintech",
     cohort: "Smart Start",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/yOOGnmEuzuWGgcpWnTAikA/tlLcJgVvdNYAgpRlOoim1zEb24rUuwAAf9Tg96HFVHUvjrkbT5-zD5xDOgoI3U1t3Bgeozne-9MF33bW5eVAk0udueUg2qkZMdkkuuiwd9JF04jCXJzTVEllWv-kTtqs9TUsJQG2_uwifTtziSU37g/QT8UT4kndV-WVED0KTBdSiTtZGvK6J9m9xGwOjKxH0A",
+    imageUrl: "/images/2025/sarra.webp",
     ventureLogoUrl: "https://diaminate.com/logo-w.png",
     url: "https://diaminate.com/",
     linkedIn: "https://ca.linkedin.com/in/sarra2020",
@@ -346,8 +328,7 @@ export const founders: Founder[] = [
     industryCategory: "EdTech, AI/ML",
     cohort: "Accelerate",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/X84dvYkQf_boUZCI8WHL-A/uXfS3jnljeWSbxWIp2mkiSpV3cQYqIStROSmZs8FXQLMGKzTFCj11_4vfaaltlrjB96THIdG6WCoSDJOx29ySuxXoPWpK96nv0K2IPBl3ePC6Llwsci92VY-6X-SchVpdxDQKZB8eYRnnYgo5Km3Ig/RwS96-t77yNW5Oe1BslmXLREV4hoM3OQjPGGiBWUEl0",
+    imageUrl: "/images/2025/curtis.webp",
     ventureLogoUrl:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-930He1NWz3HqJi1FvGEEWGVpq-UZZV2EoOQ_pZNpfA&s",
     url: "https://shuriii.com/",
@@ -365,8 +346,7 @@ export const founders: Founder[] = [
     industryCategory: "Logistics, Clean Tech, Social Impact",
     cohort: "Accelerate",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/uzqxlCVZi1rmG95SUXJctQ/2RwYzDWKDIB1KuREIkNGutvFYDj-964Js9rzNUSgooDtZTodPbN46z2Eu9GTRoXw902y9pKTFFCPexcA2rl6ckShQBKZIuD5QC7GLU_sTQ8Mc_64hLj3PChAb44udCE2ynNfIFX0jJjwh4P7-b_7VA/GzmHHYI_zYIx93KptTXpdCw9m8aoBZrJa7BrcH1A4bA",
+    imageUrl: "/images/2025/tony.webp",
     ventureLogoUrl:
       "https://b12give.ca/wp-content/uploads/2024/10/Logo-Transparent-PNG1-Tony-Colley.png",
     url: "https://b12give.ca/",
@@ -384,8 +364,7 @@ export const founders: Founder[] = [
     industryCategory: "Ecommerce, Food & Beverage, Supply Chain",
     cohort: "Accelerate",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/rxworh9af0PcgGjX9TQDRA/IbhwkYACqVU60QNRW1TXBPSXZAeQJGxuOpnpnX4IR9gab_eyVNexgQUD336oaQby99BGNo8vPzFvipYtGT_Aw1GJ66O2rEpi36TjVSTcgrJNfmxWYopf5BQrPizQx0RXjI387InLiw6GNQ7M_nsdWg/0OXswy83dmH_9-sNag7CvYA4XvHBy0y6LinL-75bijU",
+    imageUrl: "/images/2025/faith.webp",
     ventureLogoUrl:
       "https://groupbuyhive.com/cdn/shop/files/Groupbuyhive_logo_2.png?v=1720267934&width=360",
     url: "https://groupbuyhive.com/",
@@ -403,8 +382,7 @@ export const founders: Founder[] = [
     industryCategory: "AI/ML, EdTech",
     cohort: "Accelerate",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/-wV5ewYp4EIHuU1J228FjA/ipWT4C0X0PYt0eXnOgO37VzZYYBqx_nVWorOxz-mFbdsgvtvvL2hEwbs9Fg2iH4OxEpWsF2uw7X-yAStyBxI_4JkdyC_6A_ueTM1yVIFTYAvITHzVu6W-6hP9RX6FHJAbXhSuBHKYSbnKRd16gwOGg/Bm72gAh4-_PFgCzSl6l2SapAjbGi4PjgoL2SL-n_7e4",
+    imageUrl: "/images/2025/jonny.webp",
     ventureLogoUrl: "https://www.roshi.ai/logo.svg",
     url: "https://www.roshi.ai/",
     linkedIn: "https://www.linkedin.com/in/jonnykalambay/",
@@ -440,8 +418,7 @@ export const founders: Founder[] = [
     industryCategory: "EdTech, Software, AI/ML",
     cohort: "Accelerate",
     sector: "",
-    imageUrl:
-      "https://v5.airtableusercontent.com/v3/u/46/46/1760400000000/1UtQcqjnZKb-FwV8AKakUg/Bxqw7jmGhkLw0HHjfZpG9EqHJAg4zuJUtHFxStU_igFHVADkk4PdVfzChDFoQiy5GYfoCOFIQku3voh2OSnMQ1_iFyeGREm1rnhhuZL_Q7fYtZ6XyDjTF-B2ckasjTGBT-SezuPzhyMBr6x22DIeIA/STWHZLziKZBgOBgJ7MVa1WMLAgnzkuljgkBJ9E6bu6I",
+    imageUrl: "/images/2025/yaan.webp",
     ventureLogoUrl:
       "https://cdn.prod.website-files.com/65fde8495134303f29c20323/6603191e05cde40fa763a417_Graspr%20AI%20Full%20Logo%20-%20Dark.svg",
     url: "https://www.graspr.ai/",

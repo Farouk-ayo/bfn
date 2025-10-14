@@ -6,6 +6,7 @@ import ProgramHighlights from "./sections/ProgramHighlights";
 import MemoriesSection from "./sections/Memories";
 import Founder from "./sections/Founder";
 import VotingSection from "./sections/Voting";
+import SplashScreenManager from "./components/SplashScreenManager";
 
 const Yearbook2025 = () => {
   useEffect(() => {
@@ -13,7 +14,7 @@ const Yearbook2025 = () => {
   }, []);
 
   return (
-    <div className="bg-black min-h-screen">
+    <SplashScreenManager>
       <Navbar />
       <HeroSection />
       <CohortOverview />
@@ -21,7 +22,7 @@ const Yearbook2025 = () => {
       <ProgramHighlights />
       <MemoriesSection />
       <VotingSection />
-    </div>
+    </SplashScreenManager>
   );
 };
 

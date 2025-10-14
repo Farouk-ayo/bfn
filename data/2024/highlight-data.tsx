@@ -22,72 +22,72 @@ export const highlights = [
       media: [
         {
           type: "image",
-          src: "/images/summershowcase-p-1.jpg",
+          src: "/images/2024/summershowcase-p-1.jpg",
           alt: "summer showcase image 1",
         },
         {
           type: "image",
-          src: "/images/summershowcase-p-2.jpg",
+          src: "/images/2024/summershowcase-p-2.jpg",
           alt: "summer showcase image 2",
         },
         {
           type: "image",
-          src: "/images/summershowcase-p-3.jpg",
+          src: "/images/2024/summershowcase-p-3.jpg",
           alt: "summer showcase image 3",
         },
         {
           type: "image",
-          src: "/images/summershowcase-p-4.jpg",
+          src: "/images/2024/summershowcase-p-4.jpg",
           alt: "summer showcase image 4",
         },
         {
           type: "image",
-          src: "/images/summershowcase-p-5.jpg",
+          src: "/images/2024/summershowcase-p-5.jpg",
           alt: "summer showcase image 5",
         },
         {
           type: "image",
-          src: "/images/summershowcase-p-6.jpg",
+          src: "/images/2024/summershowcase-p-6.jpg",
           alt: "summer showcase image 6",
         },
         {
           type: "image",
-          src: "/images/summershowcase-p-7.jpg",
+          src: "/images/2024/summershowcase-p-7.jpg",
           alt: "summer showcase image 7",
         },
         {
           type: "image",
-          src: "/images/summershowcase-p-8.jpg",
+          src: "/images/2024/summershowcase-p-8.jpg",
           alt: "summer showcase image 8",
         },
         {
           type: "image",
-          src: "/images/summershowcase-p-9.jpg",
+          src: "/images/2024/summershowcase-p-9.jpg",
           alt: "summer showcase image 9",
         },
         {
           type: "image",
-          src: "/images/summershowcase-p-10.jpg",
+          src: "/images/2024/summershowcase-p-10.jpg",
           alt: "summer showcase image 10",
         },
         {
           type: "image",
-          src: "/images/summershowcase-p-11.jpg",
+          src: "/images/2024/summershowcase-p-11.jpg",
           alt: "summer showcase image 11",
         },
         {
           type: "image",
-          src: "/images/summershowcase-p-12.jpg",
+          src: "/images/2024/summershowcase-p-12.jpg",
           alt: "summer showcase image 12",
         },
         {
           type: "image",
-          src: "/images/summershowcase-p-13.jpg",
+          src: "/images/2024/summershowcase-p-13.jpg",
           alt: "summer showcase image 13",
         },
         {
           type: "image",
-          src: "/images/summershowcase-p-14.jpg",
+          src: "/images/2024/summershowcase-p-14.jpg",
           alt: "summer showcase image 14",
         },
       ],
@@ -104,42 +104,42 @@ export const highlights = [
       media: [
         {
           type: "video",
-          src: "/images/collision-conference-v-1.MOV",
+          src: "/images/2024/collision-conference-v-1.MOV",
           alt: "collision conference Video 1",
         },
         {
           type: "image",
-          src: "/images/collision-conference-p-1.jpg",
+          src: "/images/2024/collision-conference-p-1.jpg",
           alt: "collision conference Image 1",
         },
         {
           type: "image",
-          src: "/images/collision-conference-p-2.jpg",
+          src: "/images/2024/collision-conference-p-2.jpg",
           alt: "collision conference image 2",
         },
         {
           type: "image",
-          src: "/images/collision-conference-p-3.jpg",
+          src: "/images/2024/collision-conference-p-3.jpg",
           alt: "collision conference image 3",
         },
         {
           type: "image",
-          src: "/images/collision-conference-p-4.jpg",
+          src: "/images/2024/collision-conference-p-4.jpg",
           alt: "collision conference image 4",
         },
         {
           type: "image",
-          src: "/images/collision-conference-p-5.jpg",
+          src: "/images/2024/collision-conference-p-5.jpg",
           alt: "collision conference image 5",
         },
         {
           type: "image",
-          src: "/images/collision-conference-p-6.jpg",
+          src: "/images/2024/collision-conference-p-6.jpg",
           alt: "collision conference image 6",
         },
         {
           type: "image",
-          src: "/images/collision-conference-p-7.jpg",
+          src: "/images/2024/collision-conference-p-7.jpg",
           alt: "collision conference image 7",
         },
       ],
@@ -156,42 +156,42 @@ export const highlights = [
       media: [
         {
           type: "image",
-          src: "/images/pitching-startupfest-p-1.jpg",
+          src: "/images/2024/pitching-startupfest-p-1.jpg",
           alt: "startupfest Image 1",
         },
         {
           type: "image",
-          src: "/images/pitching-startupfest-p-2.jpg",
+          src: "/images/2024/pitching-startupfest-p-2.jpg",
           alt: "startupfest Image 2",
         },
         {
           type: "video",
-          src: "/images/pitching-startupfest-v-1.MOV",
+          src: "/images/2024/pitching-startupfest-v-1.MOV",
           alt: "startupfest Image 3",
         },
         {
           type: "video",
-          src: "/images/pitching-startupfest-v-2.MOV",
+          src: "/images/2024/pitching-startupfest-v-2.MOV",
           alt: "startupfest Image 4",
         },
         {
           type: "image",
-          src: "/images/pitching-startupfest-p-3.jpg",
+          src: "/images/2024/pitching-startupfest-p-3.jpg",
           alt: "startupfest Image 5",
         },
         {
           type: "image",
-          src: "/images/pitching-startupfest-p-4.jpg",
+          src: "/images/2024/pitching-startupfest-p-4.jpg",
           alt: "startupfest Image 4",
         },
         {
           type: "image",
-          src: "/images/pitching-startupfest-p-5.jpg",
+          src: "/images/2024/pitching-startupfest-p-5.jpg",
           alt: "startupfest Image 5",
         },
         {
           type: "image",
-          src: "/images/pitching-startupfest-p-6.jpg",
+          src: "/images/2024/pitching-startupfest-p-6.jpg",
           alt: "startupfest Image 6",
         },
       ],
@@ -207,17 +207,17 @@ export const highlights = [
       media: [
         {
           type: "video",
-          src: "/images/session-communication-v-1.mp4",
+          src: "/images/2024/session-communication-v-1.mp4",
           alt: "communication session Image 1",
         },
         {
           type: "video",
-          src: "/images/session-communication-v-2.MOV",
+          src: "/images/2024/session-communication-v-2.MOV",
           alt: "communication session Image 2",
         },
         {
           type: "image",
-          src: "/images/session-communication-v-3.jpg",
+          src: "/images/2024/session-communication-v-3.jpg",
           alt: "communication session Video 3",
         },
       ],
@@ -233,37 +233,37 @@ export const highlights = [
       media: [
         {
           type: "image",
-          src: "/images/legal-p-1.jpg",
+          src: "/images/2024/legal-p-1.jpg",
           alt: "legal Image 1",
         },
         {
           type: "image",
-          src: "/images/legal-p-2.jpg",
+          src: "/images/2024/legal-p-2.jpg",
           alt: "legal Image 2",
         },
         {
           type: "video",
-          src: "/images/legal-v-1.MOV",
+          src: "/images/2024/legal-v-1.MOV",
           alt: "legal Image 3",
         },
         {
           type: "image",
-          src: "/images/legal-p-3.jpg",
+          src: "/images/2024/legal-p-3.jpg",
           alt: "legal Image 3",
         },
         {
           type: "image",
-          src: "/images/legal-p-4.jpg",
+          src: "/images/2024/legal-p-4.jpg",
           alt: "legal Image 4",
         },
         {
           type: "image",
-          src: "/images/legal-p-5.jpg",
+          src: "/images/2024/legal-p-5.jpg",
           alt: "legal Image 5",
         },
         {
           type: "image",
-          src: "/images/legal-p-6.jpg",
+          src: "/images/2024/legal-p-6.jpg",
           alt: "legal Image 6",
         },
       ],
@@ -279,32 +279,32 @@ export const highlights = [
       media: [
         {
           type: "image",
-          src: "/images/session-marketing-p-1.jpg",
+          src: "/images/2024/session-marketing-p-1.jpg",
           alt: "session marketing Image 1",
         },
         {
           type: "image",
-          src: "/images/session-marketing-p-2.jpg",
+          src: "/images/2024/session-marketing-p-2.jpg",
           alt: "session marketing Image 2",
         },
         {
           type: "image",
-          src: "/images/session-marketing-p-3.jpg",
+          src: "/images/2024/session-marketing-p-3.jpg",
           alt: "session marketing Image 3",
         },
         {
           type: "image",
-          src: "/images/session-marketing-p-4.jpg",
+          src: "/images/2024/session-marketing-p-4.jpg",
           alt: "session marketing Image 3",
         },
         {
           type: "image",
-          src: "/images/session-marketing-p-5.jpg",
+          src: "/images/2024/session-marketing-p-5.jpg",
           alt: "session marketing Image 3",
         },
         {
           type: "image",
-          src: "/images/session-marketing-p-6.jpg",
+          src: "/images/2024/session-marketing-p-6.jpg",
           alt: "session marketing Image 3",
         },
       ],
@@ -320,17 +320,17 @@ export const highlights = [
       media: [
         {
           type: "video",
-          src: "/images/wellness-session-v-1.mp4",
+          src: "/images/2024/wellness-session-v-1.mp4",
           alt: "wellness session Image 1",
         },
         {
           type: "image",
-          src: "/images/wellness.jpg",
+          src: "/images/2024/wellness.jpg",
           alt: "wellness session Image 1",
         },
         {
           type: "image",
-          src: "/images/wellness2.jpg",
+          src: "/images/2024/wellness2.jpg",
           alt: "wellness session Image 1",
         },
       ],
@@ -346,17 +346,17 @@ export const highlights = [
       media: [
         {
           type: "image",
-          src: "/images/smartstartpitch.jpg",
+          src: "/images/2024/smartstartpitch.jpg",
           alt: "coaching Image 1",
         },
         {
           type: "image",
-          src: "/images/smartstartpitch2.jpg",
+          src: "/images/2024/smartstartpitch2.jpg",
           alt: "coaching Image 2",
         },
         {
           type: "image",
-          src: "/images/smartstartpitch3.jpg",
+          src: "/images/2024/smartstartpitch3.jpg",
           alt: "coaching Image 1",
         },
       ],

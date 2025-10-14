@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 
+
+
 const SplashScreen = ({ finishLoading }: { finishLoading: () => void }) => {
   return (
     <section className="flex w-full h-screen justify-center items-center">
