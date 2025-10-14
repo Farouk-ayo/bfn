@@ -103,7 +103,7 @@ const Leaderboard = () => {
         title="BFN 2025 Leaderboard | Vote Results & Winners"
         description="See who's leading in the BFN Yearbook 2025 awards! Real-time voting results across categories like Most Innovative, Best Pitch, Community Champion, and more."
         keywords="BFN leaderboard, voting results, Black founders awards, BFN 2025 winners, startup competition, founder awards"
-        image="/og-leaderboard.png"
+        image="https://www.programs-bfn.ca/og-leaderboard.png"
         canonicalUrl="https://yearbook.blackfounders.ca/yearbook-2025/leaderboard"
       />
       <Navbar />

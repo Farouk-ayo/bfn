@@ -13,7 +13,7 @@ interface SEOProps {
 const SEO = ({
   title = "BFN Yearbook 2025 | Black Founders Network",
   description = "Celebrating 24 innovative Black founders from the 2025 BFN cohort. Explore their stories, ventures, and the impact they're making across healthcare, education, technology, and more.",
-  image = "/og-yearbook-2025.png",
+  image = "https://www.programs-bfn.ca/og-yearbook-2025.png",
   url,
   type = "website",
   keywords = "Black Founders Network, BFN, Black entrepreneurs, startup accelerator, Canadian startups, 2025 cohort, innovation, diversity in tech, Black-owned businesses",

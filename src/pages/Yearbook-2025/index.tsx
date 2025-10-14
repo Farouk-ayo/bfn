@@ -20,7 +20,7 @@ const Yearbook2025 = () => {
         title="BFN Yearbook 2025 | Celebrating 24 Innovative Black Founders"
         description="Meet the 2025 cohort of Black Founders Network - 24 entrepreneurs building the future across healthcare, education, technology, e-commerce, and fintech. Vote for your favorites and celebrate innovation."
         keywords="BFN 2025, Black Founders Network yearbook, Black entrepreneurs Canada, startup accelerator, Smart Start program, Accelerate program, Black-owned businesses, diversity in tech, innovation, Toronto startups"
-        image="/og-yearbook-2025.png"
+        image="https://www.programs-bfn.ca/og-yearbook-2025.png"
       />
 
       <SplashScreenManager>
