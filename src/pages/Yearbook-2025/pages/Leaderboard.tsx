@@ -5,6 +5,7 @@ import { subscribeToAllVotes } from "../../../services/voting.service";
 import { votingCategories } from "../../../../data/2025/voting-data";
 import { founders } from "../../../../data/2025/founder-data";
 import Navbar from "../layout/navbar";
+import SEO from "../components/SEO";
 
 interface LeaderboardEntry {
   categoryId: string;
@@ -98,6 +99,13 @@ const Leaderboard = () => {
 
   return (
     <div className="min-h-screen bg-black">
+      <SEO
+        title="BFN 2025 Leaderboard | Vote Results & Winners"
+        description="See who's leading in the BFN Yearbook 2025 awards! Real-time voting results across categories like Most Innovative, Best Pitch, Community Champion, and more."
+        keywords="BFN leaderboard, voting results, Black founders awards, BFN 2025 winners, startup competition, founder awards"
+        image="/og-leaderboard.png"
+        canonicalUrl="https://yearbook.blackfounders.ca/yearbook-2025/leaderboard"
+      />
       <Navbar />
 
       {/* Hero Section - Mobile optimized */}
