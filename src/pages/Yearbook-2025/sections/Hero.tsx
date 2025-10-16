@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-black via-[#0A0A0A] to-black px-4 sm:px-6 md:px-8">
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black via-[#0A0A0A] to-black px-4 sm:px-6 md:px-8 overflow-hidden">
       {/* Sparkle background */}
       {sparkles.map((sparkle) => (
         <motion.div
@@ -109,11 +109,11 @@ const Hero: React.FC = () => {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-center z-10 max-w-5xl mt-24 relative "
+        className="text-center z-10 max-w-5xl md:mt-24 relative "
       >
         {/* Main Headline */}
         <motion.h1
-          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight font-tradegothic tracking-tight"
+          className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-5 md:mb-6 leading-tight font-tradegothic tracking-tight"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 1 }}
@@ -123,18 +123,17 @@ const Hero: React.FC = () => {
           NETWORK
         </motion.h1>
 
-        {/* Underline */}
         <motion.div
-          className="w-20 sm:w-32  h-0.5 sm:h-1 mx-auto mb-4 sm:mb-6 md:mb-8"
-          style={{ backgroundColor: "#d0d1c9" }}
+          className="h-0.5 sm:h-1 mx-auto mb-5 sm:mb-6 md:mb-8"
+          style={{ backgroundColor: "#5ab8d8" }}
           initial={{ width: 0 }}
-          animate={{ width: "auto" }}
+          animate={{ width: "7rem" }}
           transition={{ delay: 0.6, duration: 0.8 }}
         />
 
         {/* Year Text with Skew */}
         <motion.h2
-          className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 md:mb-10 font-tradegothic"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 md:mb-10 font-tradegothic"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 1 }}
@@ -147,7 +146,7 @@ const Hero: React.FC = () => {
             whileHover={{ scale: 1.05 }}
           >
             <span
-              className="block -skew-y-1 px-3 sm:px-5 md:px-6 py-1.5 sm:py-2 md:py-3 rounded-lg"
+              className="block -skew-y-1 px-4 sm:px-5 md:px-6 py-2 sm:py-2 md:py-3 rounded-lg"
               style={{
                 background: "linear-gradient(135deg, #6fc7ea 0%, #5ab8d8 100%)",
                 color: "#0A0A0A",
@@ -161,7 +160,7 @@ const Hero: React.FC = () => {
 
         {/* Tagline */}
         <motion.p
-          className="text-sm sm:text-base md:text-lg lg:text-xl mb-8 sm:mb-10 md:mb-14 px-4 sm:px-0 max-w-2xl mx-auto leading-relaxed"
+          className="text-base sm:text-lg md:text-xl mb-8 sm:mb-10 md:mb-12 px-4 sm:px-0 max-w-2xl mx-auto leading-relaxed"
           style={{ color: "#d0d1c9" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -173,7 +172,7 @@ const Hero: React.FC = () => {
         {/* CTA Button */}
         <motion.a
           href="#cohort"
-          className="inline-block font-bold text-xs sm:text-sm md:text-base px-6 sm:px-8 md:px-12 py-2.5 sm:py-3 md:py-4 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300"
+          className="inline-block font-bold text-sm sm:text-base md:text-lg px-8 sm:px-10 md:px-12 py-3 sm:py-3.5 md:py-4 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300"
           style={{
             background: "linear-gradient(to right, #6fc7ea, #5ab8d8)",
             color: "#0A0A0A",

@@ -7,7 +7,7 @@ const MemoriesSection = () => {
   return (
     <section
       id="memories"
-      className="w-full py-12 sm:py-20 bg-black px-4 sm:px-8"
+      className="w-full py-12 sm:py-20 bg-black px-4 sm:px-8 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}

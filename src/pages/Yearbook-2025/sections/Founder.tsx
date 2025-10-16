@@ -3,7 +3,7 @@ import FounderSpotlights from "../components/FounderSpotlight";
 
 const Founder = () => {
   return (
-    <div className="relative">
+    <div className="relative overflow-hidden">
       {/* Background Image Layer */}
       <div
         className="absolute inset-0 z-0"

@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import FounderModal from "./founderModal";
 import { founders } from "../../../../data/2025/founder-data";
 
@@ -39,12 +39,46 @@ const FounderSpotlights = () => {
     (typeof founders)[0] | null
   >(null);
   const scrollContainerRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const autoScrollIntervals = useRef<(NodeJS.Timeout | null)[]>([]);
 
   // Categorize founders by theme
   const categorizedThemes = subthemes.map((theme) => ({
     ...theme,
     founders: founders.filter((f) => f.theme === theme.title),
   }));
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    categorizedThemes.forEach((theme, index) => {
+      if (theme.founders.length > 0) {
+        const interval = setInterval(() => {
+          const container = scrollContainerRefs.current[index];
+          if (container) {
+            const maxScroll = container.scrollWidth - container.clientWidth;
+            const currentScroll = container.scrollLeft;
+
+            // If we've reached the end, scroll back to start
+            if (currentScroll >= maxScroll - 10) {
+              container.scrollTo({ left: 0, behavior: "smooth" });
+            } else {
+              // Otherwise scroll forward by one card width
+              container.scrollBy({ left: 350, behavior: "smooth" });
+            }
+          }
+        }, 3000); // Scroll every 3 seconds
+
+        autoScrollIntervals.current[index] = interval;
+      }
+    });
+
+    // Cleanup intervals on unmount
+    return () => {
+      autoScrollIntervals.current.forEach((interval) => {
+        if (interval) clearInterval(interval);
+      });
+    };
+  }, []);
+
   const scroll = (index: number, direction: "left" | "right") => {
     const container = scrollContainerRefs.current[index];
     if (container) {
@@ -53,6 +87,31 @@ const FounderSpotlights = () => {
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
       });
+    }
+  };
+
+  // Pause auto-scroll when user interacts
+  const handleManualScroll = (index: number) => {
+    const interval = autoScrollIntervals.current[index];
+    if (interval) {
+      clearInterval(interval);
+      // Resume auto-scroll after 5 seconds of inactivity
+      setTimeout(() => {
+        const newInterval = setInterval(() => {
+          const container = scrollContainerRefs.current[index];
+          if (container) {
+            const maxScroll = container.scrollWidth - container.clientWidth;
+            const currentScroll = container.scrollLeft;
+
+            if (currentScroll >= maxScroll - 10) {
+              container.scrollTo({ left: 0, behavior: "smooth" });
+            } else {
+              container.scrollBy({ left: 350, behavior: "smooth" });
+            }
+          }
+        }, 3000);
+        autoScrollIntervals.current[index] = newInterval;
+      }, 5000);
     }
   };
 
@@ -104,7 +163,10 @@ const FounderSpotlights = () => {
               <div className="relative">
                 {/* Left Arrow - Hidden on mobile */}
                 <button
-                  onClick={() => scroll(themeIndex, "left")}
+                  onClick={() => {
+                    scroll(themeIndex, "left");
+                    handleManualScroll(themeIndex);
+                  }}
                   className="hidden sm:flex absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-lg items-center justify-center hover:scale-110 transition-transform font-bold text-xl"
                   style={{ color: theme.accent }}
                   aria-label="Scroll left"
@@ -121,6 +183,8 @@ const FounderSpotlights = () => {
                     msOverflowStyle: "none",
                     WebkitOverflowScrolling: "touch",
                   }}
+                  onTouchStart={() => handleManualScroll(themeIndex)}
+                  onMouseDown={() => handleManualScroll(themeIndex)}
                 >
                   {theme.founders.map((founder) => (
                     <div
@@ -178,7 +242,10 @@ const FounderSpotlights = () => {
 
                 {/* Right Arrow - Hidden on mobile */}
                 <button
-                  onClick={() => scroll(themeIndex, "right")}
+                  onClick={() => {
+                    scroll(themeIndex, "right");
+                    handleManualScroll(themeIndex);
+                  }}
                   className="hidden sm:flex absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-lg items-center justify-center hover:scale-110 transition-transform font-bold text-xl"
                   style={{ color: theme.accent }}
                   aria-label="Scroll right"

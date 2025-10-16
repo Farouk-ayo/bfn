@@ -95,7 +95,7 @@ const CohortOverview = () => {
   return (
     <section
       id="cohort"
-      className="w-full py-16 sm:py-24 bg-black px-4 sm:px-8"
+      className="w-full py-16 sm:py-24 bg-black px-4 sm:px-8 overflow-hidden"
       data-aos="fade-up"
     >
       <div className="max-w-6xl mx-auto">
