@@ -111,7 +111,7 @@ const CohortOverview = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
           {/* Left: Headline */}
-          <div className="lg:col-span-2 ml-10 sm:ml-5">
+          <div className="lg:col-span-2 ml-10 sm:ml-5" data-aos="fade-left">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-maldives leading-tight mb-6">
               <div className="text-white mb-3  text-2xl">
                 <AnimatedNumber
@@ -139,7 +139,7 @@ const CohortOverview = () => {
           </div>
 
           {/* Right: Data Visuals */}
-          <div className="lg:col-span-3 space-y-12">
+          <div className="lg:col-span-3 space-y-12" data-aos="fade-right">
             {/* Gender Distribution */}
             <div>
               <div className="flex flex-col sm:flex-row items-center justify-between gap-8">
