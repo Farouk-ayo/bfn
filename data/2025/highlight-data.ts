@@ -85,12 +85,7 @@ export const milestonesData = [
       "/images/2025/programs/elevate-tech-conference-4.webp",
     ],
   },
-  {
-    icon: "👥",
-    title: "Mentorship",
-    description: "Guided by industry leaders and experienced founders",
-    images: ["/images/2025/programs/mentorship.webp"],
-  },
+
   {
     icon: "🏆",
     title: "Pitches and wins",

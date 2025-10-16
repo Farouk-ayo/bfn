@@ -22,7 +22,7 @@ const FounderModal: React.FC<FounderModalProps> = ({
         particleCount: 50,
         spread: 60,
         origin: { y: 0.7 },
-        colors: ["coolBlue", "#002A5C", "#FF6F61"],
+        colors: ["#D1A000", "#002A5C", "#FF6F61"],
       });
     }
   }, [isOpen, founder]);

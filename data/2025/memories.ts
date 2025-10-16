@@ -1,34 +1,34 @@
 export const memories = [
   {
-    src: "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800",
-    caption: "Cohort Orientation Day",
+    src: "/images/2025/programs/startupfest-1.webp",
+    caption: "Startupfest",
   },
   {
-    src: "https://images.unsplash.com/photo-1531545514256-b1400bc00f31?w=800",
+    src: "/images/2025/programs/workshop-1.webp",
     caption: "Workshop Sessions",
   },
   {
-    src: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?w=800",
-    caption: "Team Collaboration",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800",
-    caption: "Pitch Practice",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800",
+    src: "/images/2025/programs/showcase-5.webp",
     caption: "Demo Day Success",
   },
   {
-    src: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800",
+    src: "/images/2025/programs/pitch-3.webp",
+    caption: "Pitches",
+  },
+  {
+    src: "/images/2025/programs/showcase-2.webp",
+    caption: "Summer Showcase Success",
+  },
+  {
+    src: "/images/2025/programs/community-building-1.webp",
     caption: "Community Building",
   },
   {
-    src: "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=800",
-    caption: "Networking Events",
+    src: "/images/2025/programs/elevate-tech-conference-2.webp",
+    caption: "Elevate Tech Conference",
   },
   {
-    src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800",
+    src: "/images/2025/programs/mentorship.webp",
     caption: "Mentorship Moments",
   },
 ];

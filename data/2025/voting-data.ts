@@ -1,6 +1,14 @@
 import { VotingCategory } from "../../src/types";
 import { founders } from "./founder-data";
 
+const shuffleArray = <T>(array: T[]): T[] => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
 export const votingCategories: VotingCategory[] = [
   {
     id: "best-pitch-energy",
@@ -8,7 +16,7 @@ export const votingCategories: VotingCategory[] = [
     emoji: "⚡️",
     description:
       "The founder who brought the room to life — energy, passion, and presence! Tap to vote for the pitch that fired you up most.",
-    candidates: founders.slice(0, 3),
+    candidates: shuffleArray(founders),
   },
   {
     id: "future-unicorn",
@@ -16,7 +24,7 @@ export const votingCategories: VotingCategory[] = [
     emoji: "🦄",
     description:
       "The startup that feels destined for big things. Tap your pick — who's on the billion-dollar path?",
-    candidates: founders.slice(3, 6),
+    candidates: shuffleArray(founders),
   },
   {
     id: "innovation-spark",
@@ -24,7 +32,7 @@ export const votingCategories: VotingCategory[] = [
     emoji: "💡",
     description:
       "The boldest, smartest, or most original idea of the day. Vote for the innovation that wowed you.",
-    candidates: founders.slice(6, 9),
+    candidates: shuffleArray(founders),
   },
   {
     id: "crowd-favorite",
@@ -32,7 +40,7 @@ export const votingCategories: VotingCategory[] = [
     emoji: "💜",
     description:
       "Who stole the show today? Give your heart (and your tap) to your favorite founder.",
-    candidates: founders.slice(9, 12),
+    candidates: shuffleArray(founders),
   },
   {
     id: "design-visionary",
@@ -40,7 +48,7 @@ export const votingCategories: VotingCategory[] = [
     emoji: "🎨",
     description:
       "Beautiful decks. Seamless storytelling. Visuals that left a mark. Tap to vote for the founder who turned design into their superpower.",
-    candidates: founders.slice(12, 15),
+    candidates: shuffleArray(founders),
   },
   {
     id: "the-connector",
@@ -48,7 +56,7 @@ export const votingCategories: VotingCategory[] = [
     emoji: "🤝",
     description:
       "Some founders pitch. Others build bridges. Vote for the person who radiated collaboration, community, and genuine connection throughout the program.",
-    candidates: founders.slice(15, 18),
+    candidates: shuffleArray(founders),
   },
   {
     id: "memorable-tagline",
@@ -56,7 +64,7 @@ export const votingCategories: VotingCategory[] = [
     emoji: "🔊",
     description:
       "\"That's going on a T-shirt.\" Vote for the line, slogan, or soundbite you can't stop repeating from today's pitches.",
-    candidates: founders.slice(18, 21),
+    candidates: shuffleArray(founders),
   },
   {
     id: "pitch-mvp",
@@ -64,6 +72,6 @@ export const votingCategories: VotingCategory[] = [
     emoji: "🏅",
     description:
       "The complete package — presence, story, clarity, confidence. Tap to vote for the founder who owned the stage like a pro.",
-    candidates: founders.slice(21, 24),
+    candidates: shuffleArray(founders),
   },
 ];

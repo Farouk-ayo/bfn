@@ -10,7 +10,7 @@ const Confetti = ({ show }: { show: boolean }) => {
           key={i}
           className="absolute w-2 h-2 rounded-full"
           style={{
-            backgroundColor: ["coolBlue", "#FF6F61", "#FFFFFF"][i % 3],
+            backgroundColor: ["#D1A000", "#FF6F61", "#FFFFFF"][i % 3],
             left: `${Math.random() * 100}%`,
             top: "-10px",
           }}
