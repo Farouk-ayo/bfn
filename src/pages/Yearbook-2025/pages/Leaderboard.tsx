@@ -136,7 +136,7 @@ const Leaderboard = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto font-body px-4"
+            className="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto  px-4"
           >
             See who's leading in each category! Votes are updated in real-time.
           </motion.p>
@@ -260,7 +260,7 @@ const Leaderboard = () => {
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 font-maldives">
               Haven't Voted Yet?
             </h3>
-            <p className="text-gray-400 text-base sm:text-lg mb-6 sm:mb-8 font-body px-2">
+            <p className="text-gray-400 text-base sm:text-lg mb-6 sm:mb-8  px-2">
               Your voice matters! Head back to cast your votes and help
               celebrate the 2025 cohort.
             </p>

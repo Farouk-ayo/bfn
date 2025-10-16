@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { milestones } from "../../../../data/2025/highlight-data";
 
 const ProgramHighlights = () => {
@@ -24,19 +23,14 @@ const ProgramHighlights = () => {
       {/* Content */}
       <div className="max-w-7xl  mx-auto relative z-10">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16"
-        >
+        <div className="text-center mb-12 sm:mb-16" data-aos="fade-up">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Program <span className="text-coolBlue">Highlights</span>
           </h2>
           <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
             A journey of growth, learning, and community
           </p>
-        </motion.div>
+        </div>
 
         {/* Timeline */}
         <div className="relative mb-12 sm:mb-20">
@@ -44,12 +38,9 @@ const ProgramHighlights = () => {
           <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-coolBlue via-purple-500 to-pink-500 transform sm:-translate-x-1/2" />
 
           {milestones.map((milestone, idx) => (
-            <motion.div
+            <div
               key={idx}
-              initial={{ opacity: 0, x: idx % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
+              data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}
               className={`relative flex items-center mb-8 sm:mb-12  ${
                 idx % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
               } flex-row`}
@@ -65,9 +56,8 @@ const ProgramHighlights = () => {
                     : "sm:pl-12 sm:text-left"
                 }`}
               >
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className={` p-6 rounded-2xl shadow-xl   bg-black/20`}
+                <div
+                  className={` p-6 rounded-2xl shadow-xl bg-black/20 hover:scale-105 transition-transform duration-300`}
                 >
                   <div className="text-4xl sm:text-5xl mb-3">
                     {milestone.icon}
@@ -78,9 +68,9 @@ const ProgramHighlights = () => {
                   <p className="text-white text-opacity-90 text-sm sm:text-base">
                     {milestone.description}
                   </p>
-                </motion.div>
+                </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

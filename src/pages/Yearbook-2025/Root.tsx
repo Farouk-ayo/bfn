@@ -4,7 +4,7 @@ import Footer from "./layout/footer";
 
 const Root25 = () => {
   return (
-    <section>
+    <section className="bg-black">
       <ScrollRestoration />
       <Outlet />
       <Footer />

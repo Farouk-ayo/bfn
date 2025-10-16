@@ -1,5 +1,4 @@
-import { motion, useInView, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 
 interface GenderData {
@@ -15,26 +14,42 @@ const AnimatedNumber = ({
   value: number;
   className?: string;
 }) => {
+  const [displayValue, setDisplayValue] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true });
-  const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: 2000 });
-  const displayValue = Math.round(springValue.get());
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
-    if (isInView) {
-      motionValue.set(value);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasAnimated) {
+          setHasAnimated(true);
+          const duration = 2000;
+          const steps = 60;
+          const increment = value / steps;
+          let current = 0;
+
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= value) {
+              setDisplayValue(value);
+              clearInterval(timer);
+            } else {
+              setDisplayValue(Math.round(current));
+            }
+          }, duration / steps);
+
+          return () => clearInterval(timer);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
     }
-  }, [isInView, motionValue, value]);
 
-  useEffect(() => {
-    const unsubscribe = springValue.on("change", (latest) => {
-      if (ref.current) {
-        ref.current.textContent = Math.round(latest).toString();
-      }
-    });
-    return () => unsubscribe();
-  }, [springValue]);
+    return () => observer.disconnect();
+  }, [value, hasAnimated]);
 
   return (
     <span ref={ref} className={className}>
@@ -81,15 +96,11 @@ const CohortOverview = () => {
     <section
       id="cohort"
       className="w-full py-16 sm:py-24 bg-black px-4 sm:px-8"
+      data-aos="fade-up"
     >
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-8 sm:mb-12"
-        >
+        <div className="text-center mb-8 sm:mb-12" data-aos="zoom-in">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Quick <span className="text-coolBlue">Statistics</span>
           </h2>
@@ -97,14 +108,8 @@ const CohortOverview = () => {
             Spanning across multiple industries, the 2025 BFN founders are
             redefining innovation in Canada.
           </p>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center"
-        >
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
           {/* Left: Headline */}
           <div className="lg:col-span-2 ml-10 sm:ml-5">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-maldives leading-tight mb-6">
@@ -189,7 +194,7 @@ const CohortOverview = () => {
 
             {/* Industry Breakdown */}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

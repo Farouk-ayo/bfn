@@ -55,7 +55,7 @@ const CandidateModal = ({
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2 font-maldives">
               {category.title}
             </h2>
-            <p className="text-gray-400 text-sm sm:text-base font-body">
+            <p className="text-gray-400 text-sm sm:text-base ">
               {category.description}
             </p>
             {hasVoted && (

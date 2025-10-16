@@ -1,4 +1,3 @@
-import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { VotingCategory } from "../../../types";
 import Confetti from "../components/ui/Confetti";
@@ -43,12 +42,7 @@ const VotingSection = () => {
 
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16"
-        >
+        <div className="text-center mb-12 sm:mb-16" data-aos="fade-up">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 font-maldives">
             Tap to Vote Here
           </h2>
@@ -61,14 +55,14 @@ const VotingSection = () => {
 
           {isVotingOpen ? (
             <>
-              <p className="text-gray-400 text-base sm:text-lg max-w-3xl mx-auto mb-4 font-body">
+              <p className="text-gray-400 text-base sm:text-lg max-w-3xl mx-auto mb-4 ">
                 You've read their stories and seen their ventures, now it's your
                 turn! Tap through the cards below and vote for the founders who
                 stood out to you today. Help celebrate the vibes, creativity,
                 and energy that make this cohort unforgettable.
               </p>
 
-              <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto font-body">
+              <p className="text-gray-500 text-sm sm:text-base max-w-2xl mx-auto ">
                 You can vote in as many categories as you like. When you tap a
                 card, your pick is recorded instantly and you'll see a little
                 confetti burst 🎉 to make it official!
@@ -76,7 +70,7 @@ const VotingSection = () => {
             </>
           ) : (
             <div className="bg-gray-900 border border-gray-800 rounded-2xl p-8 max-w-2xl mx-auto">
-              <p className="text-gray-400 text-lg font-body">
+              <p className="text-gray-400 text-lg ">
                 {votingStatus === "closed"
                   ? "Voting has ended. Check out the winners on the leaderboard!"
                   : "Voting is currently paused. Check back soon!"}
@@ -85,89 +79,71 @@ const VotingSection = () => {
           )}
 
           {totalVotes > 0 && (
-            <motion.div
+            <div
               key={voteUpdate}
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
               className="mt-6 inline-block bg-coolBlue/10 border border-coolBlue rounded-full px-6 py-3"
             >
               <span className="text-coolBlue font-bold">
                 🎊 You've voted in {totalVotes}{" "}
                 {totalVotes === 1 ? "category" : "categories"}!
               </span>
-            </motion.div>
+            </div>
           )}
 
           {/* Leaderboard Link */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="mt-8"
-          >
+          <div className="mt-8">
             <Link
               to="/yearbook-2025/leaderboard"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-coolBlue to-[#5ab8d8] hover:from-[#5ab8d8] hover:to-coolBlue text-black px-8 py-3 rounded-full font-bold transition-all"
             >
               🏆 View Leaderboard
             </Link>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
         {/* Categories Grid */}
         {isVotingOpen && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {votingCategories.map((category, idx) => (
-              <motion.div
+              <div
                 key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
+                data-aos="fade-up"
+                data-aos-delay={idx * 100}
               >
                 <CategoryCard
                   category={category}
                   onClick={() => setSelectedCategory(category)}
                   voteUpdate={voteUpdate}
                 />
-              </motion.div>
+              </div>
             ))}
           </div>
         )}
 
         {/* Social Share CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-16 text-center"
-        >
-          <p className="text-gray-400 mb-4 font-body">
+        <div className="mt-16 text-center" data-aos="fade-up">
+          <p className="text-gray-400 mb-4 ">
             Share your picks with the community!
           </p>
-          <motion.a
+          <a
             href="https://www.linkedin.com/company/black-founders-network/"
             target="_blank"
             rel="noopener noreferrer"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-full font-semibold transition-all"
+            className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-full font-semibold transition-all hover:scale-105 active:scale-95"
           >
             Share on LinkedIn #BFNDemoDay2025
-          </motion.a>
-        </motion.div>
+          </a>
+        </div>
       </div>
 
       {/* Modal */}
-      <AnimatePresence>
-        {selectedCategory && (
-          <CandidateModal
-            category={selectedCategory}
-            onClose={() => setSelectedCategory(null)}
-            onVote={handleVote}
-          />
-        )}
-      </AnimatePresence>
+      {selectedCategory && (
+        <CandidateModal
+          category={selectedCategory}
+          onClose={() => setSelectedCategory(null)}
+          onVote={handleVote}
+        />
+      )}
     </section>
   );
 };

@@ -37,7 +37,7 @@ const CategoryCard = ({
         {category.title}
       </h3>
 
-      <p className="text-gray-400 text-sm mb-4 font-body line-clamp-3">
+      <p className="text-gray-400 text-sm mb-4  line-clamp-3">
         {category.description}
       </p>
 

@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useState, useRef } from "react";
 import FounderModal from "./founderModal";
 import { founders } from "../../../../data/2025/founder-data";
@@ -61,34 +60,26 @@ const FounderSpotlights = () => {
     <section
       id="spotlights"
       className="relative w-full py-12 sm:py-20 overflow-hidden"
+      data-aos="fade-up"
     >
       {/* Content */}
       <div className="relative z-10">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16 px-4"
-        >
+        <div className="text-center mb-12 sm:mb-16 px-4" data-aos="zoom-in">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 font-maldives">
             Founder <span className="text-coolBlue">Spotlights</span>
           </h2>
-          <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-body">
+          <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto ">
             Deeper stories, organized by the impact they're making
           </p>
-        </motion.div>
-
-        {/* Subtheme Sections */}
+        </div>
         <div className="space-y-12 sm:space-y-16">
+          {/* Subtheme Sections */}
           {categorizedThemes.map((theme, themeIndex) => (
-            <motion.div
+            <div
               key={theme.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: themeIndex * 0.1 }}
               className="relative"
+              data-aos={themeIndex % 2 === 0 ? "zoom-in-right" : "zoom-in-left"}
             >
               {/* Theme Header */}
               <div className="max-w-7xl mx-auto px-4 sm:px-8 mb-6 sm:mb-8">
@@ -104,7 +95,7 @@ const FounderSpotlights = () => {
                     {theme.title}
                   </h3>
                 </div>
-                <p className="text-softGray text-xs sm:text-sm md:text-base ml-5 sm:ml-6 font-body">
+                <p className="text-softGray text-xs sm:text-sm md:text-base ml-5 sm:ml-6 ">
                   {theme.description}
                 </p>
               </div>
@@ -131,15 +122,10 @@ const FounderSpotlights = () => {
                     WebkitOverflowScrolling: "touch",
                   }}
                 >
-                  {theme.founders.map((founder, idx) => (
-                    <motion.div
+                  {theme.founders.map((founder) => (
+                    <div
                       key={founder.name}
-                      initial={{ opacity: 0, x: 50 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: idx * 0.1 }}
-                      whileHover={{ scale: 1.02, y: -5 }}
-                      className="flex-shrink-0 w-72 sm:w-80 md:w-96 rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden cursor-pointer snap-center"
+                      className="flex-shrink-0 w-72 sm:w-80 md:w-96 rounded-xl sm:rounded-2xl shadow-2xl overflow-hidden cursor-pointer snap-center hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300"
                       style={{ backgroundColor: theme.cardColor }}
                       onClick={() => setSelectedFounder(founder)}
                     >
@@ -167,26 +153,26 @@ const FounderSpotlights = () => {
 
                         {/* Business Name */}
                         <p
-                          className="font-semibold text-sm sm:text-base mb-2 sm:mb-3 font-body"
+                          className="font-semibold text-sm sm:text-base mb-2 sm:mb-3 "
                           style={{ color: theme.accent }}
                         >
                           {founder.businessName}
                         </p>
 
                         {/* Story Preview (3 sentences) */}
-                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 line-clamp-3 font-body">
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 line-clamp-3 ">
                           {founder.story || founder.description}
                         </p>
 
                         {/* Read More Button */}
                         <button
-                          className="text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all hover:gap-3 font-body"
+                          className="text-xs sm:text-sm font-semibold flex items-center gap-2 transition-all hover:gap-3 "
                           style={{ color: theme.accent }}
                         >
                           Read full story →
                         </button>
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
 
@@ -200,7 +186,7 @@ const FounderSpotlights = () => {
                   →
                 </button>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

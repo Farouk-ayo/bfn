@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useState } from "react";
 import { memories } from "../../../../data/2025/memories";
 
@@ -12,32 +11,23 @@ const MemoriesSection = () => {
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16"
-        >
+        <div className="text-center mb-12 sm:mb-16" data-aos="fade-up">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             Memories & <span className="text-coolBlue">Moments</span>
           </h2>
           <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
             Capturing the journey, the laughter, and the growth
           </p>
-        </motion.div>
+        </div>
 
         {/* Photo Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
           {memories.map((memory, idx) => (
-            <motion.div
+            <div
               key={idx}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.05 }}
-              whileHover={{ scale: 1.05, zIndex: 10 }}
+              data-aos="zoom-in"
               onClick={() => setSelectedImage(memory.src)}
-              className="relative aspect-square rounded-xl overflow-hidden cursor-pointer group"
+              className="relative aspect-square rounded-xl overflow-hidden cursor-pointer group hover:scale-105 hover:z-10 transition-transform duration-300"
             >
               <img
                 src={memory.src}
@@ -49,26 +39,21 @@ const MemoriesSection = () => {
                   {memory.caption}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Lightbox Modal */}
         {selectedImage && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 bg-black bg-opacity-95 flex items-center justify-center p-4"
+          <div
+            className="fixed inset-0 z-50 bg-black bg-opacity-95 flex items-center justify-center p-4 animate-fade-in"
             onClick={() => setSelectedImage(null)}
           >
-            <motion.img
-              initial={{ scale: 0.8 }}
-              animate={{ scale: 1 }}
+            <img
               src={selectedImage}
               alt="Full size"
-              className="max-w-full max-h-full rounded-2xl"
-              onClick={(e: Event) => e.stopPropagation()}
+              className="max-w-full max-h-full rounded-2xl animate-scale-in"
+              onClick={(e) => e.stopPropagation()}
             />
             <button
               onClick={() => setSelectedImage(null)}
@@ -76,9 +61,37 @@ const MemoriesSection = () => {
             >
               ✕
             </button>
-          </motion.div>
+          </div>
         )}
       </div>
+
+      <style>{`
+        @keyframes fade-in {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes scale-in {
+          from {
+            transform: scale(0.8);
+          }
+          to {
+            transform: scale(1);
+          }
+        }
+
+        .animate-fade-in {
+          animation: fade-in 0.3s ease-out;
+        }
+
+        .animate-scale-in {
+          animation: scale-in 0.3s ease-out;
+        }
+      `}</style>
     </section>
   );
 };
