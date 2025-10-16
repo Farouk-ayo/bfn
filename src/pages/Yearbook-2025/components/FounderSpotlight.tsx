@@ -8,28 +8,29 @@ const subthemes = [
     title: "The Builders",
     cardColor: "#E5E5E5",
     accent: "#4A4947",
-    description: "Creating infrastructure and tools for tomorrow",
+    description:
+      "Launching solutions for today and shaping the world of tomorrow",
     founders: [] as typeof founders,
   },
   {
     title: "The Healers",
     cardColor: "#E8F5E9",
     accent: "#4CAF50",
-    description: "Transforming healthcare and wellness",
+    description: "Restoring wellness through innovation and care",
     founders: [] as typeof founders,
   },
   {
     title: "The Changemakers",
     cardColor: "#FFF9E6",
     accent: "#D1A000",
-    description: "Bringing bold visions to life",
+    description: "Challenging the status quo, one bold idea at a time",
     founders: [] as typeof founders,
   },
   {
     title: "The Craftsmen",
     cardColor: "#FFE8E5",
     accent: "#FF6F61",
-    description: "Building bridges and communities",
+    description: "Crafting change through culture and care",
     founders: [] as typeof founders,
   },
 ];

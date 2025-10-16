@@ -20,6 +20,9 @@ export interface Founder {
   url: string;
   linkedIn: string;
   theme: Theme;
+  whatILearned: string;
+  proudestMoment: string;
+  whatsNext: string;
 }
 
 // VOTING

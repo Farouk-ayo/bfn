@@ -141,8 +141,7 @@ const FounderModal: React.FC<FounderModalProps> = ({
                     💡 What I Learned
                   </h4>
                   <p className="text-xs sm:text-sm text-gray-300">
-                    The importance of persistence and adaptability in building
-                    something meaningful.
+                    {founder.whatILearned}
                   </p>
                 </div>
 
@@ -151,8 +150,7 @@ const FounderModal: React.FC<FounderModalProps> = ({
                     🏆 Proudest Moment
                   </h4>
                   <p className="text-xs sm:text-sm text-gray-300">
-                    Completing the BFN program and building lasting connections
-                    with fellow founders.
+                    {founder.proudestMoment}
                   </p>
                 </div>
 
@@ -161,8 +159,7 @@ const FounderModal: React.FC<FounderModalProps> = ({
                     🚀 What's Next
                   </h4>
                   <p className="text-xs sm:text-sm text-gray-300">
-                    Scaling our solution and making a greater impact in our
-                    industry.
+                    {founder.whatsNext}
                   </p>
                 </div>
               </div>

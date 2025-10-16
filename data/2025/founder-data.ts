@@ -18,6 +18,12 @@ export const founders: Founder[] = [
     url: "https://www.kazoai.com/",
     linkedIn: "https://ca.linkedin.com/in/tomi-johnson",
     theme: "The Builders",
+    whatILearned:
+      "Throughout the process, I learned how to reframe rejection and use it to my advantage.",
+    proudestMoment:
+      "Securing a partnership with PraxIQ, a Chicago-based consulting firm, to be their AI partner.",
+    whatsNext:
+      "I aim to reach $10,000/month in monthly recurring revenue and to have one concise offer by the end of the year.",
   },
   {
     id: "wisdom-mawuenyefia-amenyo",
@@ -36,6 +42,9 @@ export const founders: Founder[] = [
     url: "",
     linkedIn: "",
     theme: "The Healers",
+    whatILearned: "",
+    proudestMoment: "",
+    whatsNext: "",
   },
   {
     id: "lyle-williams",
@@ -53,6 +62,12 @@ export const founders: Founder[] = [
     url: "https://www.magnifyaccess.ai/",
     linkedIn: "",
     theme: "The Changemakers",
+    whatILearned:
+      "The mentorship I received, through sessions and one-on-ones, provided guidance and direction for our product.",
+    proudestMoment:
+      "We secured partnerships with organizations and received funding that extended our runway to 18 months.",
+    whatsNext:
+      "Our goal is to release our Workplace Accommodation System to pilot test groups for feedback, with the aim of securing customers by year's end.",
   },
   {
     id: "ibukun-elebute",
@@ -70,6 +85,11 @@ export const founders: Founder[] = [
     url: "https://cellectlaboratories.com/",
     linkedIn: "https://ca.linkedin.com/in/ibukunelebute",
     theme: "The Healers",
+    whatILearned:
+      "The acquisition stories, candid playbooks, and warm intros helped us set a clear objective: build toward strategic outcomes.",
+    proudestMoment: "Securing grants and awards totalling over $150,000.",
+    whatsNext:
+      "Close $1 million pre-seed and allocate funds to pilot inventory, packaging, and quality assurance.",
   },
   {
     id: "njideka-onwuasor",
@@ -87,6 +107,12 @@ export const founders: Founder[] = [
     url: "",
     linkedIn: "https://ca.linkedin.com/in/njideka-onwuasor-32976113a",
     theme: "The Changemakers",
+    whatILearned:
+      "This experience has given me not only the knowledge and resources I needed, but also the belief that I can do this. I’m leaving the program with clarity, confidence, and momentum.",
+    proudestMoment:
+      "The completion of our user surveys/interviews, which confirmed three key pain points of our target audience.",
+    whatsNext:
+      "Conduct structured usability testing with 15–20 users and onboard at least two pilot partners.",
   },
   {
     id: "fatima-abdillahi",
@@ -105,6 +131,12 @@ export const founders: Founder[] = [
     url: "http://www.agent-flow.ca/",
     linkedIn: "https://www.linkedin.com/in/fabdillahi/",
     theme: "The Builders",
+    whatILearned:
+      "The mentorship around narrowing focus and defining a niche pushed me to move from a broad “AI for everyone” positioning to testing Agentflow’s value in specific verticals.",
+    proudestMoment:
+      "Launched Agentflow 2.0, completed our first pilot, hosted our first webinar, and officially pivoted to a workspace model.",
+    whatsNext:
+      "Continue refining pilot programs to validate product-market fit across key niche segments and expand our early user base.",
   },
   {
     id: "eyra-abraham",
@@ -123,6 +155,12 @@ export const founders: Founder[] = [
     url: "https://lisnen.com/",
     linkedIn: "https://ca.linkedin.com/in/eyraabraham",
     theme: "The Changemakers",
+    whatILearned:
+      "I’ve gained more self-awareness about myself as an entrepreneur and the tools and resources have helped me invest in our app.",
+    proudestMoment:
+      "When we secured a hardware integration partnership after attending and speaking at the World Summit on Accessible Tourism.",
+    whatsNext:
+      "We will pivot to being a research company rather than a tech company, and use the opportunity to advance accessibility by supporting the sector with data and insights.",
   },
   {
     id: "kamika-sylvester",
@@ -141,6 +179,12 @@ export const founders: Founder[] = [
     url: "http://www.rennel.co/",
     linkedIn: "",
     theme: "The Changemakers",
+    whatILearned:
+      "The program gave me clarity, accountability, and momentum. Overall, I’m leaving with a tighter roadmap, clearer metrics, and a stronger foundation to test and iterate.",
+    proudestMoment:
+      "We secured a potential partnership with a wellness app and collaborated with The Black Birth Project to co-host an event.",
+    whatsNext:
+      "Over the next 3-6 months, we aim to complete and test the Code Melanin MVP with early users, and formalize new strategic partnerships with healthcare organizations.",
   },
   {
     id: "kay-boama",
@@ -159,6 +203,11 @@ export const founders: Founder[] = [
     url: "http://www.swiirl.io/",
     linkedIn: "https://ca.linkedin.com/in/kuratorkay",
     theme: "The Changemakers",
+    whatILearned:
+      "What I took from the mentorship in the residence programs was useful in building the next phase of our platform; Swiirl Pulse.",
+    proudestMoment:
+      "The signing of two major sports leagues for a North American tour with our product as the connective tissue to communities",
+    whatsNext: "Pursue a Series A round to set up for venture scale.",
   },
   {
     id: "bianci-mensah",
@@ -177,6 +226,9 @@ export const founders: Founder[] = [
     url: "http://sipginny.com/",
     linkedIn: "https://ca.linkedin.com/in/jessicamensah",
     theme: "The Craftsmen",
+    whatILearned: "",
+    proudestMoment: "",
+    whatsNext: "",
   },
   {
     id: "didier-ramazani",
@@ -195,6 +247,12 @@ export const founders: Founder[] = [
     url: "https://beautoronto.com/",
     linkedIn: "https://www.linkedin.com/in/didierramazani/",
     theme: "The Builders",
+    whatILearned:
+      "The program validated our pivot towards building our own AI model and showed us how to protect and market that innovation.",
+    proudestMoment:
+      "We initiated the design phase of our first smart kiosk prototype, which will integrate our AI model with optimized lighting and cameras for in-store use.",
+    whatsNext:
+      "Complete and validate our proprietary AI model and prepare for seed funding.",
   },
   {
     id: "reyanna-lambie",
@@ -213,6 +271,12 @@ export const founders: Founder[] = [
     url: "https://founderathlete.co/",
     linkedIn: "https://ca.linkedin.com/in/reyannalambie",
     theme: "The Healers",
+    whatILearned:
+      "The biggest mindset shift I experienced is that I can be both a creator and an entrepreneur, and that maximizing leverage comes from doing both.",
+    proudestMoment:
+      "We successfully completed our BFN pilot, secured our first paid coaching client, and launched our Discord community.",
+    whatsNext:
+      "Our short-term goal is to scale coaching to $10,000/month and to finish building our MVP app.",
   },
   {
     id: "gesikeme-wodu",
@@ -230,6 +294,12 @@ export const founders: Founder[] = [
     url: "",
     linkedIn: "https://ca.linkedin.com/in/gesikeme-wodu/",
     theme: "The Builders",
+    whatILearned:
+      "The program gave me a runway to consistently guide my progress on building a business and it provided me with experts to inform and guide my exploration.",
+    proudestMoment:
+      "Onboarded an engineer with the grant and I connected with an advisor through BFN events.",
+    whatsNext:
+      "Build our first prototype and test it. Then, build a waitlist, and build our team.",
   },
   {
     id: "chinedum-nwaogwugwu",
@@ -247,6 +317,12 @@ export const founders: Founder[] = [
     url: "",
     linkedIn: "https://www.linkedin.com/in/cnwaogwugwu/",
     theme: "The Changemakers",
+    whatILearned:
+      "I initially wanted to support women in my community, but BFN made me realize that this could be an even bigger platform that would impact millions of women.",
+    proudestMoment:
+      "Secured an additional $5,000 funding commitment from a Canada-based non-profit and recorded 100% growth in revenue among our entrepreneurs since the start of our pilot program.",
+    whatsNext:
+      "Apply to funding opportunities, wrap up the ongoing pilot program, and create more brand awareness for our work.",
   },
   {
     id: "justina-kanza",
@@ -264,6 +340,12 @@ export const founders: Founder[] = [
     url: "https://grantedtech.ca/",
     linkedIn: "https://ca.linkedin.com/in/justina-k-857624114",
     theme: "The Builders",
+    whatILearned:
+      "I gained strategic direction and the essential support needed to maintain focus and resilience, which has been a key factor in our continued progress.",
+    proudestMoment:
+      "We grew our user base to over 150 users and reached $1,000 in monthly recurring revenue.",
+    whatsNext:
+      "Grow our monthly recurring revenue to over $5,000 and expand our user base to over 1,000 users by leveraging our new partnerships and targeted marketing campaigns.",
   },
   {
     id: "efemena-eghujovbo",
@@ -281,6 +363,12 @@ export const founders: Founder[] = [
     url: "",
     linkedIn: "https://ca.linkedin.com/in/efemena-eghujovbo",
     theme: "The Builders",
+    whatILearned:
+      "I learned that a pivot was necessary and received mentorship to build my confidence in articulating my vision to others. ",
+    proudestMoment:
+      "We were accepted into the SOLIDWORKS program for building hardware devices.",
+    whatsNext:
+      "Conduct more high-level research on validating our pivot and secure at least 100 signups for our waitlist.",
   },
   {
     id: "busayo-ladapo",
@@ -299,6 +387,12 @@ export const founders: Founder[] = [
     url: "https://dynamiteskincollection.com/",
     linkedIn: "https://ca.linkedin.com/in/busayo-ladapo-mba-271250aa",
     theme: "The Craftsmen",
+    whatILearned:
+      "The mentorship sessions provided actionable feedback and challenged me to think more strategically about product development and market expansion. ",
+    proudestMoment:
+      "Being selected as one of the Top 50 applicants in the Melamoon Pitch Competition, powered by FACE Coalition and Black Ambition, where we will pitch live for up to $200,000 in non-dilutive funding.",
+    whatsNext:
+      "In the next 3–6 months, we aim to complete the launch of our AI-powered skin analysis platform and successfully roll out the rebranded Luméa website.",
   },
   {
     id: "sarra-ali",
@@ -316,6 +410,12 @@ export const founders: Founder[] = [
     url: "https://diaminate.com/",
     linkedIn: "https://ca.linkedin.com/in/sarra2020",
     theme: "The Builders",
+    whatILearned:
+      "The expert sessions challenged us to move beyond feature-building and emphasize storytelling that resonates with both founders and investors.",
+    proudestMoment:
+      "We secured paid pilots with early adopters to validate our platform’s automated investor reporting and investor-matching features.",
+    whatsNext:
+      "Complete our ongoing paid pilots and convert them into long-term contracts.",
   },
   {
     id: "curtis-carmichael",
@@ -334,6 +434,12 @@ export const founders: Founder[] = [
     url: "https://shuriii.com/",
     linkedIn: "https://ca.linkedin.com/in/curtiscarmicc",
     theme: "The Changemakers",
+    whatILearned:
+      "The program empowered me to operate from a place of confidence rather than desperation when it comes to raising or partnerships.",
+    proudestMoment:
+      "Participating in and winning a grant award at Pascal Siakam’s inaugural EdTech accelerator.",
+    whatsNext:
+      "Hit $500,000 in revenue by Q1 2026 and $1 million by the end of Q2/Q3 while remaining a lean team.",
   },
   {
     id: "tony-colley",
@@ -352,6 +458,12 @@ export const founders: Founder[] = [
     url: "https://b12give.ca/",
     linkedIn: "https://ca.linkedin.com/in/tony-colley-46344722",
     theme: "The Changemakers",
+    whatILearned:
+      "I’ve become more deliberate in delegating tasks, measuring impact, and aligning all activities with B12Give’s mission to make food recovery effortless and impactful.",
+    proudestMoment:
+      "Securing new corporate partnerships, most notably with the Royal Bank of Canada and the Bank of Montreal.",
+    whatsNext:
+      "Expand our partner base by onboarding at least 10 new businesses within 3-6 months.",
   },
   {
     id: "faith-oloruntoba",
@@ -370,6 +482,12 @@ export const founders: Founder[] = [
     url: "https://groupbuyhive.com/",
     linkedIn: "https://ca.linkedin.com/in/faith-oloruntoba",
     theme: "The Builders",
+    whatILearned:
+      "I learned how to articulate our value proposition more clearly, build a stronger financial narrative, and prepare for cross-border expansion with confidence.",
+    proudestMoment:
+      "When we generated $1 million in revenue during the most recent sales season — our strongest performance to date.",
+    whatsNext:
+      "Expand our San Francisco warehouse operations and strengthen our U.S. supplier base, including new partnerships.",
   },
   {
     id: "jonny-kalambay",
@@ -387,6 +505,12 @@ export const founders: Founder[] = [
     url: "https://www.roshi.ai/",
     linkedIn: "https://www.linkedin.com/in/jonnykalambay/",
     theme: "The Builders",
+    whatILearned:
+      "I've learned to frame my product offering better, and I've learned tactics to help me get face time with decision makers.",
+    proudestMoment:
+      "When we secured a six-month pilot with the Government of Canada to create lesson material for immigrants.",
+    whatsNext:
+      "Streamline our sales process, increase our number of inbound leads, and raise a seed round.",
   },
   {
     id: "mariam-oyinloye",
@@ -406,6 +530,9 @@ export const founders: Founder[] = [
     url: "https://www.abimbola.shop/",
     linkedIn: "https://ca.linkedin.com/in/mariamoyinloye",
     theme: "The Craftsmen",
+    whatILearned: "",
+    proudestMoment: "",
+    whatsNext: "",
   },
   {
     id: "yaan-saah",
@@ -424,5 +551,11 @@ export const founders: Founder[] = [
     url: "https://www.graspr.ai/",
     linkedIn: "https://ca.linkedin.com/in/yann-sibril-saah-01154551/",
     theme: "The Builders",
+    whatILearned:
+      "Our key learning from the program has been to build systems that scale faster.",
+    proudestMoment:
+      "Reaching over 81,000 users of Graspr AI, and more paying users.",
+    whatsNext:
+      "To grow our user base to one million users by the end of the first quarter of 2026.",
   },
 ];
