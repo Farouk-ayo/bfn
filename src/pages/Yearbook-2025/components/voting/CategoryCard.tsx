@@ -21,12 +21,12 @@ const CategoryCard = ({
       whileTap={{ scale: 0.95 }}
       className={`relative bg-gradient-to-br ${
         hasVoted
-          ? "from-gold/20 to-gold/10 border-gold"
+          ? "from-coolBlue/20 to-coolBlue/10 border-coolBlue"
           : "from-gray-900 to-black border-gray-800"
       } border-2 rounded-2xl p-6 cursor-pointer transition-all duration-300 shadow-lg hover:shadow-2xl`}
     >
       {hasVoted && (
-        <div className="absolute top-3 right-3 bg-gold text-black rounded-full px-3 py-1 text-xs font-bold">
+        <div className="absolute top-3 right-3 bg-coolBlue text-black rounded-full px-3 py-1 text-xs font-bold">
           ✓ Voted
         </div>
       )}
@@ -42,7 +42,7 @@ const CategoryCard = ({
       </p>
 
       <div className="flex items-center justify-between">
-        <span className="text-gold text-sm font-semibold">
+        <span className="text-coolBlue text-sm font-semibold">
           {hasVoted ? "Vote Again →" : "Tap to Vote →"}
         </span>
         <span className="text-xs text-gray-500">

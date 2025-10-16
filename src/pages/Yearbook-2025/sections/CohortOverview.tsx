@@ -50,8 +50,8 @@ const CohortOverview = () => {
   ];
 
   const COLORS = {
-    male: "#D1A000",
-    female: "#FF6F61",
+    male: "#6fc7ea",
+    female: "#d0d1c9",
   };
 
   interface CustomTooltipProps {
@@ -66,7 +66,7 @@ const CohortOverview = () => {
   const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
     if (active && payload && payload.length) {
       return (
-        <div className="bg-black bg-opacity-90 px-3 py-2 rounded border border-gold">
+        <div className="bg-black bg-opacity-90 px-3 py-2 rounded border border-coolBlue">
           <p className="text-white text-sm">
             {payload[0].name}: {payload[0].value} (
             {payload[0].payload.percentage}%)
@@ -91,7 +91,7 @@ const CohortOverview = () => {
           className="text-center mb-8 sm:mb-12"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Quick <span className="text-gold">Statistics</span>
+            Quick <span className="text-coolBlue">Statistics</span>
           </h2>
           <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
             Spanning across multiple industries, the 2025 BFN founders are
@@ -111,26 +111,26 @@ const CohortOverview = () => {
               <div className="text-white mb-3  text-2xl">
                 <AnimatedNumber
                   value={24}
-                  className="text-5xl sm:text-6xl lg:text-7xl text-gold"
+                  className="text-5xl sm:text-6xl lg:text-7xl text-coolBlue"
                 />{" "}
                 Founders.
               </div>
               <div className="text-white mb-3  text-2xl ">
                 <AnimatedNumber
                   value={5}
-                  className="text-5xl sm:text-6xl lg:text-7xl text-gold"
+                  className="text-5xl sm:text-6xl lg:text-7xl text-coolBlue"
                 />{" "}
                 Industries.
               </div>
               <div className="text-white  text-2xl">
                 <AnimatedNumber
                   value={1}
-                  className="text-5xl sm:text-6xl lg:text-7xl text-gold"
+                  className="text-5xl sm:text-6xl lg:text-7xl text-coolBlue"
                 />{" "}
                 Bold Community.
               </div>
             </h2>
-            <div className="w-16 h-1 bg-gold" />
+            <div className="w-16 h-1 bg-coolBlue" />
           </div>
 
           {/* Right: Data Visuals */}

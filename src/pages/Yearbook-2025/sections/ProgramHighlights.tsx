@@ -31,7 +31,7 @@ const ProgramHighlights = () => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Program <span className="text-yellow-400">Highlights</span>
+            Program <span className="text-coolBlue">Highlights</span>
           </h2>
           <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
             A journey of growth, learning, and community
@@ -41,7 +41,7 @@ const ProgramHighlights = () => {
         {/* Timeline */}
         <div className="relative mb-12 sm:mb-20">
           {/* Timeline Line */}
-          <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-yellow-400 via-purple-500 to-pink-500 transform sm:-translate-x-1/2" />
+          <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-coolBlue via-purple-500 to-pink-500 transform sm:-translate-x-1/2" />
 
           {milestones.map((milestone, idx) => (
             <motion.div
@@ -55,7 +55,7 @@ const ProgramHighlights = () => {
               } flex-row`}
             >
               {/* Timeline Dot */}
-              <div className="absolute left-4 sm:left-1/2 w-4 h-4 bg-yellow-400 rounded-full border-4 border-black transform sm:-translate-x-1/2 z-10" />
+              <div className="absolute left-4 sm:left-1/2 w-4 h-4 bg-coolBlue rounded-full border-4 border-black transform sm:-translate-x-1/2 z-10" />
 
               {/* Content Card */}
               <div

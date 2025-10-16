@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { subscribeToAllVotes } from "../../../services/voting.service";
 import { votingCategories } from "../../../../data/2025/voting-data";
 import { founders } from "../../../../data/2025/founder-data";
-import Navbar from "../layout/navbar";
 import SEO from "../components/SEO";
 
 interface LeaderboardEntry {
@@ -85,7 +84,6 @@ const Leaderboard = () => {
   if (loading) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">
-        <Navbar />
         <motion.div
           animate={{ rotate: 360 }}
           transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
@@ -106,7 +104,6 @@ const Leaderboard = () => {
         image="https://www.programs-bfn.ca/og-leaderboard.png"
         canonicalUrl="https://yearbook.blackfounders.ca/yearbook-2025/leaderboard"
       />
-      <Navbar />
 
       {/* Hero Section - Mobile optimized */}
       <section className="pt-24 sm:pt-32 pb-12 sm:pb-16 px-4 sm:px-8">
@@ -132,7 +129,7 @@ const Leaderboard = () => {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ delay: 0.3 }}
-            className="w-24 sm:w-32 h-1 bg-gold mx-auto mb-6 sm:mb-8"
+            className="w-24 sm:w-32 h-1 bg-coolBlue mx-auto mb-6 sm:mb-8"
           />
 
           <motion.p
@@ -152,7 +149,7 @@ const Leaderboard = () => {
           >
             <Link
               to="/yearbook-2025"
-              className="inline-block bg-gold hover:bg-yellow-600 text-black px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold transition-all text-sm sm:text-base"
+              className="inline-block bg-coolBlue hover:bg-[#5ab8d8] text-black px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-semibold transition-all text-sm sm:text-base"
             >
               ← Back to Voting
             </Link>
@@ -170,7 +167,7 @@ const Leaderboard = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.1 }}
-                className="bg-gradient-to-br from-gray-900 to-black border-2 border-gray-800 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 hover:border-gold transition-all duration-300"
+                className="bg-gradient-to-br from-gray-900 to-black border-2 border-gray-800 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8  transition-all duration-300"
               >
                 {/* Category Header - Mobile optimized */}
                 <div className="flex items-center justify-between mb-4 sm:mb-6">
@@ -258,7 +255,7 @@ const Leaderboard = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-gray-900 to-black border-2 border-gold rounded-2xl sm:rounded-3xl p-6 sm:p-10 lg:p-12"
+            className="bg-gradient-to-br from-gray-900 to-black border-2 border-gray-800  rounded-2xl sm:rounded-3xl p-6 sm:p-10 lg:p-12"
           >
             <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 font-maldives">
               Haven't Voted Yet?
@@ -269,7 +266,7 @@ const Leaderboard = () => {
             </p>
             <Link
               to="/yearbook-2025#voting"
-              className="inline-block bg-gold hover:bg-yellow-600 text-black px-8 sm:px-10 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all"
+              className="inline-block bg-coolBlue hover:bg-[#5ab8d8] text-black px-8 sm:px-10 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all"
             >
               Vote Now 🎉
             </Link>

@@ -40,7 +40,7 @@ const Footer = () => {
             </p>
             <a
               href="mailto:bfn@utoronto.ca"
-              className="text-yellow-400 hover:underline text-lg transition-colors"
+              className="text-coolBlue hover:underline text-lg transition-colors"
             >
               bfn@utoronto.ca
             </a>
@@ -57,7 +57,7 @@ const Footer = () => {
                 href="https://web.facebook.com/BFNcommunity/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-yellow-400 transition-colors"
+                className="text-white hover:text-coolBlue transition-colors"
               >
                 <FaFacebookF size={24} />
               </a>
@@ -65,7 +65,7 @@ const Footer = () => {
                 href="https://twitter.com/bfncommunity"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-yellow-400 transition-colors"
+                className="text-white hover:text-coolBlue transition-colors"
               >
                 <FaXTwitter size={24} />
               </a>
@@ -73,7 +73,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/blackfoundersnetwork/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-yellow-400 transition-colors"
+                className="text-white hover:text-coolBlue transition-colors"
               >
                 <FaLinkedinIn size={24} />
               </a>
@@ -81,7 +81,7 @@ const Footer = () => {
                 href="https://www.youtube.com/@BlackFoundersNetwork"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-yellow-400 transition-colors"
+                className="text-white hover:text-coolBlue transition-colors"
               >
                 <FaYoutube size={24} />
               </a>
@@ -89,7 +89,7 @@ const Footer = () => {
                 href="https://www.instagram.com/bfncommunity/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white hover:text-yellow-400 transition-colors"
+                className="text-white hover:text-coolBlue transition-colors"
               >
                 <FaInstagram size={24} />
               </a>

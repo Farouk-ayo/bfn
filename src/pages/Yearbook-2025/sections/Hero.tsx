@@ -19,7 +19,6 @@ const Hero: React.FC = () => {
     }));
     setSparkles(newSparkles);
 
-    // Ensure video plays if it exists
     if (videoRef.current) {
       videoRef.current
         .play()
@@ -35,19 +34,7 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black px-4 sm:px-8">
-      {/* Optional Background Video */}
-      {/* Uncomment below to use video - make sure to add your video file */}
-      {/* <video
-        ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover opacity-20 z-0"
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src="/cohort-video.mp4" type="video/mp4" />
-      </video> */}
+    <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-black via-[#0A0A0A] to-black px-4 sm:px-6 md:px-8">
       {/* Sparkle background */}
       {sparkles.map((sparkle) => (
         <motion.div
@@ -69,14 +56,15 @@ const Hero: React.FC = () => {
           }}
         />
       ))}
+
       {/* Running Ribbon - Vote Call-to-Action */}
       <motion.div
         className="fixed top-0 left-0 right-0 z-[100] cursor-pointer"
         onClick={handleVoteClick}
       >
-        <div className="relative h-10 bg-gradient-to-r from-[#0A0A0A] via-[#D1A000] to-[#0A0A0A] flex items-center justify-center overflow-hidden  text-white">
+        <div className="relative h-8  bg-gradient-to-r from-[#0A0A0A] via-[#6fc7ea] to-[#0A0A0A] flex items-center justify-center overflow-hidden text-white">
           <motion.div
-            className="flex items-center gap-4 whitespace-nowrap text-white font-bold text-base"
+            className="flex items-center gap-4 whitespace-nowrap text-white font-bold text-xs sm:text-sm"
             animate={{ x: ["-100%", "100%"] }}
             transition={{
               duration: 30,
@@ -89,7 +77,8 @@ const Hero: React.FC = () => {
             </span>
           </motion.div>
         </div>
-      </motion.div>{" "}
+      </motion.div>
+
       {/* Floating Icons */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         {["💡", "🌍", "🚀", "✨", "🎯", "💫"].map((emoji, i) => (
@@ -114,43 +103,66 @@ const Hero: React.FC = () => {
           </motion.div>
         ))}
       </div>
+
       {/* Content */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="text-center z-10 max-w-5xl"
+        className="text-center z-10 max-w-5xl mt-24 relative "
       >
+        {/* Main Headline */}
         <motion.h1
-          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-4 sm:mb-6 leading-tight font-maldives"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight font-tradegothic tracking-tight"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 1 }}
         >
-          BLACK FOUNDERS NETWORK
+          BLACK FOUNDERS
+          <br className="block" />
+          NETWORK
         </motion.h1>
 
+        {/* Underline */}
         <motion.div
-          className="w-20 sm:w-32 h-1 mx-auto mb-4 sm:mb-6 bg-gold"
-          style={{ backgroundColor: "#D1A000" }}
+          className="w-20 sm:w-32  h-0.5 sm:h-1 mx-auto mb-4 sm:mb-6 md:mb-8"
+          style={{ backgroundColor: "#d0d1c9" }}
           initial={{ width: 0 }}
-          animate={{ width: "8rem" }}
+          animate={{ width: "auto" }}
           transition={{ delay: 0.6, duration: 0.8 }}
         />
 
+        {/* Year Text with Skew */}
         <motion.h2
-          className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 sm:mb-8 font-maldives"
-          style={{ color: "#D1A000" }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 sm:mb-8 md:mb-10 font-tradegothic"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 1 }}
         >
-          2025 YEARBOOK
+          <motion.span
+            className="relative -skew-y-1 inline-block transform perspective-300"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ delay: 1.1, duration: 0.6 }}
+            whileHover={{ scale: 1.05 }}
+          >
+            <span
+              className="block -skew-y-1 px-3 sm:px-5 md:px-6 py-1.5 sm:py-2 md:py-3 rounded-lg"
+              style={{
+                background: "linear-gradient(135deg, #6fc7ea 0%, #5ab8d8 100%)",
+                color: "#0A0A0A",
+                fontSize: "inherit",
+              }}
+            >
+              2025 YEARBOOK
+            </span>
+          </motion.span>
         </motion.h2>
 
+        {/* Tagline */}
         <motion.p
-          className="text-base sm:text-xl md:text-2xl mb-8 sm:mb-12 px-4 sm:px-0 max-w-2xl mx-auto"
-          style={{ color: "#F5F5F5" }}
+          className="text-sm sm:text-base md:text-lg lg:text-xl mb-8 sm:mb-10 md:mb-14 px-4 sm:px-0 max-w-2xl mx-auto leading-relaxed"
+          style={{ color: "#d0d1c9" }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 1 }}
@@ -158,11 +170,12 @@ const Hero: React.FC = () => {
           Celebrating Innovation, Community, and Growth.
         </motion.p>
 
+        {/* CTA Button */}
         <motion.a
           href="#cohort"
-          className="inline-block font-bold text-base sm:text-lg px-8 sm:px-12 py-3 sm:py-4 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+          className="inline-block font-bold text-xs sm:text-sm md:text-base px-6 sm:px-8 md:px-12 py-2.5 sm:py-3 md:py-4 rounded-full shadow-lg hover:shadow-2xl transition-all duration-300"
           style={{
-            background: "linear-gradient(to right, #D1A000, #c99200)",
+            background: "linear-gradient(to right, #6fc7ea, #5ab8d8)",
             color: "#0A0A0A",
           }}
           initial={{ opacity: 0, y: 20 }}
@@ -174,19 +187,20 @@ const Hero: React.FC = () => {
           Enter the Yearbook ↓
         </motion.a>
       </motion.div>
+
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2"
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 1.5, repeat: Infinity }}
       >
         <div
-          className="w-6 h-10 border-2 rounded-full flex justify-center"
-          style={{ borderColor: "#D1A000" }}
+          className="w-5 h-8 sm:w-6 sm:h-10 border-1.5 sm:border-2 rounded-full flex justify-center"
+          style={{ borderColor: "#6fc7ea" }}
         >
           <motion.div
-            className="w-1.5 h-2 rounded-full mt-2"
-            style={{ backgroundColor: "#D1A000" }}
+            className="w-1 h-1.5 sm:w-1.5 sm:h-2 rounded-full mt-1.5 sm:mt-2"
+            style={{ backgroundColor: "#6fc7ea" }}
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
           />

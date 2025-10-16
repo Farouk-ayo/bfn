@@ -72,7 +72,7 @@ const FounderSpotlights = () => {
           className="text-center mb-12 sm:mb-16 px-4"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 font-maldives">
-            Founder <span className="text-gold">Spotlights</span>
+            Founder <span className="text-coolBlue">Spotlights</span>
           </h2>
           <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-body">
             Deeper stories, organized by the impact they're making

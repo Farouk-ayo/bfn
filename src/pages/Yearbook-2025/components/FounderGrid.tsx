@@ -33,7 +33,7 @@ const FounderGrid = () => {
           className="text-center mb-8 sm:mb-12"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Meet Our <span className="text-gold">Founders</span>
+            Meet Our <span className="text-coolBlue">Founders</span>
           </h2>
           <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
             Explore the inspiring stories of our 2025 cohort
@@ -50,7 +50,7 @@ const FounderGrid = () => {
               }
               className={`px-4 sm:px-8 py-2 sm:py-3 rounded-full font-semibold text-sm sm:text-base transition-all duration-300 ${
                 selectedProgram === program
-                  ? "bg-gold text-black shadow-lg scale-105"
+                  ? "bg-coolBlue text-black shadow-lg scale-105"
                   : "bg-gray-800 text-white hover:bg-gray-700"
               }`}
             >
@@ -77,7 +77,7 @@ const FounderGrid = () => {
                 onClick={() => setSelectedFounder(founder)}
                 className="cursor-pointer group"
               >
-                <div className="relative aspect-square rounded-full overflow-hidden border-4 border-gray-800 group-hover:border-gold transition-all duration-300">
+                <div className="relative aspect-square rounded-full overflow-hidden border-4 border-gray-800 group-hover:border-coolBlue transition-all duration-300">
                   <img
                     src={founder.imageUrl}
                     alt={founder.name}
@@ -114,7 +114,7 @@ const FounderGrid = () => {
             whileTap={{ scale: 0.95 }}
             className="px-8 sm:px-12 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg shadow-lg hover:shadow-2xl transition-all duration-300"
             style={{
-              background: "linear-gradient(to right, #D1A000, #c99200)",
+              background: "linear-gradient(to right, #6fc7ea, #5ab8d8)",
               color: "#0A0A0A",
             }}
           >

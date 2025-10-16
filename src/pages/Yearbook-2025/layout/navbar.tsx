@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed z-50 top-10 w-full flex justify-between items-center py-4 px-4 sm:py-6 sm:px-20 bg-opacity-100 backdrop-blur-3xl transition duration-500">
+    <nav className="fixed z-50 top-8 w-full flex justify-between items-center py-4 px-4 sm:py-6 sm:px-20 bg-opacity-100 backdrop-blur-3xl transition duration-500">
       {/* bg-opacity-100 backdrop-blur-3xl transition duration-500 */}
       <div className="text-white font-bold text-xl sm:text-2xl w-32 sm:w-44">
         <a href="/">
@@ -60,7 +60,7 @@ const Navbar = () => {
                   <a
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="hover:text-yellow-400 transition-colors duration-300 border-b-2 border-transparent hover:border-yellow-400 pb-1"
+                    className="hover:text-coolBlue transition-colors duration-300 border-b-2 border-transparent hover:border-coolBlue pb-1"
                   >
                     {link.name}
                   </a>

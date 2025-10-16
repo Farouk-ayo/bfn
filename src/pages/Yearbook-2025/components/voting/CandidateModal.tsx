@@ -59,8 +59,8 @@ const CandidateModal = ({
               {category.description}
             </p>
             {hasVoted && (
-              <div className="mt-3 inline-block bg-gold/20 border border-gold rounded-full px-4 py-1">
-                <span className="text-gold text-sm font-bold">
+              <div className="mt-3 inline-block bg-coolBlue/20 border border-coolBlue rounded-full px-4 py-1">
+                <span className="text-coolBlue text-sm font-bold">
                   ✓ You voted in this category
                 </span>
               </div>
@@ -88,7 +88,7 @@ const CandidateModal = ({
                 whileTap={{ scale: 0.98 }}
                 className={`flex items-center gap-4 p-4 rounded-xl cursor-pointer transition-all ${
                   isSelected
-                    ? "bg-gold/20 border-2 border-gold"
+                    ? "bg-coolBlue/20 border-2 border-coolBlue"
                     : isVotedFor
                     ? "bg-green-900/20 border-2 border-green-500"
                     : "bg-gray-800 border-2 border-transparent hover:border-gray-700"
@@ -101,7 +101,7 @@ const CandidateModal = ({
                     className="w-16 h-16 rounded-full object-cover"
                   />
                   {isSelected && (
-                    <div className="absolute -top-1 -right-1 bg-gold text-black rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">
+                    <div className="absolute -top-1 -right-1 bg-coolBlue text-black rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">
                       ✓
                     </div>
                   )}
@@ -139,7 +139,7 @@ const CandidateModal = ({
             whileTap={selectedCandidate && !isVoting ? { scale: 0.95 } : {}}
             className={`w-full py-4 rounded-full font-bold text-lg transition-all ${
               selectedCandidate && !isVoting
-                ? "bg-gradient-to-r from-gold to-yellow-600 text-black hover:shadow-2xl"
+                ? "bg-gradient-to-r from-coolBlue to-yellow-600 text-black hover:shadow-2xl"
                 : "bg-gray-700 text-gray-500 cursor-not-allowed"
             }`}
           >

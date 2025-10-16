@@ -19,7 +19,7 @@ const MemoriesSection = () => {
           className="text-center mb-12 sm:mb-16"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            Memories & <span className="text-yellow-400">Moments</span>
+            Memories & <span className="text-coolBlue">Moments</span>
           </h2>
           <p className="text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
             Capturing the journey, the laughter, and the growth

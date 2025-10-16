@@ -53,9 +53,9 @@ const VotingSection = () => {
             Tap to Vote Here
           </h2>
 
-          <div className="w-24 h-1 bg-gold mx-auto mb-6" />
+          <div className="w-24 h-1 bg-coolBlue mx-auto mb-6" />
 
-          <p className="text-xl sm:text-2xl text-gold mb-6 font-maldives">
+          <p className="text-xl sm:text-2xl text-coolBlue mb-6 font-maldives">
             "Celebrate the 2025 Cohort—Your Way!"
           </p>
 
@@ -89,9 +89,9 @@ const VotingSection = () => {
               key={voteUpdate}
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
-              className="mt-6 inline-block bg-gold/10 border border-gold rounded-full px-6 py-3"
+              className="mt-6 inline-block bg-coolBlue/10 border border-coolBlue rounded-full px-6 py-3"
             >
-              <span className="text-gold font-bold">
+              <span className="text-coolBlue font-bold">
                 🎊 You've voted in {totalVotes}{" "}
                 {totalVotes === 1 ? "category" : "categories"}!
               </span>
@@ -107,7 +107,7 @@ const VotingSection = () => {
           >
             <Link
               to="/yearbook-2025/leaderboard"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-gold to-yellow-600 hover:from-yellow-600 hover:to-gold text-black px-8 py-3 rounded-full font-bold transition-all"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-coolBlue to-[#5ab8d8] hover:from-[#5ab8d8] hover:to-coolBlue text-black px-8 py-3 rounded-full font-bold transition-all"
             >
               🏆 View Leaderboard
             </Link>

@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
+        // 2024
         primary: "#002A5C",
         secondary: "#295F98",
         tertiary: "#D8D2C2",
@@ -13,13 +14,16 @@ export default {
         black: "#0A0A0A",
         gold: "#D1A000",
         coral: "#FF6F61",
-        softGray: "#F5F5F5",
+        coolBlue: "#6fc7ea",
+        warmRed: "#dc4633",
+        softGray: "#d0d1c9",
       },
       fontFamily: {
         grotesk: ["ID Grotesk", "sans-serif"],
         billiona: ["Billiona", "sans-serif"],
         maldives: ["Poppins", "sans-serif"],
         tradegothic: ["Trade Gothic LT Std", "sans-serif"],
+        bembo: ["Bembo Book W04 Regular"],
         body: ["Inter", "Lato", "sans-serif"],
       },
     },

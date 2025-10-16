@@ -22,7 +22,7 @@ const FounderModal: React.FC<FounderModalProps> = ({
         particleCount: 50,
         spread: 60,
         origin: { y: 0.7 },
-        colors: ["#D1A000", "#002A5C", "#FF6F61"],
+        colors: ["coolBlue", "#002A5C", "#FF6F61"],
       });
     }
   }, [isOpen, founder]);
@@ -74,7 +74,7 @@ const FounderModal: React.FC<FounderModalProps> = ({
             {/* Top Bar: Headshot + Name + Venture */}
             <div className="bg-gradient-to-r from-gray-800 to-gray-900 p-4 sm:p-6 border-b border-gray-800">
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-yellow-400 flex-shrink-0">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-coolBlue flex-shrink-0">
                   <img
                     src={founder.imageUrl}
                     alt={founder.name}
@@ -85,7 +85,7 @@ const FounderModal: React.FC<FounderModalProps> = ({
                   <h2 className="text-xl sm:text-2xl font-bold text-white mb-1">
                     {founder.name}
                   </h2>
-                  <p className="text-base sm:text-lg text-yellow-400 font-semibold">
+                  <p className="text-base sm:text-lg text-coolBlue font-semibold">
                     {founder.businessName}
                   </p>
                 </div>
@@ -103,7 +103,7 @@ const FounderModal: React.FC<FounderModalProps> = ({
             <div className="p-4 sm:p-6 grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
               {/* Left: About Section */}
               <div>
-                <h3 className="text-base sm:text-lg font-bold text-yellow-400 mb-2 sm:mb-3">
+                <h3 className="text-base sm:text-lg font-bold text-coolBlue mb-2 sm:mb-3">
                   About
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
@@ -131,7 +131,7 @@ const FounderModal: React.FC<FounderModalProps> = ({
               {/* Right: Fun Facts / Q&A */}
               <div className="space-y-3 sm:space-y-4">
                 <div>
-                  <h3 className="text-base sm:text-lg font-bold text-yellow-400 mb-2 sm:mb-3">
+                  <h3 className="text-base sm:text-lg font-bold text-coolBlue mb-2 sm:mb-3">
                     Quick Insights
                   </h3>
                 </div>
@@ -173,7 +173,7 @@ const FounderModal: React.FC<FounderModalProps> = ({
               <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
                 <span className="text-xs sm:text-sm text-gray-400">
                   Part of:{" "}
-                  <span className="text-yellow-400 font-semibold">
+                  <span className="text-coolBlue font-semibold">
                     {founder.cohort}
                   </span>
                 </span>

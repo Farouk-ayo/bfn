@@ -58,7 +58,7 @@ const SEO = ({
       <meta name="robots" content="index, follow" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />
-      <meta name="theme-color" content="#D1A000" />
+      <meta name="theme-color" content="coolBlue" />
 
       {/* JSON-LD Structured Data */}
       <script type="application/ld+json">
