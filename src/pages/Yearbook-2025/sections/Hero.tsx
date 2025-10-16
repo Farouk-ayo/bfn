@@ -27,6 +27,13 @@ const Hero: React.FC = () => {
     }
   }, []);
 
+  const handleVoteClick = () => {
+    const votingSection = document.getElementById("voting");
+    if (votingSection) {
+      votingSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-black via-gray-900 to-black px-4 sm:px-8">
       {/* Optional Background Video */}
@@ -41,7 +48,6 @@ const Hero: React.FC = () => {
       >
         <source src="/cohort-video.mp4" type="video/mp4" />
       </video> */}
-
       {/* Sparkle background */}
       {sparkles.map((sparkle) => (
         <motion.div
@@ -63,13 +69,33 @@ const Hero: React.FC = () => {
           }}
         />
       ))}
-
+      {/* Running Ribbon - Vote Call-to-Action */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 z-[100] cursor-pointer"
+        onClick={handleVoteClick}
+      >
+        <div className="relative h-10 bg-gradient-to-r from-[#0A0A0A] via-[#D1A000] to-[#0A0A0A] flex items-center justify-center overflow-hidden  text-white">
+          <motion.div
+            className="flex items-center gap-4 whitespace-nowrap text-white font-bold text-base"
+            animate={{ x: ["-100%", "100%"] }}
+            transition={{
+              duration: 30,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+          >
+            <span>
+              click for a chance to vote for your favourite founder 🤏
+            </span>
+          </motion.div>
+        </div>
+      </motion.div>{" "}
       {/* Floating Icons */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
         {["💡", "🌍", "🚀", "✨", "🎯", "💫"].map((emoji, i) => (
           <motion.div
             key={i}
-            className="absolute text-4xl opacity-20"
+            className="absolute text-6xl sm:text-7xl  opacity-30"
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
@@ -88,7 +114,6 @@ const Hero: React.FC = () => {
           </motion.div>
         ))}
       </div>
-
       {/* Content */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -149,7 +174,6 @@ const Hero: React.FC = () => {
           Enter the Yearbook ↓
         </motion.a>
       </motion.div>
-
       {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"

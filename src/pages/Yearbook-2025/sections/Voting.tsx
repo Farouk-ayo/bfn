@@ -49,14 +49,6 @@ const VotingSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12 sm:mb-16"
         >
-          <motion.div
-            animate={{ rotate: [0, 10, -10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
-            className="text-6xl sm:text-7xl mb-6"
-          >
-            🎉
-          </motion.div>
-
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4 font-maldives">
             Tap to Vote Here
           </h2>

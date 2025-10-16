@@ -15,6 +15,12 @@ const FounderGrid = () => {
     selectedProgram === "all"
       ? founders
       : founders.filter((f) => f.cohort === `${selectedProgram}`);
+  const handleVoteClick = () => {
+    const votingSection = document.getElementById("voting");
+    if (votingSection) {
+      votingSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section id="founders" className="w-full py-12 sm:py-20  px-4 sm:px-8">
@@ -94,6 +100,26 @@ const FounderGrid = () => {
               </motion.div>
             ))}
           </AnimatePresence>
+        </motion.div>
+        {/* Vote CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-16 sm:mt-20 text-center"
+        >
+          <motion.button
+            onClick={handleVoteClick}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-8 sm:px-12 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg shadow-lg hover:shadow-2xl transition-all duration-300"
+            style={{
+              background: "linear-gradient(to right, #D1A000, #c99200)",
+              color: "#0A0A0A",
+            }}
+          >
+            Click Here to Vote for Your Favourite Founder ↓
+          </motion.button>
         </motion.div>
       </div>
 
