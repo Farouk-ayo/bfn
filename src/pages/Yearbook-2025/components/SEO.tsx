@@ -53,12 +53,19 @@ const SEO = ({
       <meta name="twitter:site" content="@bfncommunity" />
       <meta name="twitter:creator" content="@bfncommunity" />
 
+      {/* LinkedIn */}
+      <meta property="og:image:alt" content={title} />
+      <meta property="og:image:type" content="image/png" />
+
+      {/* WhatsApp (uses Open Graph tags but with specific optimizations) */}
+      <meta property="og:image:secure_url" content={fullImageUrl} />
+
       {/* Additional Meta Tags */}
       <meta name="author" content="Black Founders Network" />
       <meta name="robots" content="index, follow" />
       <meta name="language" content="English" />
       <meta name="revisit-after" content="7 days" />
-      <meta name="theme-color" content="coolBlue" />
+      <meta name="theme-color" content="#6DC5E7" />
 
       {/* JSON-LD Structured Data */}
       <script type="application/ld+json">
