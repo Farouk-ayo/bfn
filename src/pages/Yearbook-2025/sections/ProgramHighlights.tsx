@@ -7,6 +7,9 @@ const ProgramHighlights = () => {
   const [selectedMilestoneIdx, setSelectedMilestoneIdx] = useState<
     number | null
   >(null);
+  const thumbnailRefs = useState<{ [key: number]: HTMLButtonElement | null }>(
+    {}
+  )[0];
 
   const DISPLAY_COUNT = 5;
 
@@ -23,6 +26,7 @@ const ProgramHighlights = () => {
     const nextIdx = (currentImageIdx + 1) % images.length;
     setCurrentImageIdx(nextIdx);
     setSelectedImage(images[nextIdx]);
+    scrollToThumbnail(nextIdx);
   };
 
   const prevImage = () => {
@@ -31,6 +35,7 @@ const ProgramHighlights = () => {
     const prevIdx = (currentImageIdx - 1 + images.length) % images.length;
     setCurrentImageIdx(prevIdx);
     setSelectedImage(images[prevIdx]);
+    scrollToThumbnail(prevIdx);
   };
 
   const getDisplayImages = (images: string[]): string[] => {
@@ -39,6 +44,17 @@ const ProgramHighlights = () => {
 
   const getRemainingCount = (images: string[]): number => {
     return Math.max(0, images.length - DISPLAY_COUNT);
+  };
+
+  const scrollToThumbnail = (index: number) => {
+    const thumbnail = thumbnailRefs[index];
+    if (thumbnail) {
+      thumbnail.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+        inline: "center",
+      });
+    }
   };
 
   return (
@@ -207,10 +223,12 @@ const ProgramHighlights = () => {
                 {milestonesData[selectedMilestoneIdx].images.map((img, i) => (
                   <button
                     key={i}
+                    ref={(el) => (thumbnailRefs[i] = el)}
                     onClick={(e) => {
                       e.stopPropagation();
                       setCurrentImageIdx(i);
                       setSelectedImage(img);
+                      scrollToThumbnail(i);
                     }}
                     className={`flex-shrink-0 h-16 w-16 lg:h-20 lg:w-20 rounded-lg overflow-hidden transition-all ${
                       i === currentImageIdx
