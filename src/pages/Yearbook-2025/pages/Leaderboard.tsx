@@ -81,26 +81,17 @@ const Leaderboard = () => {
 
   console.log(leaderboard);
   const handleLinkedInShare = () => {
-    const url = "https://www.programs-bfn.ca/yearbook-2025/leaderboard";
-    const text =
-      "Proud to support the amazing founders in the BFN 2025 Smart Start & Accelerate Cohorts! 🏆\n\nThese innovators are building creative solutions and inspiring impact — come see the leaderboard and join the celebration.\n\n#BFNDemoDay2025 #BlackFounders #Innovation";
+    const url = encodeURIComponent(
+      "https://www.programs-bfn.ca/yearbook-2025/leaderboard"
+    );
+    const text = encodeURIComponent(
+      "Proud to support the amazing founders in the BFN 2025 Smart Start & Accelerate Cohorts! 🏆\n\nThese innovators are building creative solutions and inspiring impact — come see the leaderboard and join the celebration.\n\n#BFNDemoDay2025 #BlackFounders #Innovation"
+    );
 
-    // Mobile-friendly approach: Use LinkedIn's mobile share URL
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const linkedInUrl = `https://www.linkedin.com/feed/?shareActive=true&text=${text}%20${url}`;
 
-    if (isMobile) {
-      // For mobile: Use LinkedIn app deep link if available, otherwise web
-      const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-        url
-      )}`;
-      window.location.href = linkedInUrl;
-    } else {
-      // For desktop: Use the feed share URL
-      const linkedInUrl = `https://www.linkedin.com/feed/?shareActive=true&text=${encodeURIComponent(
-        text + " " + url
-      )}`;
-      window.open(linkedInUrl, "_blank", "noopener,noreferrer");
-    }
+    // Use window.location.href for mobile compatibility
+    window.location.href = linkedInUrl;
   };
 
   if (loading) {
