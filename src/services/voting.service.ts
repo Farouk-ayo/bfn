@@ -1,7 +1,7 @@
 import { ref, onValue, runTransaction, get, set } from "firebase/database";
 import { database } from "./firebase.config";
 
-const VOTING_SESSION_VERSION = "v4";
+const VOTING_SESSION_VERSION = "v5";
 export interface Candidate {
   id: string;
   name: string;

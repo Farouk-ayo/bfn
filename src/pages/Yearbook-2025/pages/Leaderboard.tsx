@@ -212,7 +212,7 @@ const Leaderboard = () => {
                           alt={entry.winner.name}
                           className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-3 sm:border-4 border-gold"
                         />
-                        <div className="absolute -top-1 sm:-top-2 -right-1 sm:-right-2 bg-gold text-black rounded-full w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center font-bold text-xs sm:text-sm">
+                        <div className="absolute -top-1 sm:-top-2 -right-1 sm:-right-2 bg-coolBlue text-black rounded-full w-6 h-6 sm:w-8 sm:h-8 flex items-center justify-center font-bold text-xs sm:text-sm">
                           👑
                         </div>
                       </div>
