@@ -80,6 +80,18 @@ const Leaderboard = () => {
   }, []);
 
   console.log(leaderboard);
+  const handleLinkedInShare = () => {
+    const url = encodeURIComponent(
+      "https://www.programs-bfn.ca/yearbook-2025/leaderboard"
+    );
+    const text = encodeURIComponent(
+      "Proud to support the amazing founders in the BFN 2025 Smart Start & Accelerate Cohorts! 🏆\n\nThese innovators are building creative solutions and inspiring impact — come see the leaderboard and join the celebration.\n\n#BFNDemoDay2025 #BlackFounders #Innovation"
+    );
+
+    const linkedInUrl = `https://www.linkedin.com/feed/?shareActive=true&text=${text}%20${url}`;
+
+    window.open(linkedInUrl, "_blank", "noopener,noreferrer");
+  };
 
   if (loading) {
     return (
@@ -247,6 +259,21 @@ const Leaderboard = () => {
           </div>
         </div>
       </section>
+
+      {/* Social Share CTA */}
+      <div className=" text-center mb-10">
+        <p className="text-gray-400 mb-4 ">
+          Share your picks with the community!
+        </p>
+        <a
+          onClick={handleLinkedInShare}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block cursor-pointer bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-full font-semibold transition-all hover:scale-105 active:scale-95"
+        >
+          Share on LinkedIn #BFNDemoDay2025
+        </a>
+      </div>
 
       {/* CTA Section - Mobile optimized */}
       <section className="pb-16 sm:pb-24 px-4 sm:px-8">

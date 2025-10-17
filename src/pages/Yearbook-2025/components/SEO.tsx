@@ -19,7 +19,7 @@ const SEO = ({
   keywords = "Black Founders Network, BFN, Black entrepreneurs, startup accelerator, Canadian startups, 2025 cohort, innovation, diversity in tech, Black-owned businesses",
   canonicalUrl,
 }: SEOProps) => {
-  const baseUrl = "https://yearbook.blackfounders.ca";
+  const baseUrl = "https://www.programs-bfn.ca";
   const currentUrl = url || `${baseUrl}${window.location.pathname}`;
   const fullImageUrl = image.startsWith("http") ? image : `${baseUrl}${image}`;
   const canonical = canonicalUrl || currentUrl;

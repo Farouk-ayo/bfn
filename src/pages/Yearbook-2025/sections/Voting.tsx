@@ -103,7 +103,7 @@ const VotingSection = () => {
 
         {/* Categories Grid */}
         {isVotingOpen && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
             {votingCategories.map((category, idx) => (
               <div
                 key={category.id}
@@ -120,20 +120,30 @@ const VotingSection = () => {
           </div>
         )}
 
-        {/* Social Share CTA */}
-        <div className="mt-16 text-center" data-aos="fade-up">
-          <p className="text-gray-400 mb-4 ">
-            Share your picks with the community!
-          </p>
-          <a
-            href="https://www.linkedin.com/company/black-founders-network/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-full font-semibold transition-all hover:scale-105 active:scale-95"
-          >
-            Share on LinkedIn #BFNDemoDay2025
-          </a>
-        </div>
+        {/* BFN Community Platform Waitlist - Mobile optimized */}
+        <section className=" px-4 sm:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-gray-800 rounded-2xl sm:rounded-3xl p-6 sm:p-10 lg:p-12">
+              <div className="text-4xl sm:text-5xl mb-4">🚀</div>
+              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 font-maldives">
+                Join the BFN Community Platform Waitlist
+              </h3>
+              <p className="text-gray-400 text-base sm:text-lg mb-6 sm:mb-8 px-2 max-w-2xl mx-auto">
+                Sign up to stay connected with the BFN family and be the first
+                to explore our new platform for founders, mentors, and
+                supporters.
+              </p>
+              <a
+                href="https://airtable.com/app93eVF3hi8TvY8U/pagvZ8fViwD63QVIX/form"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-coolBlue hover:bg-[#5ab8d8] text-black px-8 sm:px-10 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all hover:scale-105 active:scale-95"
+              >
+                Join Waitlist ✨
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
 
       {/* Modal */}
