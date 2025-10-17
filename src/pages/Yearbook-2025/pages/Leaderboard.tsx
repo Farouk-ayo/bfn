@@ -269,7 +269,7 @@ const Leaderboard = () => {
           onClick={handleLinkedInShare}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block cursor-pointer bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-full font-semibold transition-all hover:scale-105 active:scale-95"
+          className="inline-block cursor-pointer bg-coolBlue hover:bg-[#5ab8d8] text-black px-8 py-3 rounded-full font-semibold transition-all hover:scale-105 active:scale-95"
         >
           Share on LinkedIn #BFNDemoDay2025
         </a>
