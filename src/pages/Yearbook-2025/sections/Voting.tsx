@@ -120,10 +120,10 @@ const VotingSection = () => {
           </div>
         )}
 
-        <div className="mt-8">
+        <div className="  mb-8 m-auto flex justify-center">
           <Link
             to="/yearbook-2025/leaderboard"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-coolBlue to-[#5ab8d8] hover:from-[#5ab8d8] hover:to-coolBlue text-black px-8 py-3 rounded-full font-bold transition-all"
+            className="inline-flex items-center  justify-center gap-2 bg-gradient-to-r from-coolBlue to-[#5ab8d8] hover:from-[#5ab8d8] hover:to-coolBlue text-black px-8 py-3 rounded-full font-bold transition-all"
           >
             🏆 View Leaderboard
           </Link>
