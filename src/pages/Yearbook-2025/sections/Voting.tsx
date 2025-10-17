@@ -135,8 +135,8 @@ const VotingSection = () => {
                   </h3>
                   <p className="text-gray-400 text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 px-2 flex-grow">
                     Sign up to stay connected with the BFN family and be the
-                    first to explore our new platform for founders,
-                    mentors, and supporters.
+                    first to explore our new platform for founders, mentors, and
+                    supporters.
                   </p>
                   <a
                     href="https://airtable.com/app93eVF3hi8TvY8U/pagvZ8fViwD63QVIX/form"
