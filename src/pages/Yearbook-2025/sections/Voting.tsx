@@ -120,27 +120,60 @@ const VotingSection = () => {
           </div>
         )}
 
-        {/* BFN Community Platform Waitlist - Mobile optimized */}
-        <section className=" px-4 sm:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-gray-800 rounded-2xl sm:rounded-3xl p-6 sm:p-10 lg:p-12">
-              <div className="text-4xl sm:text-5xl mb-4">🚀</div>
-              <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4 font-maldives">
-                Join the BFN Community Platform Waitlist
-              </h3>
-              <p className="text-gray-400 text-base sm:text-lg mb-6 sm:mb-8 px-2 max-w-2xl mx-auto">
-                Sign up to stay connected with the BFN family and be the first
-                to explore our new platform for founders, mentors, and
-                supporters.
-              </p>
-              <a
-                href="https://airtable.com/app93eVF3hi8TvY8U/pagvZ8fViwD63QVIX/form"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-coolBlue hover:bg-[#5ab8d8] text-black px-8 sm:px-10 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all hover:scale-105 active:scale-95"
-              >
-                Join Waitlist ✨
-              </a>
+        {/* Dual CTA Section - Side by side on desktop, stacked on mobile */}
+        <section className="">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+              {/* Community Platform Waitlist */}
+              <div className="text-center">
+                <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-gray-800 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 h-full flex flex-col">
+                  <div className="text-3xl sm:text-4xl lg:text-5xl mb-3 sm:mb-4">
+                    🚀
+                  </div>
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-2 sm:mb-3 font-maldives px-2">
+                    Join the BFN Community Platform Waitlist
+                  </h3>
+                  <p className="text-gray-400 text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 px-2 flex-grow">
+                    Sign up to stay connected with the BFN family and be the
+                    first to explore our new platform for founders,
+                    mentors, and supporters.
+                  </p>
+                  <a
+                    href="https://airtable.com/app93eVF3hi8TvY8U/pagvZ8fViwD63QVIX/form"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-coolBlue hover:bg-[#5ab8d8] text-black px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-bold text-sm sm:text-base transition-all hover:scale-105 active:scale-95"
+                  >
+                    Join Waitlist
+                  </a>
+                </div>
+              </div>
+
+              {/* Mentor/Investor Application */}
+              <div className="text-center">
+                <div className="bg-gradient-to-br from-gray-900 to-black border-2 border-gray-800 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 h-full flex flex-col">
+                  <div className="text-3xl sm:text-4xl lg:text-5xl mb-3 sm:mb-4">
+                    💼
+                  </div>
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-2 sm:mb-3 font-maldives px-2">
+                    Become a Mentor or Investor
+                  </h3>
+                  <p className="text-gray-400 text-sm sm:text-base lg:text-lg mb-4 sm:mb-6 px-2 flex-grow">
+                    BFN is seeking seasoned entrepreneurs and investors who can
+                    provide strategic guidance to a cohort of growth-stage
+                    founders with unique needs. Please complete this form to
+                    help us understand your background and potential fit.
+                  </p>
+                  <a
+                    href="https://airtable.com/app93eVF3hi8TvY8U/pagEJidLHVsZCvi9n/form"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-coolBlue hover:bg-[#5ab8d8] text-black px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-bold text-sm sm:text-base transition-all hover:scale-105 active:scale-95"
+                  >
+                    Apply Now
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
