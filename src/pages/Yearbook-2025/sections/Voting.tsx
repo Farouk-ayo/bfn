@@ -120,6 +120,15 @@ const VotingSection = () => {
           </div>
         )}
 
+        <div className="mt-8">
+          <Link
+            to="/yearbook-2025/leaderboard"
+            className="inline-flex items-center gap-2 bg-gradient-to-r from-coolBlue to-[#5ab8d8] hover:from-[#5ab8d8] hover:to-coolBlue text-black px-8 py-3 rounded-full font-bold transition-all"
+          >
+            🏆 View Leaderboard
+          </Link>
+        </div>
+
         {/* Dual CTA Section - Side by side on desktop, stacked on mobile */}
         <section className="">
           <div className="max-w-7xl mx-auto">
