@@ -91,7 +91,7 @@ const Leaderboard = () => {
     if (isMobile) {
       // For mobile: Use LinkedIn app deep link if available, otherwise web
       const linkedInUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
-        url
+        text + " " + url
       )}`;
       window.location.href = linkedInUrl;
     } else {
